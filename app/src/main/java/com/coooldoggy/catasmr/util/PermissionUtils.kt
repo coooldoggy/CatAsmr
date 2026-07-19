@@ -42,6 +42,28 @@ object PermissionUtils {
     fun batteryOptimizationSettingsIntent(context: Context): Intent =
         Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse("package:${context.packageName}"))
 
+    /**
+     * Launches the direct "ignore battery optimizations" prompt. Some OEM skins reject
+     * that intent even with the permission declared, so this falls back to the app's own
+     * settings page (which always has a battery section) rather than doing nothing.
+     */
+    fun launchBatteryOptimizationSettings(context: Context) {
+        try {
+            context.startActivity(batteryOptimizationSettingsIntent(context))
+        } catch (e: Exception) {
+            try {
+                context.startActivity(
+                    Intent(
+                        Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                        Uri.parse("package:${context.packageName}")
+                    )
+                )
+            } catch (e2: Exception) {
+                // No Settings app available to handle either intent -- nothing more we can do.
+            }
+        }
+    }
+
     /** Runtime (dialog-prompted) permissions still missing, ready to hand to a permission launcher. */
     fun runtimePermissionsToRequest(context: Context): List<String> {
         val perms = mutableListOf<String>()

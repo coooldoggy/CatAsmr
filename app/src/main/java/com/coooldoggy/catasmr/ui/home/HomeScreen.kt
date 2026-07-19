@@ -87,7 +87,7 @@ fun HomeScreen(
             context.startActivity(PermissionUtils.exactAlarmSettingsIntent(context))
         }
         PermissionRow("Battery optimization disabled", batteryExempt) {
-            context.startActivity(PermissionUtils.batteryOptimizationSettingsIntent(context))
+            PermissionUtils.launchBatteryOptimizationSettings(context)
         }
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
