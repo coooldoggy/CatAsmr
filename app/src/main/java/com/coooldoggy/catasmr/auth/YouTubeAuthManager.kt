@@ -3,8 +3,11 @@ package com.coooldoggy.catasmr.auth
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import com.google.android.gms.auth.api.identity.AuthorizationRequest
 import com.google.android.gms.auth.api.identity.Identity
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.common.api.CommonStatusCodes
 import com.google.android.gms.common.api.Scope
 import kotlinx.coroutines.tasks.await
 
@@ -48,7 +51,7 @@ class YouTubeAuthManager(private val context: Context) {
                 else -> AuthOutcome.Failed("No access token returned")
             }
         } catch (e: Exception) {
-            AuthOutcome.Failed(e.message ?: "Authorization failed")
+            AuthOutcome.Failed(describeError(e))
         }
     }
 
@@ -66,11 +69,27 @@ class YouTubeAuthManager(private val context: Context) {
                 AuthOutcome.Failed("No access token in authorization result")
             }
         } catch (e: Exception) {
-            AuthOutcome.Failed(e.message ?: "Failed to parse authorization result")
+            AuthOutcome.Failed(describeError(e))
+        }
+    }
+
+    /**
+     * [ApiException.getMessage] alone is often just a bare status code with no explanation
+     * (e.g. "10:"), which is useless for figuring out *why* sign-in failed. Translate it to
+     * the named status (DEVELOPER_ERROR almost always means the Google Cloud Console OAuth
+     * client's package name/SHA-1 doesn't match this build) and log the full exception.
+     */
+    private fun describeError(e: Exception): String {
+        Log.e(TAG, "YouTube authorization failed", e)
+        return if (e is ApiException) {
+            "${CommonStatusCodes.getStatusCodeString(e.statusCode)} (${e.statusCode})"
+        } else {
+            e.message ?: e.javaClass.simpleName
         }
     }
 
     companion object {
         const val YOUTUBE_UPLOAD_SCOPE = "https://www.googleapis.com/auth/youtube.upload"
+        private const val TAG = "YouTubeAuthManager"
     }
 }
