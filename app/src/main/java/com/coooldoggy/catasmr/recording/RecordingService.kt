@@ -17,6 +17,7 @@ import com.coooldoggy.catasmr.detection.CatDetector
 import com.coooldoggy.catasmr.detection.DetectionConfig
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.status.ActivityStatusRepository
+import com.coooldoggy.catasmr.streaming.CloudStreamingService
 import com.coooldoggy.catasmr.streaming.DevicePairingManager
 import com.coooldoggy.catasmr.streaming.LocalStreamingServer
 import com.coooldoggy.catasmr.streaming.StreamingFrameAnalyzer
@@ -63,6 +64,9 @@ class RecordingService : LifecycleService() {
     private var tickJob: Job? = null
     private var streamingServer: LocalStreamingServer? = null
     private var streamingAnalyzer: StreamingFrameAnalyzer? = null
+    private var cloudStreamingService: CloudStreamingService? = null
+    private var cloudStreamingEnabled = false
+    private var currentIntent: Intent? = null
 
     override fun onCreate() {
         super.onCreate()
@@ -82,6 +86,8 @@ class RecordingService : LifecycleService() {
             stopWatchingAndSelf()
             return START_NOT_STICKY
         }
+
+        currentIntent = intent
 
         if (!hasCameraPermission() || !hasMicPermission()) {
             // Android 14+ requires actually holding the camera/mic permission *at this
@@ -120,36 +126,50 @@ class RecordingService : LifecycleService() {
             }
             catDetector = detector
 
+            // Read cloud streaming preference from intent
+            cloudStreamingEnabled = currentIntent?.getBooleanExtra(EXTRA_CLOUD_STREAMING, false) ?: false
+
+            // Set up pairing
+            val pairingManager = DevicePairingManager(applicationContext)
+            val pairingCode = pairingManager.generatePairingCode()
+
             // Set up streaming if enabled
             Log.d(TAG, "Setting up streaming analyzer...")
             val streamingFrameAnalyzer = StreamingFrameAnalyzer { frameData, width, height ->
                 Log.d(TAG, "StreamingFrameAnalyzer: Got frame $width x $height (${frameData.size} bytes)")
                 streamingServer?.broadcastFrame(frameData, width, height)
+                if (cloudStreamingEnabled) {
+                    cloudStreamingService?.broadcastFrame(frameData, width, height)
+                }
             }
             streamingAnalyzer = streamingFrameAnalyzer
             Log.d(TAG, "Streaming analyzer created")
 
-            // Start streaming server
+            // Start local streaming server
             Log.d(TAG, "Starting LocalStreamingServer on port 8888...")
             val server = LocalStreamingServer(applicationContext, port = 8888)
             streamingServer = server
             server.start()
             Log.d(TAG, "Streaming server started")
 
+            // Set up cloud streaming if enabled
+            if (cloudStreamingEnabled) {
+                Log.d(TAG, "Setting up cloud streaming with code: $pairingCode")
+                cloudStreamingService = CloudStreamingService(pairingCode, android.os.Build.DEVICE)
+            }
+
             // Set up pairing information
-            val pairingManager = DevicePairingManager(applicationContext)
-            val pairingCode = pairingManager.generatePairingCode()
             val localIp = server.getLocalIpAddress()
             _streamingInfo.value = com.coooldoggy.catasmr.streaming.StreamingInfo(
                 deviceId = android.os.Build.DEVICE,
                 deviceName = android.os.Build.MODEL,
                 isLocalAvailable = true,
-                isCloudAvailable = false,
+                isCloudAvailable = cloudStreamingEnabled,
                 localAddress = localIp,
                 streamingPort = 8888,
                 pairingCode = pairingCode
             )
-            Log.d(TAG, "Streaming info updated: IP=$localIp, Code=$pairingCode")
+            Log.d(TAG, "Streaming info updated: IP=$localIp, Code=$pairingCode, Cloud=$cloudStreamingEnabled")
 
             cameraController.bind(
                 lifecycleOwner = this@RecordingService,
@@ -243,6 +263,8 @@ class RecordingService : LifecycleService() {
         streamingServer?.stop()
         streamingServer = null
         streamingAnalyzer = null
+        cloudStreamingService?.stop()
+        cloudStreamingService = null
         _streamingInfo.value = null
         ServiceCompat.stopForeground(this, ServiceCompat.STOP_FOREGROUND_REMOVE)
         stopSelf()
@@ -257,6 +279,8 @@ class RecordingService : LifecycleService() {
         streamingServer?.stop()
         streamingServer = null
         streamingAnalyzer = null
+        cloudStreamingService?.stop()
+        cloudStreamingService = null
         serviceScope.cancel()
         _isRunning.value = false
         super.onDestroy()
@@ -273,6 +297,7 @@ class RecordingService : LifecycleService() {
         const val ACTION_START_WINDOW = "com.coooldoggy.catasmr.action.SERVICE_START_WINDOW"
         const val ACTION_STOP_WINDOW = "com.coooldoggy.catasmr.action.SERVICE_STOP_WINDOW"
         const val EXTRA_WINDOW_ID = "extra_window_id"
+        const val EXTRA_CLOUD_STREAMING = "extra_cloud_streaming"
 
         /** Manual (non-scheduled) start, e.g. a "start watching now" test button. */
         const val MANUAL_WINDOW_ID = "manual"
@@ -283,10 +308,11 @@ class RecordingService : LifecycleService() {
         private val _streamingInfo = MutableStateFlow<com.coooldoggy.catasmr.streaming.StreamingInfo?>(null)
         val streamingInfo: StateFlow<com.coooldoggy.catasmr.streaming.StreamingInfo?> = _streamingInfo.asStateFlow()
 
-        fun start(context: Context, windowId: String = MANUAL_WINDOW_ID) {
+        fun start(context: Context, windowId: String = MANUAL_WINDOW_ID, cloudStreamingEnabled: Boolean = false) {
             val intent = Intent(context, RecordingService::class.java).apply {
                 action = ACTION_START_WINDOW
                 putExtra(EXTRA_WINDOW_ID, windowId)
+                putExtra(EXTRA_CLOUD_STREAMING, cloudStreamingEnabled)
             }
             ContextCompat.startForegroundService(context, intent)
         }

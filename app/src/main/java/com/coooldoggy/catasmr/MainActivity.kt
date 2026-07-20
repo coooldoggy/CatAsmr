@@ -25,6 +25,7 @@ import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.ui.home.HomeScreen
 import com.coooldoggy.catasmr.ui.settings.ScheduleSettingsScreen
 import com.coooldoggy.catasmr.ui.streaming.CameraPreviewScreen
+import com.coooldoggy.catasmr.ui.streaming.CloudViewerScreen
 import com.coooldoggy.catasmr.ui.streaming.ConnectToDeviceScreen
 import com.coooldoggy.catasmr.ui.streaming.RemoteViewerScreen
 import com.coooldoggy.catasmr.ui.streaming.RemoteViewerViewModel
@@ -38,6 +39,7 @@ private sealed class Screen {
     data object ConnectToDevice : Screen()
     data object StreamPreview : Screen()
     data class RemoteViewer(val deviceName: String, val ipAddress: String, val port: Int) : Screen()
+    data class CloudViewer(val pairingCode: String) : Screen()
 }
 
 class MainActivity : ComponentActivity() {
@@ -115,6 +117,9 @@ class MainActivity : ComponentActivity() {
                             onConnect = { deviceName, ipAddress, port ->
                                 screen = Screen.RemoteViewer(deviceName, ipAddress, port)
                             },
+                            onConnectCloud = { pairingCode ->
+                                screen = Screen.CloudViewer(pairingCode)
+                            },
                             modifier = Modifier.padding(innerPadding)
                         )
                         is Screen.RemoteViewer -> {
@@ -127,6 +132,13 @@ class MainActivity : ComponentActivity() {
                             RemoteViewerScreen(
                                 deviceName = (screen as Screen.RemoteViewer).deviceName,
                                 streamingState = viewModel.streamingState,
+                                onClose = { screen = Screen.Home },
+                                modifier = Modifier.padding(innerPadding)
+                            )
+                        }
+                        is Screen.CloudViewer -> {
+                            CloudViewerScreen(
+                                pairingCode = (screen as Screen.CloudViewer).pairingCode,
                                 onClose = { screen = Screen.Home },
                                 modifier = Modifier.padding(innerPadding)
                             )
