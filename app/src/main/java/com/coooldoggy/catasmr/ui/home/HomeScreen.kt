@@ -2,15 +2,28 @@ package com.coooldoggy.catasmr.ui.home
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Button
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
@@ -19,11 +32,13 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.material3.Icon
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -35,12 +50,12 @@ import com.coooldoggy.catasmr.status.UploadState
 import com.coooldoggy.catasmr.streaming.QrCodeGenerator
 import com.coooldoggy.catasmr.ui.components.ErrorBanner
 import com.coooldoggy.catasmr.ui.components.PermissionRow
-import com.coooldoggy.catasmr.ui.streaming.QrCodeScreen
 import com.coooldoggy.catasmr.util.PermissionUtils
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     onOpenSettings: () -> Unit,
@@ -54,7 +69,7 @@ fun HomeScreen(
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
     var refreshTick by remember { mutableIntStateOf(0) }
-    var showError by remember { mutableStateOf(false) }
+    var expandPermissions by remember { mutableStateOf(false) }
 
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
@@ -74,17 +89,27 @@ fun HomeScreen(
     val exactAlarmGranted = remember(refreshTick) { PermissionUtils.canScheduleExactAlarms(context) }
     val batteryExempt = remember(refreshTick) { PermissionUtils.isIgnoringBatteryOptimizations(context) }
 
-    Column(
-        modifier = modifier
-            .fillMaxSize()
-    ) {
+    val allPermissionsGranted = cameraGranted && micGranted && notifGranted && exactAlarmGranted && batteryExempt
+
+    Column(modifier = modifier.fillMaxSize()) {
+        TopAppBar(
+            title = { Text(stringResource(R.string.app_name), fontWeight = FontWeight.Bold) },
+            actions = {
+                IconButton(onClick = onOpenSettings) {
+                    Icon(Icons.Default.Settings, contentDescription = "Settings")
+                }
+            },
+            colors = TopAppBarDefaults.topAppBarColors(
+                containerColor = MaterialTheme.colorScheme.primary,
+                titleContentColor = MaterialTheme.colorScheme.onPrimary,
+                actionIconContentColor = MaterialTheme.colorScheme.onPrimary
+            )
+        )
+
         uiState.error?.let { error ->
             ErrorBanner(
                 error = error,
-                onDismiss = {
-                    showError = false
-                    viewModel.clearError()
-                }
+                onDismiss = { viewModel.clearError() }
             )
         }
 
@@ -92,89 +117,249 @@ fun HomeScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp)
-                .verticalScroll(rememberScrollState())
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            Text(stringResource(R.string.app_name), style = MaterialTheme.typography.headlineMedium)
+            val isWatching by RecordingService.isRunning.collectAsState()
+            val streamingInfo by RecordingService.streamingInfo.collectAsState()
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-        Text(stringResource(R.string.section_setup), style = MaterialTheme.typography.titleMedium)
-        PermissionRow(stringResource(R.string.perm_camera), cameraGranted) {
-            permissionLauncher.launch(PermissionUtils.runtimePermissionsToRequest(context).toTypedArray())
-        }
-        PermissionRow(stringResource(R.string.perm_microphone), micGranted) {
-            permissionLauncher.launch(PermissionUtils.runtimePermissionsToRequest(context).toTypedArray())
-        }
-        PermissionRow(stringResource(R.string.perm_notifications), notifGranted) {
-            permissionLauncher.launch(PermissionUtils.runtimePermissionsToRequest(context).toTypedArray())
-        }
-        PermissionRow(stringResource(R.string.perm_exact_alarms), exactAlarmGranted) {
-            context.startActivity(PermissionUtils.exactAlarmSettingsIntent(context))
-        }
-        PermissionRow(stringResource(R.string.perm_battery_optimization), batteryExempt) {
-            PermissionUtils.launchBatteryOptimizationSettings(context)
-        }
-
-        HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-        Text(stringResource(R.string.section_manual_test), style = MaterialTheme.typography.titleMedium)
-        val isWatching by RecordingService.isRunning.collectAsState()
-        val streamingInfo by RecordingService.streamingInfo.collectAsState()
-
-        Text(if (isWatching) stringResource(R.string.recording_watching) else stringResource(R.string.recording_not_watching))
-        if (isWatching) {
-            Button(onClick = { RecordingService.stop(context) }) { Text(stringResource(R.string.recording_stop_watching)) }
-            Button(onClick = onOpenPreview, modifier = Modifier.padding(top = 8.dp)) {
-                Text("View Stream Preview")
-            }
-
-            // Show QR code for pairing if streaming is active
-            streamingInfo?.let { info ->
-                info.localAddress?.let { ip ->
-                    info.pairingCode?.let { code ->
-                        val qrData = QrCodeGenerator.generatePairingData(ip, info.streamingPort, code)
-                        val qrBitmap = remember(qrData) { QrCodeGenerator.generateQrCode(qrData, 256) }
-
-                        androidx.compose.material3.Card(
-                            modifier = Modifier.padding(top = 16.dp)
-                        ) {
-                            QrCodeScreen(
-                                qrBitmap = qrBitmap,
-                                deviceIp = ip,
-                                pairingCode = code,
-                                modifier = Modifier.padding(16.dp)
+            // Recording Status Card
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                colors = CardDefaults.cardColors(
+                    containerColor = if (isWatching) MaterialTheme.colorScheme.tertiaryContainer
+                    else MaterialTheme.colorScheme.surfaceVariant
+                )
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column {
+                            Text("Recording Status", style = MaterialTheme.typography.titleSmall)
+                            Text(
+                                if (isWatching) "Active" else "Inactive",
+                                style = MaterialTheme.typography.headlineMedium,
+                                color = if (isWatching) MaterialTheme.colorScheme.tertiary
+                                else MaterialTheme.colorScheme.onSurfaceVariant,
+                                fontWeight = FontWeight.Bold
                             )
+                        }
+                    }
+
+                    if (isWatching) {
+                        Button(
+                            onClick = { RecordingService.stop(context) },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.tertiary
+                            )
+                        ) {
+                            Text("Stop Watching", color = MaterialTheme.colorScheme.onTertiary)
+                        }
+                        Button(
+                            onClick = onOpenPreview,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text("View Local Preview")
+                        }
+
+                        // QR Code Card
+                        streamingInfo?.let { info ->
+                            info.localAddress?.let { ip ->
+                                info.pairingCode?.let { code ->
+                                    val qrData = QrCodeGenerator.generatePairingData(ip, info.streamingPort, code)
+                                    val qrBitmap = remember(qrData) { QrCodeGenerator.generateQrCode(qrData, 256) }
+
+                                    Card(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        colors = CardDefaults.cardColors(
+                                            containerColor = MaterialTheme.colorScheme.surface
+                                        )
+                                    ) {
+                                        Column(
+                                            modifier = Modifier
+                                                .padding(12.dp)
+                                                .fillMaxWidth(),
+                                            horizontalAlignment = Alignment.CenterHorizontally,
+                                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                                        ) {
+                                            Text(
+                                                "Share with Others",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                                            )
+                                            Image(
+                                                bitmap = qrBitmap.asImageBitmap(),
+                                                contentDescription = "Pairing QR Code",
+                                                modifier = Modifier
+                                                    .padding(8.dp)
+                                                    .fillMaxWidth(0.6f)
+                                            )
+                                            Text(
+                                                code,
+                                                style = MaterialTheme.typography.labelLarge,
+                                                fontWeight = FontWeight.Bold
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        Button(
+                            onClick = {
+                                RecordingService.start(context)
+                                viewModel.delayedOpenPreview(onOpenPreview)
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.tertiary
+                            )
+                        ) {
+                            Text("Start Watching", color = MaterialTheme.colorScheme.onTertiary)
                         }
                     }
                 }
             }
-        } else {
-            Button(onClick = {
-                RecordingService.start(context)
-                // Small delay to let server initialize before preview connects
-                viewModel.delayedOpenPreview(onOpenPreview)
-            }) { Text(stringResource(R.string.recording_start_watching)) }
-        }
-        Button(onClick = onOpenRemoteViewer, modifier = Modifier.padding(top = 8.dp)) {
-            Text("Watch Remote Camera")
-        }
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-        Text(stringResource(R.string.section_schedule), style = MaterialTheme.typography.titleMedium)
-        Text(uiState.nextWindowLabel?.let { stringResource(R.string.schedule_next_window, it) } ?: stringResource(R.string.schedule_empty))
-        Button(onClick = onOpenSettings) { Text(stringResource(R.string.schedule_edit)) }
+            // Remote Viewing Card
+            Card(modifier = Modifier.fillMaxWidth()) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Text("Remote Viewer", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    Text(
+                        "Watch another device's camera stream",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Button(
+                        onClick = onOpenRemoteViewer,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("Connect to Camera")
+                    }
+                }
+            }
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-        Text(stringResource(R.string.section_activity), style = MaterialTheme.typography.titleMedium)
-        Text(recordingStatusLabel(context, uiState.status))
-        Text(uploadStatusLabel(context, uiState.status))
+            // Schedule Card
+            Card(modifier = Modifier.fillMaxWidth()) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Text("Feeding Schedule", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    Text(
+                        uiState.nextWindowLabel?.let { "Next: $it" } ?: "No schedule set",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Button(
+                        onClick = onOpenSettings,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("Edit Schedule")
+                    }
+                }
+            }
 
-        HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-        Text(stringResource(R.string.section_youtube), style = MaterialTheme.typography.titleMedium)
-        if (uiState.settings.isAuthorized) {
-            Text(stringResource(R.string.youtube_signed_in, uiState.settings.authorizedAccountEmail ?: "your account"))
-            Button(onClick = { viewModel.signOut() }) { Text(stringResource(R.string.youtube_sign_out)) }
-        } else {
-            Button(onClick = onSignIn) { Text(stringResource(R.string.youtube_not_signed_in)) }
-        }
+            // Activity Card
+            Card(modifier = Modifier.fillMaxWidth()) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Text("Activity", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    Text(
+                        recordingStatusLabel(context, uiState.status),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Text(
+                        uploadStatusLabel(context, uiState.status),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+
+            // Permissions Card - only show if not all granted
+            if (!allPermissionsGranted) {
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    onClick = { expandPermissions = !expandPermissions },
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.errorContainer
+                    )
+                ) {
+                    Column(
+                        modifier = Modifier.padding(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Text(
+                            "Permissions Required",
+                            style = MaterialTheme.typography.titleSmall,
+                            color = MaterialTheme.colorScheme.error,
+                            fontWeight = FontWeight.Bold
+                        )
+                        if (expandPermissions) {
+                            PermissionRow(stringResource(R.string.perm_camera), cameraGranted) {
+                                permissionLauncher.launch(PermissionUtils.runtimePermissionsToRequest(context).toTypedArray())
+                            }
+                            PermissionRow(stringResource(R.string.perm_microphone), micGranted) {
+                                permissionLauncher.launch(PermissionUtils.runtimePermissionsToRequest(context).toTypedArray())
+                            }
+                            PermissionRow(stringResource(R.string.perm_notifications), notifGranted) {
+                                permissionLauncher.launch(PermissionUtils.runtimePermissionsToRequest(context).toTypedArray())
+                            }
+                            PermissionRow(stringResource(R.string.perm_exact_alarms), exactAlarmGranted) {
+                                context.startActivity(PermissionUtils.exactAlarmSettingsIntent(context))
+                            }
+                            PermissionRow(stringResource(R.string.perm_battery_optimization), batteryExempt) {
+                                PermissionUtils.launchBatteryOptimizationSettings(context)
+                            }
+                        }
+                    }
+                }
+            }
+
+            // YouTube Card
+            Card(modifier = Modifier.fillMaxWidth()) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Text("YouTube", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    if (uiState.settings.isAuthorized) {
+                        Text(
+                            "Signed in as ${uiState.settings.authorizedAccountEmail ?: "your account"}",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Button(
+                            onClick = { viewModel.signOut() },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = ButtonDefaults.outlinedButtonColors()
+                        ) {
+                            Text("Sign Out")
+                        }
+                    } else {
+                        Button(
+                            onClick = onSignIn,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text("Sign In to YouTube")
+                        }
+                    }
+                }
+            }
         }
     }
 }
