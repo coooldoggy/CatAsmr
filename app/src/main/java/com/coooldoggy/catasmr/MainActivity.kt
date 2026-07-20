@@ -35,6 +35,7 @@ private sealed class Screen {
     data object Home : Screen()
     data object Settings : Screen()
     data object ConnectToDevice : Screen()
+    data object StreamPreview : Screen()
     data class RemoteViewer(val deviceName: String, val ipAddress: String, val port: Int) : Screen()
 }
 
@@ -80,6 +81,7 @@ class MainActivity : ComponentActivity() {
                         Screen.Home -> HomeScreen(
                             onOpenSettings = { screen = Screen.Settings },
                             onOpenRemoteViewer = { screen = Screen.ConnectToDevice },
+                            onOpenPreview = { screen = Screen.StreamPreview },
                             onSignIn = {
                                 scope.launch {
                                     when (val outcome = authManager.authorize()) {
@@ -114,6 +116,20 @@ class MainActivity : ComponentActivity() {
                             },
                             modifier = Modifier.padding(innerPadding)
                         )
+                        Screen.StreamPreview -> {
+                            val viewModel = androidx.lifecycle.viewmodel.compose.viewModel {
+                                RemoteViewerViewModel(applicationContext)
+                            }
+                            androidx.compose.runtime.LaunchedEffect(Unit) {
+                                viewModel.connectToDevice("Local Stream Preview", "127.0.0.1", 8888)
+                            }
+                            RemoteViewerScreen(
+                                deviceName = "Stream Preview",
+                                streamingState = viewModel.streamingState,
+                                onClose = { screen = Screen.Home },
+                                modifier = Modifier.padding(innerPadding)
+                            )
+                        }
                         is Screen.RemoteViewer -> {
                             val viewModel = androidx.lifecycle.viewmodel.compose.viewModel {
                                 RemoteViewerViewModel(applicationContext)

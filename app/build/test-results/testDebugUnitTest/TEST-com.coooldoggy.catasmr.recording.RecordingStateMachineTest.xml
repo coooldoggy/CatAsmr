@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.coooldoggy.catasmr.recording.RecordingStateMachineTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-07-20T04:32:45" hostname="iyulim-ui-MacBookPro.local" time="0.015">
+  <properties/>
+  <testcase name="no detection for grace period stops recording" classname="com.coooldoggy.catasmr.recording.RecordingStateMachineTest" time="0.011"/>
+  <testcase name="two positive detections within window start recording" classname="com.coooldoggy.catasmr.recording.RecordingStateMachineTest" time="0.0"/>
+  <testcase name="continued detection resets the grace period" classname="com.coooldoggy.catasmr.recording.RecordingStateMachineTest" time="0.0"/>
+  <testcase name="single positive detection does not start recording" classname="com.coooldoggy.catasmr.recording.RecordingStateMachineTest" time="0.0"/>
+  <testcase name="negative detection clears accumulated hits while watching" classname="com.coooldoggy.catasmr.recording.RecordingStateMachineTest" time="0.0"/>
+  <testcase name="positive hits outside the window do not accumulate" classname="com.coooldoggy.catasmr.recording.RecordingStateMachineTest" time="0.003"/>
+  <testcase name="max clip length forces a stop even with continued detection" classname="com.coooldoggy.catasmr.recording.RecordingStateMachineTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -43,6 +43,7 @@ import java.util.Locale
 fun HomeScreen(
     onOpenSettings: () -> Unit,
     onOpenRemoteViewer: () -> Unit,
+    onOpenPreview: () -> Unit,
     onSignIn: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel()
@@ -117,8 +118,14 @@ fun HomeScreen(
         Text(if (isWatching) stringResource(R.string.recording_watching) else stringResource(R.string.recording_not_watching))
         if (isWatching) {
             Button(onClick = { RecordingService.stop(context) }) { Text(stringResource(R.string.recording_stop_watching)) }
+            Button(onClick = onOpenPreview, modifier = Modifier.padding(top = 8.dp)) {
+                Text("View Stream Preview")
+            }
         } else {
-            Button(onClick = { RecordingService.start(context) }) { Text(stringResource(R.string.recording_start_watching)) }
+            Button(onClick = {
+                RecordingService.start(context)
+                onOpenPreview()
+            }) { Text(stringResource(R.string.recording_start_watching)) }
         }
         Button(onClick = onOpenRemoteViewer, modifier = Modifier.padding(top = 8.dp)) {
             Text("Watch Remote Camera")
