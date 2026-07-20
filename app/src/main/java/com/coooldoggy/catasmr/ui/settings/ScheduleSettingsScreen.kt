@@ -32,6 +32,7 @@ import com.coooldoggy.catasmr.schedule.ScheduleWindow
 import com.coooldoggy.catasmr.settings.DetectionSensitivity
 import com.coooldoggy.catasmr.settings.PrivacyStatus
 import com.coooldoggy.catasmr.settings.VideoQuality
+import com.coooldoggy.catasmr.ui.components.ErrorBanner
 import com.coooldoggy.catasmr.ui.components.TimePickerDialog
 import com.coooldoggy.catasmr.ui.components.WindowEditorRow
 
@@ -48,15 +49,26 @@ fun ScheduleSettingsScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp)
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            Text(stringResource(R.string.schedule_settings), style = MaterialTheme.typography.headlineSmall)
-            TextButton(onClick = onBack) { Text(stringResource(R.string.schedule_done)) }
+        uiState.error?.let { error ->
+            ErrorBanner(
+                error = error,
+                onDismiss = { viewModel.clearError() }
+            )
         }
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp)
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(stringResource(R.string.schedule_settings), style = MaterialTheme.typography.headlineSmall)
+                TextButton(onClick = onBack) { Text(stringResource(R.string.schedule_done)) }
+            }
 
         if (uiState.windows.isEmpty()) {
             Text(stringResource(R.string.schedule_no_windows))
@@ -100,6 +112,7 @@ fun ScheduleSettingsScreen(
 
         ToggleRow(stringResource(R.string.setting_wifi_only), uiState.settings.wifiOnly) { viewModel.setWifiOnly(it) }
         ToggleRow(stringResource(R.string.setting_keep_local), uiState.settings.keepLocalCopy) { viewModel.setKeepLocalCopy(it) }
+        }
     }
 
     editingWindow?.let { window ->

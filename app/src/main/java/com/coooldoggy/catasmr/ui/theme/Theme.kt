@@ -9,34 +9,76 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+private val LightColorScheme = lightColorScheme(
+    primary = Amber30,
+    onPrimary = Color.White,
+    primaryContainer = Amber90,
+    onPrimaryContainer = Amber10,
+
+    secondary = Cream30,
+    onSecondary = Color.White,
+    secondaryContainer = Cream90,
+    onSecondaryContainer = Cream10,
+
+    tertiary = Emerald30,
+    onTertiary = Color.White,
+    tertiaryContainer = Emerald90,
+    onTertiaryContainer = Emerald10,
+
+    error = Error,
+    onError = Color.White,
+    errorContainer = Error90,
+    onErrorContainer = ErrorDark,
+
+    background = Neutral90,
+    onBackground = Neutral10,
+
+    surface = Color.White,
+    onSurface = Neutral10,
+    surfaceVariant = Neutral80,
+    onSurfaceVariant = Neutral40,
+
+    outline = Neutral50
 )
 
-private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+private val DarkColorScheme = darkColorScheme(
+    primary = Amber50,
+    onPrimary = Amber10,
+    primaryContainer = Amber30,
+    onPrimaryContainer = Amber90,
 
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    secondary = Cream50,
+    onSecondary = Cream10,
+    secondaryContainer = Cream30,
+    onSecondaryContainer = Cream90,
+
+    tertiary = Emerald50,
+    onTertiary = Emerald10,
+    tertiaryContainer = Emerald30,
+    onTertiaryContainer = Emerald90,
+
+    error = Color(0xFFFF7B7B),
+    onError = ErrorDark,
+    errorContainer = Error,
+    onErrorContainer = Color(0xFFFFCDD2),
+
+    background = Neutral10,
+    onBackground = Neutral90,
+
+    surface = Neutral20,
+    onSurface = Neutral90,
+    surfaceVariant = Neutral30,
+    onSurfaceVariant = Neutral80,
+
+    outline = Neutral60
 )
 
 @Composable
 fun CatAsmrTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
@@ -45,7 +87,6 @@ fun CatAsmrTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }

@@ -10,6 +10,8 @@ import com.coooldoggy.catasmr.settings.AppSettings
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.status.ActivityStatus
 import com.coooldoggy.catasmr.status.ActivityStatusRepository
+import com.coooldoggy.catasmr.ui.util.UiError
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
@@ -23,6 +25,8 @@ data class HomeUiState(
     val settings: AppSettings = AppSettings(),
     val status: ActivityStatus = ActivityStatus(),
     val nextWindowLabel: String? = null,
+    val isLoading: Boolean = false,
+    val error: UiError? = null,
 )
 
 class HomeViewModel(application: Application) : AndroidViewModel(application) {
@@ -31,15 +35,20 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     private val scheduleRepository = ScheduleRepository(application)
     private val statusRepository = ActivityStatusRepository(application)
 
+    private val _error = MutableStateFlow<UiError?>(null)
+
     val uiState: StateFlow<HomeUiState> = combine(
         settingsRepository.settings,
         statusRepository.status,
-        scheduleRepository.windows
-    ) { settings, status, windows ->
+        scheduleRepository.windows,
+        _error
+    ) { settings, status, windows, error ->
         HomeUiState(
             settings = settings,
             status = status,
-            nextWindowLabel = nextWindowLabel(windows)
+            nextWindowLabel = nextWindowLabel(windows),
+            isLoading = false,
+            error = error
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), HomeUiState())
 
@@ -52,6 +61,17 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun signOut() {
-        viewModelScope.launch { settingsRepository.setAuthorization(false, null) }
+        viewModelScope.launch {
+            try {
+                settingsRepository.setAuthorization(false, null)
+                _error.value = null
+            } catch (e: Exception) {
+                _error.value = UiError.OperationFailed("Failed to sign out")
+            }
+        }
+    }
+
+    fun clearError() {
+        _error.value = null
     }
 }

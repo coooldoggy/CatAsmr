@@ -31,6 +31,7 @@ import com.coooldoggy.catasmr.R
 import com.coooldoggy.catasmr.recording.RecordingService
 import com.coooldoggy.catasmr.status.ActivityStatus
 import com.coooldoggy.catasmr.status.UploadState
+import com.coooldoggy.catasmr.ui.components.ErrorBanner
 import com.coooldoggy.catasmr.ui.components.PermissionRow
 import com.coooldoggy.catasmr.util.PermissionUtils
 import java.text.SimpleDateFormat
@@ -48,6 +49,7 @@ fun HomeScreen(
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
     var refreshTick by remember { mutableIntStateOf(0) }
+    var showError by remember { mutableStateOf(false) }
 
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
@@ -70,10 +72,24 @@ fun HomeScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp)
-            .verticalScroll(rememberScrollState())
     ) {
-        Text(stringResource(R.string.app_name), style = MaterialTheme.typography.headlineMedium)
+        uiState.error?.let { error ->
+            ErrorBanner(
+                error = error,
+                onDismiss = {
+                    showError = false
+                    viewModel.clearError()
+                }
+            )
+        }
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp)
+                .verticalScroll(rememberScrollState())
+        ) {
+            Text(stringResource(R.string.app_name), style = MaterialTheme.typography.headlineMedium)
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
         Text(stringResource(R.string.section_setup), style = MaterialTheme.typography.titleMedium)
@@ -120,6 +136,7 @@ fun HomeScreen(
             Button(onClick = { viewModel.signOut() }) { Text(stringResource(R.string.youtube_sign_out)) }
         } else {
             Button(onClick = onSignIn) { Text(stringResource(R.string.youtube_not_signed_in)) }
+        }
         }
     }
 }
