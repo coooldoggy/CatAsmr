@@ -51,6 +51,7 @@ class RemoteViewerViewModel(context: Context) : ViewModel() {
 
                     Log.d(TAG, "Connection attempt $attempts/$maxAttempts to $ipAddress:$port")
                     streamSocket = Socket(ipAddress, port)
+                    Log.d(TAG, "Socket connected successfully")
 
                     val socket = streamSocket ?: return@launch
                     socket.soTimeout = 10000
@@ -67,17 +68,26 @@ class RemoteViewerViewModel(context: Context) : ViewModel() {
                     var contentLength = 0
 
                     // Skip HTTP response headers
+                    Log.d(TAG, "Reading HTTP headers...")
                     while (reader.readLine().also { line = it ?: "" }.isNotEmpty()) {
-                        // Continue until empty line
+                        Log.d(TAG, "Header: $line")
                     }
+                    Log.d(TAG, "Headers done, waiting for frames...")
 
                     // Read multipart stream
                     val input = BufferedInputStream(socket.getInputStream())
                     val buffer = ByteArray(65536)
                     var bytesRead: Int
                     var bytesOfCurrentFrame = 0
+                    var frameCount = 0
+                    val startTime = System.currentTimeMillis()
+                    val timeoutMs = 5000L // 5 second timeout for first frame
 
                     while (input.read(buffer).also { bytesRead = it } != -1) {
+                        // Check timeout for first frame
+                        if (frameCount == 0 && System.currentTimeMillis() - startTime > timeoutMs) {
+                            throw Exception("Timeout waiting for first frame (5 seconds)")
+                        }
                         var pos = 0
 
                         while (pos < bytesRead) {
@@ -115,8 +125,9 @@ class RemoteViewerViewModel(context: Context) : ViewModel() {
                                     try {
                                         val bitmap = BitmapFactory.decodeByteArray(frameBuffer, 0, bytesOfCurrentFrame)
                                         if (bitmap != null) {
+                                            frameCount++
                                             _streamingState.value = StreamingState.Connected(bitmap, 10)
-                                            Log.d(TAG, "Decoded frame: $bytesOfCurrentFrame bytes")
+                                            Log.d(TAG, "Frame #$frameCount received: $bytesOfCurrentFrame bytes")
                                         }
                                     } catch (e: Exception) {
                                         Log.e(TAG, "Error decoding frame ($bytesOfCurrentFrame bytes)", e)
