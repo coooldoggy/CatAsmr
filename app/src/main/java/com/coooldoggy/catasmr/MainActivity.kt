@@ -24,12 +24,18 @@ import com.coooldoggy.catasmr.auth.YouTubeAuthManager
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.ui.home.HomeScreen
 import com.coooldoggy.catasmr.ui.settings.ScheduleSettingsScreen
+import com.coooldoggy.catasmr.ui.streaming.ConnectToDeviceScreen
+import com.coooldoggy.catasmr.ui.streaming.RemoteViewerScreen
+import com.coooldoggy.catasmr.ui.streaming.RemoteViewerViewModel
+import com.coooldoggy.catasmr.ui.streaming.StreamingState
 import com.coooldoggy.catasmr.ui.theme.CatAsmrTheme
 import kotlinx.coroutines.launch
 
 private sealed class Screen {
     data object Home : Screen()
     data object Settings : Screen()
+    data object ConnectToDevice : Screen()
+    data class RemoteViewer(val deviceName: String, val ipAddress: String, val port: Int) : Screen()
 }
 
 class MainActivity : ComponentActivity() {
@@ -73,6 +79,7 @@ class MainActivity : ComponentActivity() {
                     when (screen) {
                         Screen.Home -> HomeScreen(
                             onOpenSettings = { screen = Screen.Settings },
+                            onOpenRemoteViewer = { screen = Screen.ConnectToDevice },
                             onSignIn = {
                                 scope.launch {
                                     when (val outcome = authManager.authorize()) {
@@ -100,6 +107,27 @@ class MainActivity : ComponentActivity() {
                             onBack = { screen = Screen.Home },
                             modifier = Modifier.padding(innerPadding)
                         )
+                        Screen.ConnectToDevice -> ConnectToDeviceScreen(
+                            onBack = { screen = Screen.Home },
+                            onConnect = { deviceName, ipAddress, port ->
+                                screen = Screen.RemoteViewer(deviceName, ipAddress, port)
+                            },
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                        is Screen.RemoteViewer -> {
+                            val viewModel = androidx.lifecycle.viewmodel.compose.viewModel {
+                                RemoteViewerViewModel(applicationContext)
+                            }
+                            androidx.compose.runtime.LaunchedEffect(screen) {
+                                viewModel.connectToDevice((screen as Screen.RemoteViewer).deviceName, (screen as Screen.RemoteViewer).ipAddress, (screen as Screen.RemoteViewer).port)
+                            }
+                            RemoteViewerScreen(
+                                deviceName = (screen as Screen.RemoteViewer).deviceName,
+                                streamingState = viewModel.streamingState,
+                                onClose = { screen = Screen.Home },
+                                modifier = Modifier.padding(innerPadding)
+                            )
+                        }
                     }
                 }
             }

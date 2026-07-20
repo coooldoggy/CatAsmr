@@ -42,6 +42,7 @@ import java.util.Locale
 @Composable
 fun HomeScreen(
     onOpenSettings: () -> Unit,
+    onOpenRemoteViewer: () -> Unit,
     onSignIn: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel()
@@ -118,6 +119,9 @@ fun HomeScreen(
             Button(onClick = { RecordingService.stop(context) }) { Text(stringResource(R.string.recording_stop_watching)) }
         } else {
             Button(onClick = { RecordingService.start(context) }) { Text(stringResource(R.string.recording_start_watching)) }
+        }
+        Button(onClick = onOpenRemoteViewer, modifier = Modifier.padding(top = 8.dp)) {
+            Text("Watch Remote Camera")
         }
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))

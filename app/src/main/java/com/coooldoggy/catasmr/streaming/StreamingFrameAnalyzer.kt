@@ -57,9 +57,6 @@ class StreamingFrameAnalyzer(
         val planes = image.planes
         val buffer = planes[0].buffer
         buffer.rewind()
-        val pixelStride = planes[0].pixelStride
-        val rowPadding = planes[0].rowPadding
-        val rowBytes = pixelStride * image.width + rowPadding
 
         val data = ByteArray(buffer.capacity() +
             (planes[1].buffer.capacity() + planes[2].buffer.capacity()))
