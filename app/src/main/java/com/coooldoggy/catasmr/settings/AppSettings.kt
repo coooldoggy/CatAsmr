@@ -1,5 +1,7 @@
 package com.coooldoggy.catasmr.settings
 
+import kotlinx.serialization.Serializable
+
 enum class DetectionSensitivity { LOW, MEDIUM, HIGH }
 
 enum class VideoQuality { SD, HD, FHD }
@@ -9,6 +11,7 @@ enum class PrivacyStatus(val apiValue: String) {
     UNLISTED("unlisted")
 }
 
+@Serializable
 data class AppSettings(
     val sensitivity: DetectionSensitivity = DetectionSensitivity.MEDIUM,
     val videoQuality: VideoQuality = VideoQuality.HD,

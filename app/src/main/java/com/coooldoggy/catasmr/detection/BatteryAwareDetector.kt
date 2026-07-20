@@ -1,9 +1,8 @@
 package com.coooldoggy.catasmr.detection
 
-import android.content.BatteryManager
 import android.content.Context
 import android.content.IntentFilter
-import android.os.BatteryManager.BATTERY_HEALTH_GOOD
+import android.os.BatteryManager
 import android.util.Log
 
 object BatteryAwareDetector {

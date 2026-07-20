@@ -17,12 +17,10 @@ object PerformanceMonitor {
             val freeMemory = runtime.freeMemory() / 1024 / 1024
             val usedMemory = totalMemory - freeMemory
 
-            val nativeHeap = Debug.getNativeHeap().sumOf { it.sizeMb }.toLong()
-
-            val info = "Memory - Used: ${usedMemory}MB / ${maxMemory}MB, Native: ${nativeHeap}MB"
+            val info = "Memory - Used: ${usedMemory}MB / ${maxMemory}MB"
             Log.i(TAG, tag + ": " + info)
 
-            FirebaseCrashlytics.getInstance().log("$tag memory: used=${usedMemory}MB max=${maxMemory}MB native=${nativeHeap}MB")
+            FirebaseCrashlytics.getInstance().log("$tag memory: used=${usedMemory}MB max=${maxMemory}MB")
         } catch (e: Exception) {
             Log.e(TAG, "Failed to log memory usage", e)
         }
