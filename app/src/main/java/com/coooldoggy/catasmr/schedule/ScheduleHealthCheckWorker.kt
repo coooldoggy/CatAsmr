@@ -29,7 +29,13 @@ class ScheduleHealthCheckWorker(
         private const val WORK_NAME = "schedule_health_check"
 
         fun enqueue(context: Context) {
-            val request = PeriodicWorkRequestBuilder<ScheduleHealthCheckWorker>(6, TimeUnit.HOURS).build()
+            val request = PeriodicWorkRequestBuilder<ScheduleHealthCheckWorker>(6, TimeUnit.HOURS)
+                .setBackoffCriteria(
+                    androidx.work.BackoffPolicy.EXPONENTIAL,
+                    androidx.work.WorkRequest.DEFAULT_BACKOFF_DELAY_MILLIS,
+                    TimeUnit.MILLISECONDS
+                )
+                .build()
             WorkManager.getInstance(context).enqueueUniquePeriodicWork(
                 WORK_NAME,
                 ExistingPeriodicWorkPolicy.KEEP,

@@ -7,15 +7,19 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.ServiceInfo
 import android.os.Build
+import android.util.Log
 import androidx.camera.video.VideoRecordEvent
 import androidx.core.app.ServiceCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleService
+import com.coooldoggy.catasmr.detection.BatteryAwareDetector
 import com.coooldoggy.catasmr.detection.CatDetector
 import com.coooldoggy.catasmr.detection.DetectionConfig
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.status.ActivityStatusRepository
 import com.coooldoggy.catasmr.upload.UploadQueue
+import com.coooldoggy.catasmr.util.PerformanceMonitor
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -38,6 +42,8 @@ import kotlinx.coroutines.launch
  * [CameraController], driven by [RecordingStateMachine].
  */
 class RecordingService : LifecycleService() {
+
+    private var recordingStartTime: Long = 0
 
     // Main dispatcher deliberately: the state machine (mutated from both the ML Kit
     // detection callback and the tick loop below) is not thread-safe, and camera calls
@@ -122,9 +128,18 @@ class RecordingService : LifecycleService() {
     private fun startTicking(machine: RecordingStateMachine) {
         tickJob?.cancel()
         tickJob = serviceScope.launch {
+            val analysisInterval = BatteryAwareDetector.getAnalysisInterval(applicationContext)
+            Log.d(TAG, "Starting recording with ${analysisInterval}ms analysis interval")
+            PerformanceMonitor.logMemoryUsage(applicationContext, "recording_start")
+
             while (isActive) {
-                delay(1000)
-                applyAction(machine.onTick())
+                delay(analysisInterval)
+                try {
+                    applyAction(machine.onTick())
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error in recording tick", e)
+                    FirebaseCrashlytics.getInstance().recordException(e)
+                }
             }
         }
     }
@@ -132,12 +147,15 @@ class RecordingService : LifecycleService() {
     private fun applyAction(action: RecordingStateMachine.Action) {
         when (action) {
             RecordingStateMachine.Action.StartRecording -> {
+                recordingStartTime = System.currentTimeMillis()
                 cameraController.startRecording { event -> handleRecordEvent(event) }
                 updateNotification("Recording your cat…")
+                Log.d(TAG, "Started recording")
             }
             RecordingStateMachine.Action.StopRecording -> {
                 cameraController.stopRecording()
                 updateNotification("Watching for your cat…")
+                Log.d(TAG, "Stopped recording")
             }
             RecordingStateMachine.Action.None -> Unit
         }
@@ -146,10 +164,28 @@ class RecordingService : LifecycleService() {
     private fun handleRecordEvent(event: VideoRecordEvent) {
         if (event !is VideoRecordEvent.Finalize) return
         serviceScope.launch {
+            val recordingDuration = System.currentTimeMillis() - recordingStartTime
             if (!event.hasError()) {
-                UploadQueue.enqueue(applicationContext, event.outputResults.outputUri)
-                statusRepository.onRecordingFinished(success = true)
+                try {
+                    val fileSize = applicationContext.contentResolver.query(
+                        event.outputResults.outputUri,
+                        null, null, null, null
+                    )?.use { cursor ->
+                        cursor.moveToFirst()
+                        val sizeIndex = cursor.getColumnIndexOrThrow(android.provider.MediaStore.MediaColumns.SIZE)
+                        cursor.getLong(sizeIndex)
+                    } ?: 0L
+
+                    PerformanceMonitor.logRecordingSession(recordingDuration, fileSize)
+                    UploadQueue.enqueue(applicationContext, event.outputResults.outputUri)
+                    statusRepository.onRecordingFinished(success = true)
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error processing recorded video", e)
+                    FirebaseCrashlytics.getInstance().recordException(e)
+                    statusRepository.onRecordingFinished(success = false)
+                }
             } else {
+                Log.w(TAG, "Recording error: ${event.error}")
                 statusRepository.onRecordingFinished(success = false)
             }
         }
@@ -172,6 +208,8 @@ class RecordingService : LifecycleService() {
     }
 
     override fun onDestroy() {
+        Log.d(TAG, "Service destroying")
+        PerformanceMonitor.logMemoryUsage(applicationContext, "recording_end")
         tickJob?.cancel()
         cameraController.unbind()
         catDetector?.close()
@@ -187,6 +225,7 @@ class RecordingService : LifecycleService() {
         ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED
 
     companion object {
+        private const val TAG = "RecordingService"
         const val ACTION_START_WINDOW = "com.coooldoggy.catasmr.action.SERVICE_START_WINDOW"
         const val ACTION_STOP_WINDOW = "com.coooldoggy.catasmr.action.SERVICE_STOP_WINDOW"
         const val EXTRA_WINDOW_ID = "extra_window_id"

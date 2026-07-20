@@ -2,12 +2,13 @@ package com.coooldoggy.catasmr.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.ErrorOutline
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -15,7 +16,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.coooldoggy.catasmr.ui.util.UiError
 
@@ -46,12 +46,12 @@ fun ErrorBanner(
             verticalAlignment = Alignment.Top
         ) {
             Icon(
-                Icons.Filled.ErrorOutline,
+                imageVector = Icons.Filled.Info,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.error,
                 modifier = Modifier.padding(top = 2.dp)
             )
-            androidx.compose.foundation.layout.Column {
+            Column {
                 Text(
                     text = title,
                     style = MaterialTheme.typography.labelLarge,
@@ -66,7 +66,7 @@ fun ErrorBanner(
         }
         IconButton(onClick = onDismiss, modifier = Modifier.padding(0.dp)) {
             Icon(
-                Icons.Filled.Close,
+                imageVector = Icons.Filled.Close,
                 contentDescription = "Dismiss",
                 tint = MaterialTheme.colorScheme.error
             )
