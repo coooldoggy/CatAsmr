@@ -59,4 +59,42 @@
     <!-- Notification channel -->
     <string name="notification_channel_title">Cat camera activity</string>
     <string name="notification_channel_desc">Shows when PawWatch is watching for or recording your cat</string>
+
+    <!-- Home Screen -->
+    <string name="home_recording_status">Recording Status</string>
+    <string name="home_active">Active</string>
+    <string name="home_inactive">Inactive</string>
+    <string name="home_stop_watching">Stop Watching</string>
+    <string name="home_view_preview">View Local Preview</string>
+    <string name="home_start_watching">Start Watching</string>
+    <string name="home_share_qr">Share with Others</string>
+    <string name="home_remote_viewer">Remote Viewer</string>
+    <string name="home_remote_desc">Watch another device\'s camera stream</string>
+    <string name="home_connect_camera">Connect to Camera</string>
+    <string name="home_feeding_schedule">Feeding Schedule</string>
+    <string name="home_no_schedule">No schedule set</string>
+    <string name="home_edit_schedule">Edit Schedule</string>
+    <string name="home_activity">Activity</string>
+    <string name="home_permissions_required">Permissions Required</string>
+    <string name="home_youtube">YouTube</string>
+    <string name="home_sign_in_youtube">Sign In to YouTube</string>
+
+    <!-- Remote Viewer -->
+    <string name="remote_scan_qr">Scan QR Code</string>
+    <string name="remote_or_manual">Or enter details manually:</string>
+    <string name="remote_device_name">Device Name</string>
+    <string name="remote_device_hint">e.g., Living Room Camera</string>
+    <string name="remote_ip_address">IP Address</string>
+    <string name="remote_ip_hint">192.168.1.100</string>
+    <string name="remote_port">Port</string>
+    <string name="remote_connect">Connect</string>
+    <string name="remote_find_ip">To find your device IP:\nadb shell ip addr show | grep \'inet \'</string>
+    <string name="remote_scan_hint">Point your camera at the QR code</string>
+    <string name="remote_back">Back</string>
+
+    <!-- QR Code -->
+    <string name="qr_scan_title">Scan to Connect</string>
+    <string name="qr_scan_desc">다른 기기에서 카메라를 보려면 QR 코드를 스캔하세요</string>
+    <string name="qr_ip_label">IP:</string>
+    <string name="qr_code_label">Code:</string>
 </resources>

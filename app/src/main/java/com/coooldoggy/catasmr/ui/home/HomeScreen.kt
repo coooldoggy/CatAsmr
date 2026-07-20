@@ -141,9 +141,9 @@ fun HomeScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text("Recording Status", style = MaterialTheme.typography.titleSmall)
+                            Text(stringResource(R.string.home_recording_status), style = MaterialTheme.typography.titleSmall)
                             Text(
-                                if (isWatching) "Active" else "Inactive",
+                                if (isWatching) stringResource(R.string.home_active) else stringResource(R.string.home_inactive),
                                 style = MaterialTheme.typography.headlineMedium,
                                 color = if (isWatching) MaterialTheme.colorScheme.tertiary
                                 else MaterialTheme.colorScheme.onSurfaceVariant,
@@ -160,13 +160,13 @@ fun HomeScreen(
                                 containerColor = MaterialTheme.colorScheme.tertiary
                             )
                         ) {
-                            Text("Stop Watching", color = MaterialTheme.colorScheme.onTertiary)
+                            Text(stringResource(R.string.home_stop_watching), color = MaterialTheme.colorScheme.onTertiary)
                         }
                         Button(
                             onClick = onOpenPreview,
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Text("View Local Preview")
+                            Text(stringResource(R.string.home_view_preview))
                         }
 
                         // QR Code Card
@@ -190,7 +190,7 @@ fun HomeScreen(
                                             verticalArrangement = Arrangement.spacedBy(8.dp)
                                         ) {
                                             Text(
-                                                "Share with Others",
+                                                stringResource(R.string.home_share_qr),
                                                 style = MaterialTheme.typography.labelSmall,
                                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                                             )
@@ -222,7 +222,7 @@ fun HomeScreen(
                                 containerColor = MaterialTheme.colorScheme.tertiary
                             )
                         ) {
-                            Text("Start Watching", color = MaterialTheme.colorScheme.onTertiary)
+                            Text(stringResource(R.string.home_start_watching), color = MaterialTheme.colorScheme.onTertiary)
                         }
                     }
                 }
@@ -234,9 +234,9 @@ fun HomeScreen(
                     modifier = Modifier.padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    Text("Remote Viewer", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.home_remote_viewer), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                     Text(
-                        "Watch another device's camera stream",
+                        stringResource(R.string.home_remote_desc),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -244,7 +244,7 @@ fun HomeScreen(
                         onClick = onOpenRemoteViewer,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("Connect to Camera")
+                        Text(stringResource(R.string.home_connect_camera))
                     }
                 }
             }
@@ -255,9 +255,9 @@ fun HomeScreen(
                     modifier = Modifier.padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    Text("Feeding Schedule", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.home_feeding_schedule), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                     Text(
-                        uiState.nextWindowLabel?.let { "Next: $it" } ?: "No schedule set",
+                        uiState.nextWindowLabel?.let { stringResource(R.string.schedule_next_window, it) } ?: stringResource(R.string.home_no_schedule),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -265,7 +265,7 @@ fun HomeScreen(
                         onClick = onOpenSettings,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("Edit Schedule")
+                        Text(stringResource(R.string.home_edit_schedule))
                     }
                 }
             }
@@ -276,7 +276,7 @@ fun HomeScreen(
                     modifier = Modifier.padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Text("Activity", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.home_activity), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                     Text(
                         recordingStatusLabel(context, uiState.status),
                         style = MaterialTheme.typography.bodySmall,
@@ -304,7 +304,7 @@ fun HomeScreen(
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         Text(
-                            "Permissions Required",
+                            stringResource(R.string.home_permissions_required),
                             style = MaterialTheme.typography.titleSmall,
                             color = MaterialTheme.colorScheme.error,
                             fontWeight = FontWeight.Bold
@@ -336,10 +336,10 @@ fun HomeScreen(
                     modifier = Modifier.padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    Text("YouTube", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.home_youtube), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                     if (uiState.settings.isAuthorized) {
                         Text(
-                            "Signed in as ${uiState.settings.authorizedAccountEmail ?: "your account"}",
+                            stringResource(R.string.youtube_signed_in, uiState.settings.authorizedAccountEmail ?: "your account"),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -348,14 +348,14 @@ fun HomeScreen(
                             modifier = Modifier.fillMaxWidth(),
                             colors = ButtonDefaults.outlinedButtonColors()
                         ) {
-                            Text("Sign Out")
+                            Text(stringResource(R.string.youtube_sign_out))
                         }
                     } else {
                         Button(
                             onClick = onSignIn,
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Text("Sign In to YouTube")
+                            Text(stringResource(R.string.home_sign_in_youtube))
                         }
                     }
                 }

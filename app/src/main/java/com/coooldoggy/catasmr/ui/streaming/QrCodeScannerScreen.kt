@@ -26,8 +26,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import com.coooldoggy.catasmr.R
 import com.coooldoggy.catasmr.streaming.QrCodeGenerator
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
@@ -145,11 +147,11 @@ fun QrCodeScannerScreen(
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Text(
-                "Scan QR Code",
+                stringResource(R.string.qr_scan_title),
                 style = MaterialTheme.typography.titleMedium
             )
             Text(
-                "Point your camera at the QR code",
+                stringResource(R.string.remote_scan_hint),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

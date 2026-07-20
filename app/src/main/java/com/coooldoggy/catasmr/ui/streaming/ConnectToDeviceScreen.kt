@@ -22,9 +22,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.material3.ExperimentalMaterial3Api
+import com.coooldoggy.catasmr.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,10 +57,10 @@ fun ConnectToDeviceScreen(
 
     Column(modifier = modifier.fillMaxSize()) {
         TopAppBar(
-            title = { Text("Connect to Camera") },
+            title = { Text(stringResource(R.string.home_connect_camera)) },
             navigationIcon = {
                 IconButton(onClick = onBack) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.remote_back))
                 }
             }
         )
@@ -79,37 +81,37 @@ fun ConnectToDeviceScreen(
                 onClick = { showScanner = true },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Scan QR Code")
+                Text(stringResource(R.string.remote_scan_qr))
             }
 
             Text(
-                "Or enter details manually:",
+                stringResource(R.string.remote_or_manual),
                 style = MaterialTheme.typography.labelMedium,
                 modifier = Modifier.padding(vertical = 16.dp)
             )
 
-            Text("Device Name", style = MaterialTheme.typography.labelMedium)
+            Text(stringResource(R.string.remote_device_name), style = MaterialTheme.typography.labelMedium)
             TextField(
                 value = deviceName,
                 onValueChange = { deviceName = it },
-                placeholder = { Text("e.g., Living Room Camera") },
+                placeholder = { Text(stringResource(R.string.remote_device_hint)) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 16.dp)
             )
 
-            Text("IP Address", style = MaterialTheme.typography.labelMedium)
+            Text(stringResource(R.string.remote_ip_address), style = MaterialTheme.typography.labelMedium)
             TextField(
                 value = ipAddress,
                 onValueChange = { ipAddress = it },
-                placeholder = { Text("192.168.1.100") },
+                placeholder = { Text(stringResource(R.string.remote_ip_hint)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 16.dp)
             )
 
-            Text("Port", style = MaterialTheme.typography.labelMedium)
+            Text(stringResource(R.string.remote_port), style = MaterialTheme.typography.labelMedium)
             TextField(
                 value = port,
                 onValueChange = { port = it },
@@ -129,11 +131,11 @@ fun ConnectToDeviceScreen(
                 modifier = Modifier.fillMaxWidth(),
                 enabled = deviceName.isNotBlank() && ipAddress.isNotBlank()
             ) {
-                Text("Connect")
+                Text(stringResource(R.string.remote_connect))
             }
 
             Text(
-                "To find your device IP:\nadb shell ip addr show | grep 'inet '",
+                stringResource(R.string.remote_find_ip),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.secondary,
                 modifier = Modifier.padding(top = 24.dp)
