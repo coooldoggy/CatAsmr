@@ -8,7 +8,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -36,13 +36,29 @@ fun ConnectToDeviceScreen(
     var deviceName by remember { mutableStateOf("") }
     var ipAddress by remember { mutableStateOf("") }
     var port by remember { mutableStateOf("8888") }
+    var showScanner by remember { mutableStateOf(false) }
+
+    if (showScanner) {
+        QrCodeScannerScreen(
+            onQrCodeScanned = { ip, scannedPort, pairingCode ->
+                ipAddress = ip
+                port = scannedPort.toString()
+                showScanner = false
+            },
+            onClose = {
+                showScanner = false
+            },
+            modifier = modifier
+        )
+        return
+    }
 
     Column(modifier = modifier.fillMaxSize()) {
         TopAppBar(
             title = { Text("Connect to Camera") },
             navigationIcon = {
                 IconButton(onClick = onBack) {
-                    Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                 }
             }
         )
@@ -57,6 +73,19 @@ fun ConnectToDeviceScreen(
                 "Enter device details to connect to a camera stream",
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(bottom = 24.dp)
+            )
+
+            Button(
+                onClick = { showScanner = true },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Scan QR Code")
+            }
+
+            Text(
+                "Or enter details manually:",
+                style = MaterialTheme.typography.labelMedium,
+                modifier = Modifier.padding(vertical = 16.dp)
             )
 
             Text("Device Name", style = MaterialTheme.typography.labelMedium)
