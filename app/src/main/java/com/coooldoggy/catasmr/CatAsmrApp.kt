@@ -25,7 +25,12 @@ class CatAsmrApp : Application(), Configuration.Provider {
 
     private fun initCrashlytics() {
         val crashlytics = FirebaseCrashlytics.getInstance()
-        crashlytics.setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
+        try {
+            val isDebug = applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE != 0
+            crashlytics.setCrashlyticsCollectionEnabled(!isDebug)
+        } catch (e: Exception) {
+            crashlytics.setCrashlyticsCollectionEnabled(false)
+        }
         Thread.setDefaultUncaughtExceptionHandler { thread, exception ->
             crashlytics.recordException(exception)
             Log.e(TAG, "Uncaught exception in thread ${thread.name}", exception)

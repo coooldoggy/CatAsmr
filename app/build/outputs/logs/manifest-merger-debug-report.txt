@@ -1,0 +1,1133 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-64:12
+MERGED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.mlkit:image-labeling-default-common:17.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/64e3f5949358b25179b44529507d07df/transformed/image-labeling-default-common-17.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.mlkit:image-labeling-common:18.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/78c197d50cbfa2822cb46b7208a97991/transformed/image-labeling-common-18.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:2:1-20:12
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yulim/.gradle/caches/8.10.2/transforms/debcdc3492ddbfcfd2da25542630e98f/transformed/vision-common-17.3.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/5e409f8889b78a2cf9bb9bd70a6f5c64/transformed/play-services-auth-api-phone-18.0.2/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] /Users/yulim/.gradle/caches/8.10.2/transforms/60a52ebdb347dd08f966cf7de19a53a3/transformed/play-services-auth-base-18.0.10/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2cc88b0091eacd175720e85ac99bbe73/transformed/play-services-fido-20.0.1/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af11ee7c4951d445eaae18e080e38f0a/transformed/play-services-base-18.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-view:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b6d5698221b47c85787c50ec75c21f39/transformed/camera-view-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-video:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2461defc4074a0521f318f96bcfa1cc0/transformed/camera-video-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-lifecycle:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/61cebd10751c8e877fd2026febd81892/transformed/camera-lifecycle-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a8eedb44631bcaebf53c1d7c3fab73dd/transformed/camera-core-1.4.1/AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.work:work-runtime-ktx:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/6d9017ceab60f3838cec384b5e17c7cb/transformed/work-runtime-ktx-2.10.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:17:1-145:12
+MERGED from [androidx.loader:loader:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5df1ffba0ced5476b6e6e189b1421e3d/transformed/loader-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/24e1cc5f335bdad57cb5d12b7a82f77b/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2ef887b23bd0b21c502ea34bffac6ef6/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/00b152b5ed71999ddc88b1c32ed23637/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/yulim/.gradle/caches/8.10.2/transforms/63504f3d0f84dbc64143987c3dd1057c/transformed/material3-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/59598ace372228857c6274db27554288/transformed/ui-tooling-data/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/608c79d8b1e47420fd9f9c2d3ead19fa/transformed/foundation-layout/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/998c2b82d0048a9652072ec1e42dab66/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5b50aafbcd29f1ed9c3cd08074c2a800/transformed/animation/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c985e5ec407957ba4e09b8c71aa15995/transformed/animation-core/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/494c1f2ed6d99f41d760e4c3cff928f0/transformed/ui-unit/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/24fee00b6e25b9d105d761fe4dd6bc51/transformed/ui-geometry/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/77e4fc49f23427ba91f3804c7997a274/transformed/ui-tooling-preview/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9b8963c617058e0ce2fe25ddec252e50/transformed/ui-tooling/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.material:material-android:1.6.6] /Users/yulim/.gradle/caches/8.10.2/transforms/22b1892986eef6702f5ef3272e2fa8b5/transformed/material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.6] /Users/yulim/.gradle/caches/8.10.2/transforms/5080271cfc88e747eb2ee76fba98d348/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.6.6] /Users/yulim/.gradle/caches/8.10.2/transforms/de926dbb024e60b64fd904d0a7e93cc1/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f90e3ccbbdac782c440dbda33c706bc5/transformed/ui-util/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/239430bb4ccad55d2ce4b90faa787b70/transformed/ui-text/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f5e4168d419d01b4a8beb068afbd9162/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/80ea879433bfe7f34ed6cc486559e143/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:17:1-29:12
+MERGED from [androidx.compose.ui:ui-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b917a3d8252535359208bd8622dad064/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2dfe773a1cc9851ad844cf1a72d53037/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b4f1113635fab4788dfb927b05b83067/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c1789240381d9b80c3e7466d91c68028/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f5c3c0a76fe47f865c0a3e89c1f337aa/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/22147ec9953d29cb66c85c066817df96/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/fcb4da6ab4517f64a03ac278e47364d6/transformed/graphics-path-1.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a15cba7fac26cc0af25935913c34659/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7b50c9c1bdce0b3a5c6225e2c634f698/transformed/emoji2-1.4.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/50321b403d5c98e33d631aac900f0297/transformed/runtime-annotation/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b3ae95cd69658eb9b43617f4122594b6/transformed/savedstate-ktx-1.3.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-android:1.3.1] /Users/yulim/.gradle/caches/8.10.2/transforms/4498a859067307088d3dc968e44f5983/transformed/savedstate-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a18b1d7e2b58a4f473c5b17d2eac646d/transformed/savedstate-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dc891c7058fadf5efc2fd9e469bc9a80/transformed/runtime/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a87719207b42ba2e36997c74bb9bd0dd/transformed/runtime-saveable/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/0433ecff456060d957e21dc9685ba86f/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/e8ca5c1ec0d29824faecea1e9baa5a60/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/3076065307ad2d333df5ebecdbfd6b29/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/df58f346bd26045392cd149b23ae9428/transformed/lifecycle-livedata-core-ktx-2.9.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8c9b9447b465a683c316f416852603ed/transformed/lifecycle-livedata-core-2.9.3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/dff2d518fb59eb00528039c7efe29f2d/transformed/lifecycle-viewmodel-2.9.3/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/494a4ea0ac649017d855401eb935ef8a/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/b4bf06d942c08251974f0a5857408a68/transformed/lifecycle-viewmodel-ktx-2.9.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/51f13e87350f7ae747f4bb2c4f2467ce/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/163a5611efaee9eef6b35dbf1d33e114/transformed/lifecycle-livedata-2.9.3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/14500d9f2a35274fbb49194a13362f9f/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/762d5ad9acbedba6a5a1ce4e1e630fac/transformed/lifecycle-service-2.9.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/aa572a1d4ff3e53502fd155f9341fa3e/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a872cd80b283af3e60d5e102fb08cf1a/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9bb1c66ec2e0fdb2c514a9d741c8da8d/transformed/room-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:15:1-30:12
+MERGED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:15:1-35:12
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/fa6eea4404eb533e46ec82d8e4962738/transformed/datastore-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-android:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/7687b23502fcef47cdb28cc0c74f3d48/transformed/datastore-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-preferences:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a2bbb7083b05bbc6d53ed1f4cc27fce0/transformed/datastore-preferences-1.1.1/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/c0ba7a37f07962049d5dd096f6027d85/transformed/datastore-preferences-release/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a09f36d66917be3104d503ee72a11ba/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.mlkit:vision-interfaces:16.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/6977c8d6f4a75fdbbf316ff063efb5d7/transformed/vision-interfaces-16.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5f09518eceaa58d9e21e95f520cea810/transformed/firebase-installations-interop-17.1.1/AndroidManifest.xml:15:1-19:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b9d1d141d19d7a03b9f099b7fd127398/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.firebase:firebase-measurement-connector:20.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/dc0dc937c67ffcf24a0b44ac26996550/transformed/firebase-measurement-connector-20.0.1/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5258b020cab1424cbc86cccdbd5ec2b7/transformed/play-services-basement-18.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.fragment:fragment:1.5.7] /Users/yulim/.gradle/caches/8.10.2/transforms/c23d0c7b84ea53b8c7dfa138b9cb8443/transformed/fragment-1.5.7/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.10.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9b91b768a50e6f8ba3f3a5f2f78339ed/transformed/activity-1.10.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9b348f7d11e96fe47bbe88f9ff3a2157/transformed/activity-ktx-1.10.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-compose:1.10.1] /Users/yulim/.gradle/caches/8.10.2/transforms/d175e8f14f39f43fead4d95024191ae5/transformed/activity-compose-1.10.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5bd7fc0d8eb21a0f93ecbd5448dac452/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/445b1ba7591b0379264e5d32d0d29f9c/transformed/core-ktx-1.15.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/12bbc3ca57227320fffcef7f5c604619/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b970485775c3b11d8791bd40d402e4ef/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/adbfb527c3a1fca43dd1891372f1acc2/transformed/tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2ee157e7f8c24acde0547823187327c7/transformed/tracing-ktx-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/yulim/.gradle/caches/8.10.2/transforms/073677eacd5abd5a016d5972d0c8afff/transformed/exifinterface-1.3.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/yulim/.gradle/caches/8.10.2/transforms/0ff0dd473902fa2df540dc177c27775b/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:15:1-33:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.firebase:firebase-config-interop:16.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/079ffb215ec7a28c2affa8680e6593e4/transformed/firebase-config-interop-16.0.0/AndroidManifest.xml:15:1-20:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/f8ca21a77ec52077371930c584763856/transformed/firebase-encoders-json-18.0.1/AndroidManifest.xml:15:1-22:12
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/676a1a9a76640db8cbae0ca5aa726b87/transformed/firebase-components-18.0.0/AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/60f97abfe28384acffb2d24810b43c0e/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/707fc7f2ee265d52e3aaece77de1be6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b6428c98cd4dbb68ce1de7855ed12070/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7e8905488cee12c4c8674969883c3f11/transformed/transport-api-3.0.0/AndroidManifest.xml:15:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/4739985e08b2e0281932b0030a0d6f36/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/703faa72b0debbe43e89264693accc1f/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2009b691bd3c8038f7b25510fefab7fb/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/cab0ba1eae0212d9661e4bbe59abc5e1/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yulim/.gradle/caches/8.10.2/transforms/52a00244df356ecc5c6010a8ac1facef/transformed/image-1.0.0-beta1/AndroidManifest.xml:2:1-9:12
+	package
+		INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CAMERA
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:5:5-65
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:5:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:6:5-71
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:6:22-68
+uses-permission#android.permission.INTERNET
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:7:5-67
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:8:5-67
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:8:5-67
+MERGED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:7:5-67
+MERGED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:7:5-67
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:8:5-67
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:25:5-67
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:8:5-79
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:7:5-79
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:7:5-79
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:24:5-79
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:7:5-79
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:8:22-76
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:9:5-77
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:9:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:10:5-77
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:26:5-77
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:26:5-77
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:10:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_CAMERA
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:11:5-84
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:11:22-81
+uses-permission#android.permission.FOREGROUND_SERVICE_MICROPHONE
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:12:5-88
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:12:22-85
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:13:5-81
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:25:5-81
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:25:5-81
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:13:22-78
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:14:22-76
+uses-permission#android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:15:5-95
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:15:22-92
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:16:5-18:38
+	android:maxSdkVersion
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:18:9-35
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:17:9-65
+uses-feature#android.hardware.camera
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:20:5-84
+	android:required
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:20:58-81
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:20:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:21:5-95
+	android:required
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:21:68-92
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:21:19-67
+application
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:23:5-62:19
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:23:5-62:19
+MERGED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yulim/.gradle/caches/8.10.2/transforms/debcdc3492ddbfcfd2da25542630e98f/transformed/vision-common-17.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yulim/.gradle/caches/8.10.2/transforms/debcdc3492ddbfcfd2da25542630e98f/transformed/vision-common-17.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:8:5-24:19
+MERGED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:8:5-24:19
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2cc88b0091eacd175720e85ac99bbe73/transformed/play-services-fido-20.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2cc88b0091eacd175720e85ac99bbe73/transformed/play-services-fido-20.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af11ee7c4951d445eaae18e080e38f0a/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af11ee7c4951d445eaae18e080e38f0a/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a8eedb44631bcaebf53c1d7c3fab73dd/transformed/camera-core-1.4.1/AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a8eedb44631bcaebf53c1d7c3fab73dd/transformed/camera-core-1.4.1/AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:28:5-143:19
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:28:5-143:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9b8963c617058e0ce2fe25ddec252e50/transformed/ui-tooling/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9b8963c617058e0ce2fe25ddec252e50/transformed/ui-tooling/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/80ea879433bfe7f34ed6cc486559e143/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:22:5-27:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/80ea879433bfe7f34ed6cc486559e143/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:22:5-27:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7b50c9c1bdce0b3a5c6225e2c634f698/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7b50c9c1bdce0b3a5c6225e2c634f698/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/0433ecff456060d957e21dc9685ba86f/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/0433ecff456060d957e21dc9685ba86f/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a872cd80b283af3e60d5e102fb08cf1a/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a872cd80b283af3e60d5e102fb08cf1a/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:20:5-28:19
+MERGED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:20:5-28:19
+MERGED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:21:5-33:19
+MERGED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:21:5-33:19
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a09f36d66917be3104d503ee72a11ba/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a09f36d66917be3104d503ee72a11ba/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b9d1d141d19d7a03b9f099b7fd127398/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b9d1d141d19d7a03b9f099b7fd127398/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:20.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/dc0dc937c67ffcf24a0b44ac26996550/transformed/firebase-measurement-connector-20.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:20.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/dc0dc937c67ffcf24a0b44ac26996550/transformed/firebase-measurement-connector-20.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5258b020cab1424cbc86cccdbd5ec2b7/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5258b020cab1424cbc86cccdbd5ec2b7/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b970485775c3b11d8791bd40d402e4ef/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b970485775c3b11d8791bd40d402e4ef/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/yulim/.gradle/caches/8.10.2/transforms/0ff0dd473902fa2df540dc177c27775b/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/yulim/.gradle/caches/8.10.2/transforms/0ff0dd473902fa2df540dc177c27775b/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:25:5-39:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/707fc7f2ee265d52e3aaece77de1be6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/707fc7f2ee265d52e3aaece77de1be6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yulim/.gradle/caches/8.10.2/transforms/52a00244df356ecc5c6010a8ac1facef/transformed/image-1.0.0-beta1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yulim/.gradle/caches/8.10.2/transforms/52a00244df356ecc5c6010a8ac1facef/transformed/image-1.0.0-beta1/AndroidManifest.xml:7:5-20
+	android:extractNativeLibs
+		INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:31:9-35
+	android:label
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:29:9-41
+	android:fullBackupContent
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:27:9-54
+	android:roundIcon
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:30:9-54
+	tools:targetApi
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:33:9-29
+	android:icon
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:28:9-43
+	android:allowBackup
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:25:9-35
+	android:theme
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:32:9-45
+	android:dataExtractionRules
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:26:9-65
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:24:9-35
+activity#com.coooldoggy.catasmr.MainActivity
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:34:9-44:20
+	android:label
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:37:13-45
+	android:exported
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:36:13-36
+	android:theme
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:38:13-49
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:35:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:39:13-43:29
+action#android.intent.action.MAIN
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:40:17-69
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:40:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:42:17-77
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:42:27-74
+service#com.coooldoggy.catasmr.recording.RecordingService
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:46:9-49:65
+	android:exported
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:48:13-37
+	android:foregroundServiceType
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:49:13-62
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:47:13-55
+receiver#com.coooldoggy.catasmr.schedule.WindowAlarmReceiver
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:51:9-53:40
+	android:exported
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:53:13-37
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:52:13-57
+receiver#com.coooldoggy.catasmr.schedule.BootCompletedReceiver
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:55:9-61:20
+	android:exported
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:57:13-36
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:56:13-59
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:58:13-60:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:59:17-79
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:59:25-76
+uses-sdk
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:image-labeling-default-common:17.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/64e3f5949358b25179b44529507d07df/transformed/image-labeling-default-common-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:image-labeling-default-common:17.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/64e3f5949358b25179b44529507d07df/transformed/image-labeling-default-common-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:image-labeling-common:18.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/78c197d50cbfa2822cb46b7208a97991/transformed/image-labeling-common-18.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:image-labeling-common:18.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/78c197d50cbfa2822cb46b7208a97991/transformed/image-labeling-common-18.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yulim/.gradle/caches/8.10.2/transforms/debcdc3492ddbfcfd2da25542630e98f/transformed/vision-common-17.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yulim/.gradle/caches/8.10.2/transforms/debcdc3492ddbfcfd2da25542630e98f/transformed/vision-common-17.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/5e409f8889b78a2cf9bb9bd70a6f5c64/transformed/play-services-auth-api-phone-18.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/5e409f8889b78a2cf9bb9bd70a6f5c64/transformed/play-services-auth-api-phone-18.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] /Users/yulim/.gradle/caches/8.10.2/transforms/60a52ebdb347dd08f966cf7de19a53a3/transformed/play-services-auth-base-18.0.10/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] /Users/yulim/.gradle/caches/8.10.2/transforms/60a52ebdb347dd08f966cf7de19a53a3/transformed/play-services-auth-base-18.0.10/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2cc88b0091eacd175720e85ac99bbe73/transformed/play-services-fido-20.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2cc88b0091eacd175720e85ac99bbe73/transformed/play-services-fido-20.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af11ee7c4951d445eaae18e080e38f0a/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af11ee7c4951d445eaae18e080e38f0a/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [androidx.camera:camera-view:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b6d5698221b47c85787c50ec75c21f39/transformed/camera-view-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-view:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b6d5698221b47c85787c50ec75c21f39/transformed/camera-view-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-video:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2461defc4074a0521f318f96bcfa1cc0/transformed/camera-video-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-video:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2461defc4074a0521f318f96bcfa1cc0/transformed/camera-video-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/61cebd10751c8e877fd2026febd81892/transformed/camera-lifecycle-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/61cebd10751c8e877fd2026febd81892/transformed/camera-lifecycle-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a8eedb44631bcaebf53c1d7c3fab73dd/transformed/camera-core-1.4.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a8eedb44631bcaebf53c1d7c3fab73dd/transformed/camera-core-1.4.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.work:work-runtime-ktx:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/6d9017ceab60f3838cec384b5e17c7cb/transformed/work-runtime-ktx-2.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.work:work-runtime-ktx:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/6d9017ceab60f3838cec384b5e17c7cb/transformed/work-runtime-ktx-2.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.loader:loader:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5df1ffba0ced5476b6e6e189b1421e3d/transformed/loader-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5df1ffba0ced5476b6e6e189b1421e3d/transformed/loader-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/24e1cc5f335bdad57cb5d12b7a82f77b/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/24e1cc5f335bdad57cb5d12b7a82f77b/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2ef887b23bd0b21c502ea34bffac6ef6/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/2ef887b23bd0b21c502ea34bffac6ef6/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/00b152b5ed71999ddc88b1c32ed23637/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/00b152b5ed71999ddc88b1c32ed23637/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/yulim/.gradle/caches/8.10.2/transforms/63504f3d0f84dbc64143987c3dd1057c/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/yulim/.gradle/caches/8.10.2/transforms/63504f3d0f84dbc64143987c3dd1057c/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/59598ace372228857c6274db27554288/transformed/ui-tooling-data/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/59598ace372228857c6274db27554288/transformed/ui-tooling-data/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/608c79d8b1e47420fd9f9c2d3ead19fa/transformed/foundation-layout/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/608c79d8b1e47420fd9f9c2d3ead19fa/transformed/foundation-layout/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/998c2b82d0048a9652072ec1e42dab66/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/998c2b82d0048a9652072ec1e42dab66/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5b50aafbcd29f1ed9c3cd08074c2a800/transformed/animation/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5b50aafbcd29f1ed9c3cd08074c2a800/transformed/animation/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c985e5ec407957ba4e09b8c71aa15995/transformed/animation-core/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c985e5ec407957ba4e09b8c71aa15995/transformed/animation-core/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/494c1f2ed6d99f41d760e4c3cff928f0/transformed/ui-unit/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/494c1f2ed6d99f41d760e4c3cff928f0/transformed/ui-unit/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/24fee00b6e25b9d105d761fe4dd6bc51/transformed/ui-geometry/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/24fee00b6e25b9d105d761fe4dd6bc51/transformed/ui-geometry/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/77e4fc49f23427ba91f3804c7997a274/transformed/ui-tooling-preview/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/77e4fc49f23427ba91f3804c7997a274/transformed/ui-tooling-preview/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9b8963c617058e0ce2fe25ddec252e50/transformed/ui-tooling/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9b8963c617058e0ce2fe25ddec252e50/transformed/ui-tooling/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.6.6] /Users/yulim/.gradle/caches/8.10.2/transforms/22b1892986eef6702f5ef3272e2fa8b5/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.6] /Users/yulim/.gradle/caches/8.10.2/transforms/22b1892986eef6702f5ef3272e2fa8b5/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.6] /Users/yulim/.gradle/caches/8.10.2/transforms/5080271cfc88e747eb2ee76fba98d348/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.6] /Users/yulim/.gradle/caches/8.10.2/transforms/5080271cfc88e747eb2ee76fba98d348/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.6] /Users/yulim/.gradle/caches/8.10.2/transforms/de926dbb024e60b64fd904d0a7e93cc1/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.6] /Users/yulim/.gradle/caches/8.10.2/transforms/de926dbb024e60b64fd904d0a7e93cc1/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f90e3ccbbdac782c440dbda33c706bc5/transformed/ui-util/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f90e3ccbbdac782c440dbda33c706bc5/transformed/ui-util/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/239430bb4ccad55d2ce4b90faa787b70/transformed/ui-text/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/239430bb4ccad55d2ce4b90faa787b70/transformed/ui-text/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f5e4168d419d01b4a8beb068afbd9162/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f5e4168d419d01b4a8beb068afbd9162/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/80ea879433bfe7f34ed6cc486559e143/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/80ea879433bfe7f34ed6cc486559e143/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b917a3d8252535359208bd8622dad064/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b917a3d8252535359208bd8622dad064/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2dfe773a1cc9851ad844cf1a72d53037/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2dfe773a1cc9851ad844cf1a72d53037/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b4f1113635fab4788dfb927b05b83067/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b4f1113635fab4788dfb927b05b83067/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c1789240381d9b80c3e7466d91c68028/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c1789240381d9b80c3e7466d91c68028/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f5c3c0a76fe47f865c0a3e89c1f337aa/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f5c3c0a76fe47f865c0a3e89c1f337aa/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/22147ec9953d29cb66c85c066817df96/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/22147ec9953d29cb66c85c066817df96/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/fcb4da6ab4517f64a03ac278e47364d6/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/fcb4da6ab4517f64a03ac278e47364d6/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a15cba7fac26cc0af25935913c34659/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a15cba7fac26cc0af25935913c34659/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7b50c9c1bdce0b3a5c6225e2c634f698/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7b50c9c1bdce0b3a5c6225e2c634f698/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/50321b403d5c98e33d631aac900f0297/transformed/runtime-annotation/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/50321b403d5c98e33d631aac900f0297/transformed/runtime-annotation/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b3ae95cd69658eb9b43617f4122594b6/transformed/savedstate-ktx-1.3.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b3ae95cd69658eb9b43617f4122594b6/transformed/savedstate-ktx-1.3.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.3.1] /Users/yulim/.gradle/caches/8.10.2/transforms/4498a859067307088d3dc968e44f5983/transformed/savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.3.1] /Users/yulim/.gradle/caches/8.10.2/transforms/4498a859067307088d3dc968e44f5983/transformed/savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a18b1d7e2b58a4f473c5b17d2eac646d/transformed/savedstate-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a18b1d7e2b58a4f473c5b17d2eac646d/transformed/savedstate-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dc891c7058fadf5efc2fd9e469bc9a80/transformed/runtime/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dc891c7058fadf5efc2fd9e469bc9a80/transformed/runtime/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a87719207b42ba2e36997c74bb9bd0dd/transformed/runtime-saveable/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a87719207b42ba2e36997c74bb9bd0dd/transformed/runtime-saveable/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/0433ecff456060d957e21dc9685ba86f/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/0433ecff456060d957e21dc9685ba86f/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/e8ca5c1ec0d29824faecea1e9baa5a60/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/e8ca5c1ec0d29824faecea1e9baa5a60/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/3076065307ad2d333df5ebecdbfd6b29/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/3076065307ad2d333df5ebecdbfd6b29/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/df58f346bd26045392cd149b23ae9428/transformed/lifecycle-livedata-core-ktx-2.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/df58f346bd26045392cd149b23ae9428/transformed/lifecycle-livedata-core-ktx-2.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8c9b9447b465a683c316f416852603ed/transformed/lifecycle-livedata-core-2.9.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8c9b9447b465a683c316f416852603ed/transformed/lifecycle-livedata-core-2.9.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/dff2d518fb59eb00528039c7efe29f2d/transformed/lifecycle-viewmodel-2.9.3/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/dff2d518fb59eb00528039c7efe29f2d/transformed/lifecycle-viewmodel-2.9.3/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/494a4ea0ac649017d855401eb935ef8a/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/494a4ea0ac649017d855401eb935ef8a/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/b4bf06d942c08251974f0a5857408a68/transformed/lifecycle-viewmodel-ktx-2.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/b4bf06d942c08251974f0a5857408a68/transformed/lifecycle-viewmodel-ktx-2.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/51f13e87350f7ae747f4bb2c4f2467ce/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/51f13e87350f7ae747f4bb2c4f2467ce/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/163a5611efaee9eef6b35dbf1d33e114/transformed/lifecycle-livedata-2.9.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/163a5611efaee9eef6b35dbf1d33e114/transformed/lifecycle-livedata-2.9.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/14500d9f2a35274fbb49194a13362f9f/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/14500d9f2a35274fbb49194a13362f9f/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/762d5ad9acbedba6a5a1ce4e1e630fac/transformed/lifecycle-service-2.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/762d5ad9acbedba6a5a1ce4e1e630fac/transformed/lifecycle-service-2.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/aa572a1d4ff3e53502fd155f9341fa3e/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/aa572a1d4ff3e53502fd155f9341fa3e/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a872cd80b283af3e60d5e102fb08cf1a/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a872cd80b283af3e60d5e102fb08cf1a/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9bb1c66ec2e0fdb2c514a9d741c8da8d/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9bb1c66ec2e0fdb2c514a9d741c8da8d/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:18:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/fa6eea4404eb533e46ec82d8e4962738/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/fa6eea4404eb533e46ec82d8e4962738/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/7687b23502fcef47cdb28cc0c74f3d48/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/7687b23502fcef47cdb28cc0c74f3d48/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a2bbb7083b05bbc6d53ed1f4cc27fce0/transformed/datastore-preferences-1.1.1/AndroidManifest.xml:4:5-43
+MERGED from [androidx.datastore:datastore-preferences:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a2bbb7083b05bbc6d53ed1f4cc27fce0/transformed/datastore-preferences-1.1.1/AndroidManifest.xml:4:5-43
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/c0ba7a37f07962049d5dd096f6027d85/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/c0ba7a37f07962049d5dd096f6027d85/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a09f36d66917be3104d503ee72a11ba/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a09f36d66917be3104d503ee72a11ba/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.mlkit:vision-interfaces:16.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/6977c8d6f4a75fdbbf316ff063efb5d7/transformed/vision-interfaces-16.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:vision-interfaces:16.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/6977c8d6f4a75fdbbf316ff063efb5d7/transformed/vision-interfaces-16.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5f09518eceaa58d9e21e95f520cea810/transformed/firebase-installations-interop-17.1.1/AndroidManifest.xml:17:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5f09518eceaa58d9e21e95f520cea810/transformed/firebase-installations-interop-17.1.1/AndroidManifest.xml:17:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b9d1d141d19d7a03b9f099b7fd127398/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b9d1d141d19d7a03b9f099b7fd127398/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:20.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/dc0dc937c67ffcf24a0b44ac26996550/transformed/firebase-measurement-connector-20.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:20.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/dc0dc937c67ffcf24a0b44ac26996550/transformed/firebase-measurement-connector-20.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5258b020cab1424cbc86cccdbd5ec2b7/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5258b020cab1424cbc86cccdbd5ec2b7/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [androidx.fragment:fragment:1.5.7] /Users/yulim/.gradle/caches/8.10.2/transforms/c23d0c7b84ea53b8c7dfa138b9cb8443/transformed/fragment-1.5.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.7] /Users/yulim/.gradle/caches/8.10.2/transforms/c23d0c7b84ea53b8c7dfa138b9cb8443/transformed/fragment-1.5.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.10.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9b91b768a50e6f8ba3f3a5f2f78339ed/transformed/activity-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.10.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9b91b768a50e6f8ba3f3a5f2f78339ed/transformed/activity-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9b348f7d11e96fe47bbe88f9ff3a2157/transformed/activity-ktx-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9b348f7d11e96fe47bbe88f9ff3a2157/transformed/activity-ktx-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.10.1] /Users/yulim/.gradle/caches/8.10.2/transforms/d175e8f14f39f43fead4d95024191ae5/transformed/activity-compose-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.10.1] /Users/yulim/.gradle/caches/8.10.2/transforms/d175e8f14f39f43fead4d95024191ae5/transformed/activity-compose-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5bd7fc0d8eb21a0f93ecbd5448dac452/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5bd7fc0d8eb21a0f93ecbd5448dac452/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/445b1ba7591b0379264e5d32d0d29f9c/transformed/core-ktx-1.15.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/445b1ba7591b0379264e5d32d0d29f9c/transformed/core-ktx-1.15.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/12bbc3ca57227320fffcef7f5c604619/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/12bbc3ca57227320fffcef7f5c604619/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b970485775c3b11d8791bd40d402e4ef/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b970485775c3b11d8791bd40d402e4ef/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/adbfb527c3a1fca43dd1891372f1acc2/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/adbfb527c3a1fca43dd1891372f1acc2/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2ee157e7f8c24acde0547823187327c7/transformed/tracing-ktx-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2ee157e7f8c24acde0547823187327c7/transformed/tracing-ktx-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/yulim/.gradle/caches/8.10.2/transforms/073677eacd5abd5a016d5972d0c8afff/transformed/exifinterface-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/yulim/.gradle/caches/8.10.2/transforms/073677eacd5abd5a016d5972d0c8afff/transformed/exifinterface-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/yulim/.gradle/caches/8.10.2/transforms/0ff0dd473902fa2df540dc177c27775b/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/yulim/.gradle/caches/8.10.2/transforms/0ff0dd473902fa2df540dc177c27775b/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-config-interop:16.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/079ffb215ec7a28c2affa8680e6593e4/transformed/firebase-config-interop-16.0.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-config-interop:16.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/079ffb215ec7a28c2affa8680e6593e4/transformed/firebase-config-interop-16.0.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/f8ca21a77ec52077371930c584763856/transformed/firebase-encoders-json-18.0.1/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/f8ca21a77ec52077371930c584763856/transformed/firebase-encoders-json-18.0.1/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/676a1a9a76640db8cbae0ca5aa726b87/transformed/firebase-components-18.0.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/676a1a9a76640db8cbae0ca5aa726b87/transformed/firebase-components-18.0.0/AndroidManifest.xml:18:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/60f97abfe28384acffb2d24810b43c0e/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/60f97abfe28384acffb2d24810b43c0e/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/707fc7f2ee265d52e3aaece77de1be6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/707fc7f2ee265d52e3aaece77de1be6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b6428c98cd4dbb68ce1de7855ed12070/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b6428c98cd4dbb68ce1de7855ed12070/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7e8905488cee12c4c8674969883c3f11/transformed/transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7e8905488cee12c4c8674969883c3f11/transformed/transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/4739985e08b2e0281932b0030a0d6f36/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/4739985e08b2e0281932b0030a0d6f36/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/703faa72b0debbe43e89264693accc1f/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/703faa72b0debbe43e89264693accc1f/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2009b691bd3c8038f7b25510fefab7fb/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2009b691bd3c8038f7b25510fefab7fb/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/cab0ba1eae0212d9661e4bbe59abc5e1/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/cab0ba1eae0212d9661e4bbe59abc5e1/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yulim/.gradle/caches/8.10.2/transforms/52a00244df356ecc5c6010a8ac1facef/transformed/image-1.0.0-beta1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yulim/.gradle/caches/8.10.2/transforms/52a00244df356ecc5c6010a8ac1facef/transformed/image-1.0.0-beta1/AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dbe373388833af3859c350a32ee14d78/transformed/play-services-auth-21.2.0/AndroidManifest.xml:34:13-89
+service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService
+ADDED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:11:9-17:19
+MERGED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:11:9-17:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yulim/.gradle/caches/8.10.2/transforms/debcdc3492ddbfcfd2da25542630e98f/transformed/vision-common-17.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/yulim/.gradle/caches/8.10.2/transforms/debcdc3492ddbfcfd2da25542630e98f/transformed/vision-common-17.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:15:9-23:19
+MERGED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:15:9-23:19
+	android:exported
+		ADDED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:10:13-37
+	tools:targetApi
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:19:13-32
+	android:directBootAware
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:17:13-43
+	android:name
+		ADDED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:9:13-91
+meta-data#com.google.firebase.components:com.google.mlkit.vision.label.defaults.internal.BundledLabelRegistrar
+ADDED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/93129cf5d5156741fa31520bcde5c5b0/transformed/image-labeling-17.0.9/AndroidManifest.xml:12:17-132
+meta-data#com.google.firebase.components:com.google.mlkit.vision.vkp.VkpRegistrar
+ADDED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:14:13-16:85
+	android:value
+		ADDED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:16:17-82
+	android:name
+		ADDED from [com.google.mlkit:vision-internal-vkp:18.2.3] /Users/yulim/.gradle/caches/8.10.2/transforms/13ebc9e8ad19f6efc294604d46c2138b/transformed/vision-internal-vkp-18.2.3/AndroidManifest.xml:15:17-103
+meta-data#com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar
+ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/yulim/.gradle/caches/8.10.2/transforms/debcdc3492ddbfcfd2da25542630e98f/transformed/vision-common-17.3.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/yulim/.gradle/caches/8.10.2/transforms/debcdc3492ddbfcfd2da25542630e98f/transformed/vision-common-17.3.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/yulim/.gradle/caches/8.10.2/transforms/debcdc3492ddbfcfd2da25542630e98f/transformed/vision-common-17.3.0/AndroidManifest.xml:13:17-124
+provider#com.google.mlkit.common.internal.MlKitInitProvider
+ADDED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:9:9-13:38
+	android:authorities
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:11:13-69
+	android:exported
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:12:13-37
+	android:initOrder
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:13:13-35
+	android:name
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:10:13-78
+meta-data#com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar
+ADDED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/yulim/.gradle/caches/8.10.2/transforms/fa0554eebe9ddc3f43459034c966b05c/transformed/common-18.11.0/AndroidManifest.xml:21:17-120
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af11ee7c4951d445eaae18e080e38f0a/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af11ee7c4951d445eaae18e080e38f0a/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af11ee7c4951d445eaae18e080e38f0a/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af11ee7c4951d445eaae18e080e38f0a/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+service#androidx.camera.core.impl.MetadataHolderService
+ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:24:9-33:19
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a8eedb44631bcaebf53c1d7c3fab73dd/transformed/camera-core-1.4.1/AndroidManifest.xml:29:9-33:78
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a8eedb44631bcaebf53c1d7c3fab73dd/transformed/camera-core-1.4.1/AndroidManifest.xml:29:9-33:78
+	tools:node
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:29:13-31
+	android:enabled
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:26:13-36
+	android:exported
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:28:13-75
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:25:13-75
+meta-data#androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER
+ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:30:13-32:89
+	android:value
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/5820353c7ff3d1db0314c87584770983/transformed/camera-camera2-1.4.1/AndroidManifest.xml:31:17-103
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:23:5-68
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:23:22-65
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:29:9-37:20
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7b50c9c1bdce0b3a5c6225e2c634f698/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7b50c9c1bdce0b3a5c6225e2c634f698/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/0433ecff456060d957e21dc9685ba86f/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/0433ecff456060d957e21dc9685ba86f/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b970485775c3b11d8791bd40d402e4ef/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/b970485775c3b11d8791bd40d402e4ef/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:33:13-31
+	android:authorities
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:31:13-68
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:30:13-67
+meta-data#androidx.work.WorkManagerInitializer
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:34:13-36:52
+	android:value
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:36:17-49
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:35:17-68
+service#androidx.work.impl.background.systemalarm.SystemAlarmService
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:39:9-45:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:42:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:43:13-37
+	tools:ignore
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:44:13-60
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:45:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:41:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:40:13-88
+service#androidx.work.impl.background.systemjob.SystemJobService
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:46:9-52:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:49:13-70
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:50:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:51:13-69
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:52:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:48:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:47:13-84
+service#androidx.work.impl.foreground.SystemForegroundService
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:53:9-59:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:56:13-77
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:57:13-37
+	tools:ignore
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:58:13-60
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:59:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:55:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:54:13-81
+receiver#androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:61:9-66:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:64:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:65:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:66:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:63:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:62:13-88
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:67:9-77:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:70:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:71:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:72:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:69:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:68:13-106
+intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:73:13-76:29
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:74:17-87
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:74:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:75:17-90
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:75:25-87
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:78:9-88:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:81:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:82:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:83:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:80:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:79:13-104
+intent-filter#action:name:android.intent.action.BATTERY_LOW+action:name:android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:84:13-87:29
+action#android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:85:17-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:85:25-74
+action#android.intent.action.BATTERY_LOW
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:86:17-76
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:86:25-73
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:89:9-99:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:92:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:93:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:94:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:91:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:90:13-104
+intent-filter#action:name:android.intent.action.DEVICE_STORAGE_LOW+action:name:android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:95:13-98:29
+action#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:96:17-83
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:96:25-80
+action#android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:97:17-82
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:97:25-79
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:100:9-109:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:103:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:104:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:105:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:102:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:101:13-103
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:106:13-108:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:107:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:107:25-76
+receiver#androidx.work.impl.background.systemalarm.RescheduleReceiver
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:110:9-121:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:113:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:114:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:115:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:112:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:111:13-88
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:116:13-120:29
+action#android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:118:17-73
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:118:25-70
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:119:17-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:119:25-78
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:122:9-131:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:125:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:126:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:127:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:124:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:123:13-99
+intent-filter#action:name:androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:128:13-130:29
+action#androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:129:17-98
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:129:25-95
+receiver#androidx.work.impl.diagnostics.DiagnosticsReceiver
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:132:9-142:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:135:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:136:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:137:13-57
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:138:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:134:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:133:13-78
+intent-filter#action:name:androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:139:13-141:29
+action#androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:140:17-88
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fb5cf1879f2d482b989d407d7151271/transformed/work-runtime-2.10.0/AndroidManifest.xml:140:25-85
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9b8963c617058e0ce2fe25ddec252e50/transformed/ui-tooling/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9b8963c617058e0ce2fe25ddec252e50/transformed/ui-tooling/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9b8963c617058e0ce2fe25ddec252e50/transformed/ui-tooling/AndroidManifest.xml:24:13-71
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/80ea879433bfe7f34ed6cc486559e143/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:23:9-26:79
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/80ea879433bfe7f34ed6cc486559e143/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:25:13-36
+	android:theme
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/80ea879433bfe7f34ed6cc486559e143/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:26:13-76
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/80ea879433bfe7f34ed6cc486559e143/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:24:13-63
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7b50c9c1bdce0b3a5c6225e2c634f698/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7b50c9c1bdce0b3a5c6225e2c634f698/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7b50c9c1bdce0b3a5c6225e2c634f698/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
+permission#com.coooldoggy.catasmr.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
+uses-permission#com.coooldoggy.catasmr.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/53a324a307a048c937bb3367c4f6bc3a/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/0433ecff456060d957e21dc9685ba86f/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/0433ecff456060d957e21dc9685ba86f/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/0433ecff456060d957e21dc9685ba86f/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:30:17-78
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a872cd80b283af3e60d5e102fb08cf1a/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a872cd80b283af3e60d5e102fb08cf1a/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a872cd80b283af3e60d5e102fb08cf1a/transformed/room-runtime-2.6.1/AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a872cd80b283af3e60d5e102fb08cf1a/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/a872cd80b283af3e60d5e102fb08cf1a/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:21:9-27:19
+MERGED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:26:9-32:19
+MERGED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:26:9-32:19
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a09f36d66917be3104d503ee72a11ba/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a09f36d66917be3104d503ee72a11ba/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/yulim/.gradle/caches/8.10.2/transforms/0ff0dd473902fa2df540dc177c27775b/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:24:9-30:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/yulim/.gradle/caches/8.10.2/transforms/0ff0dd473902fa2df540dc177c27775b/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:24:9-30:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:23:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:22:13-84
+meta-data#com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar
+ADDED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:24:13-26:85
+	android:value
+		ADDED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:26:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-crashlytics-ktx:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/ab6ab29edee77183780b13d90cea8ec6/transformed/firebase-crashlytics-ktx-19.0.2/AndroidManifest.xml:25:17-130
+meta-data#com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar
+ADDED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:15:13-17:85
+	android:value
+		ADDED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:17:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:16:17-126
+meta-data#com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar
+ADDED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-crashlytics:19.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/3d82d053b482ee213a86fd1aa833dcae/transformed/firebase-crashlytics-19.0.2/AndroidManifest.xml:19:17-115
+service#com.google.firebase.sessions.SessionLifecycleService
+ADDED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:22:9-25:40
+	android:enabled
+		ADDED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:24:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:23:13-80
+meta-data#com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar
+ADDED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:29:13-31:85
+	android:value
+		ADDED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:31:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-sessions:2.0.2] /Users/yulim/.gradle/caches/8.10.2/transforms/a7cc81a5448a6bd8818c0ed6d7536029/transformed/firebase-sessions-2.0.2/AndroidManifest.xml:30:17-117
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar
+ADDED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:15:13-17:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:17:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:16:17-130
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:18.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1f55251c90c9b77efc966a221057d623/transformed/firebase-installations-18.0.0/AndroidManifest.xml:19:17-127
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a09f36d66917be3104d503ee72a11ba/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a09f36d66917be3104d503ee72a11ba/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/0a09f36d66917be3104d503ee72a11ba/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/169125d77ba7f20fe6c48fb1801f43d8/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5258b020cab1424cbc86cccdbd5ec2b7/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5258b020cab1424cbc86cccdbd5ec2b7/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5258b020cab1424cbc86cccdbd5ec2b7/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a52b59e7c4f6955ca0ea2f8fa6647b7f/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
+ADDED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/yulim/.gradle/caches/8.10.2/transforms/0ff0dd473902fa2df540dc177c27775b/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:27:13-29:85
+	android:value
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/yulim/.gradle/caches/8.10.2/transforms/0ff0dd473902fa2df540dc177c27775b/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:29:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/yulim/.gradle/caches/8.10.2/transforms/0ff0dd473902fa2df540dc177c27775b/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:28:17-115
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/5ded007904c68c718fca4095ac8cb2aa/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/yulim/.gradle/caches/8.10.2/transforms/a01b41ea89c3ea52d4969ffb9a485d15/transformed/transport-runtime-3.1.9/AndroidManifest.xml:33:13-132

@@ -40,8 +40,8 @@
     <string name="schedule_empty">No feeder schedule set yet</string>
     <string name="schedule_next_window">Next window: %s</string>
     <string name="schedule_no_windows">No feeder windows yet — add one to match your auto-feeder\'s schedule.</string>
-    <string name="schedule_edit">Edit schedule & settings</string>
-    <string name="schedule_settings">Schedule & settings</string>
+    <string name="schedule_edit">Edit schedule &amp;settings</string>
+    <string name="schedule_settings">Schedule &amp;settings</string>
     <string name="schedule_done">Done</string>
     <string name="schedule_add_window">Add window</string>
 
