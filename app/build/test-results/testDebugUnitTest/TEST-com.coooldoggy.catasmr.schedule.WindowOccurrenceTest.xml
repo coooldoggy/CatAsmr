@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.coooldoggy.catasmr.schedule.WindowOccurrenceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-07-20T04:32:45" hostname="iyulim-ui-MacBookPro.local" time="0.042">
+<testsuite name="com.coooldoggy.catasmr.schedule.WindowOccurrenceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-07-20T04:44:51" hostname="iyulim-ui-MacBookPro.local" time="0.016">
   <properties/>
-  <testcase name="now inside todays window returns todays occurrence with a past start" classname="com.coooldoggy.catasmr.schedule.WindowOccurrenceTest" time="0.041"/>
+  <testcase name="now inside todays window returns todays occurrence with a past start" classname="com.coooldoggy.catasmr.schedule.WindowOccurrenceTest" time="0.015"/>
   <testcase name="now after todays window rolls over to tomorrow" classname="com.coooldoggy.catasmr.schedule.WindowOccurrenceTest" time="0.0"/>
   <testcase name="window crossing midnight is handled by plain duration addition" classname="com.coooldoggy.catasmr.schedule.WindowOccurrenceTest" time="0.0"/>
-  <testcase name="exactly at end boundary rolls to tomorrow, not treated as still inside" classname="com.coooldoggy.catasmr.schedule.WindowOccurrenceTest" time="0.001"/>
+  <testcase name="exactly at end boundary rolls to tomorrow, not treated as still inside" classname="com.coooldoggy.catasmr.schedule.WindowOccurrenceTest" time="0.0"/>
   <testcase name="now before todays start returns todays occurrence" classname="com.coooldoggy.catasmr.schedule.WindowOccurrenceTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

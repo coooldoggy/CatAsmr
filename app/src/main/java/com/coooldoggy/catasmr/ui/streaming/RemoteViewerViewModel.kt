@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.coooldoggy.catasmr.streaming.DevicePairingManager
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -38,101 +39,123 @@ class RemoteViewerViewModel(context: Context) : ViewModel() {
 
     fun connectToDevice(deviceName: String, ipAddress: String, port: Int = 8888) {
         viewModelScope.launch(Dispatchers.IO) {
-            try {
-                _streamingState.value = StreamingState.Connecting
-                streamSocket = Socket(ipAddress, port)
+            var lastError: Exception? = null
+            var attempts = 0
+            val maxAttempts = 5
+            var retryDelay = 500L
 
-                val socket = streamSocket ?: return@launch
-                socket.soTimeout = 10000
+            while (attempts < maxAttempts) {
+                try {
+                    _streamingState.value = StreamingState.Connecting
+                    attempts++
 
-                // Send HTTP GET request
-                val request = "GET /stream HTTP/1.1\r\nHost: $ipAddress\r\nConnection: close\r\n\r\n"
-                socket.getOutputStream().write(request.toByteArray())
-                socket.getOutputStream().flush()
+                    Log.d(TAG, "Connection attempt $attempts/$maxAttempts to $ipAddress:$port")
+                    streamSocket = Socket(ipAddress, port)
 
-                // Read response and stream frames using simple line parsing
-                val reader = socket.getInputStream().bufferedReader()
-                val frameBuffer = ByteArray(1024 * 1024) // 1MB buffer for frames
-                var line = ""
-                var contentLength = 0
+                    val socket = streamSocket ?: return@launch
+                    socket.soTimeout = 10000
 
-                // Skip HTTP response headers
-                while (reader.readLine().also { line = it ?: "" }.isNotEmpty()) {
-                    // Continue until empty line
-                }
+                    // Send HTTP GET request
+                    val request = "GET /stream HTTP/1.1\r\nHost: $ipAddress\r\nConnection: close\r\n\r\n"
+                    socket.getOutputStream().write(request.toByteArray())
+                    socket.getOutputStream().flush()
 
-                // Read multipart stream
-                val input = BufferedInputStream(socket.getInputStream())
-                val buffer = ByteArray(65536)
-                var bytesRead: Int
-                var bytesOfCurrentFrame = 0
+                    // Read response and stream frames
+                    val reader = socket.getInputStream().bufferedReader()
+                    val frameBuffer = ByteArray(1024 * 1024)
+                    var line = ""
+                    var contentLength = 0
 
-                while (input.read(buffer).also { bytesRead = it } != -1) {
-                    var pos = 0
+                    // Skip HTTP response headers
+                    while (reader.readLine().also { line = it ?: "" }.isNotEmpty()) {
+                        // Continue until empty line
+                    }
 
-                    while (pos < bytesRead) {
-                        // Try to read a line for Content-Length header
-                        if (contentLength == 0 && bytesOfCurrentFrame == 0) {
-                            var lineEnd = pos
-                            while (lineEnd < bytesRead - 1) {
-                                if (buffer[lineEnd] == '\r'.code.toByte() &&
-                                    buffer[lineEnd + 1] == '\n'.code.toByte()) {
-                                    val line = String(buffer, pos, lineEnd - pos).trim()
-                                    if (line.startsWith("Content-Length:")) {
-                                        contentLength = line.substringAfter(":").trim().toIntOrNull() ?: 0
+                    // Read multipart stream
+                    val input = BufferedInputStream(socket.getInputStream())
+                    val buffer = ByteArray(65536)
+                    var bytesRead: Int
+                    var bytesOfCurrentFrame = 0
+
+                    while (input.read(buffer).also { bytesRead = it } != -1) {
+                        var pos = 0
+
+                        while (pos < bytesRead) {
+                            if (contentLength == 0 && bytesOfCurrentFrame == 0) {
+                                var lineEnd = pos
+                                while (lineEnd < bytesRead - 1) {
+                                    if (buffer[lineEnd] == '\r'.code.toByte() &&
+                                        buffer[lineEnd + 1] == '\n'.code.toByte()) {
+                                        val line = String(buffer, pos, lineEnd - pos).trim()
+                                        if (line.startsWith("Content-Length:")) {
+                                            contentLength = line.substringAfter(":").trim().toIntOrNull() ?: 0
+                                        }
+                                        pos = lineEnd + 2
+                                        break
                                     }
-                                    pos = lineEnd + 2
-                                    break
+                                    lineEnd++
                                 }
-                                lineEnd++
+                                if (lineEnd >= bytesRead - 1) break
+
+                                if (pos < bytesRead && buffer[pos] == '\r'.code.toByte() &&
+                                    pos + 1 < bytesRead && buffer[pos + 1] == '\n'.code.toByte()) {
+                                    pos += 2
+                                    if (contentLength == 0) continue
+                                }
                             }
-                            if (lineEnd >= bytesRead - 1) break
 
-                            // Check for empty line (end of headers, start of data)
-                            if (pos < bytesRead && buffer[pos] == '\r'.code.toByte() &&
-                                pos + 1 < bytesRead && buffer[pos + 1] == '\n'.code.toByte()) {
-                                pos += 2
-                                if (contentLength == 0) continue
-                            }
-                        }
+                            if (contentLength > 0 && bytesOfCurrentFrame < contentLength) {
+                                val remaining = bytesRead - pos
+                                val toCopy = minOf(remaining, contentLength - bytesOfCurrentFrame)
+                                buffer.copyInto(frameBuffer, bytesOfCurrentFrame, pos, pos + toCopy)
+                                bytesOfCurrentFrame += toCopy
+                                pos += toCopy
 
-                        // Read frame data
-                        if (contentLength > 0 && bytesOfCurrentFrame < contentLength) {
-                            val remaining = bytesRead - pos
-                            val toCopy = minOf(remaining, contentLength - bytesOfCurrentFrame)
-                            buffer.copyInto(frameBuffer, bytesOfCurrentFrame, pos, pos + toCopy)
-                            bytesOfCurrentFrame += toCopy
-                            pos += toCopy
-
-                            // Frame complete
-                            if (bytesOfCurrentFrame == contentLength) {
-                                try {
-                                    val bitmap = BitmapFactory.decodeByteArray(frameBuffer, 0, bytesOfCurrentFrame)
-                                    if (bitmap != null) {
-                                        _streamingState.value = StreamingState.Connected(bitmap, 10)
-                                        Log.d(TAG, "Decoded frame: $bytesOfCurrentFrame bytes")
+                                if (bytesOfCurrentFrame == contentLength) {
+                                    try {
+                                        val bitmap = BitmapFactory.decodeByteArray(frameBuffer, 0, bytesOfCurrentFrame)
+                                        if (bitmap != null) {
+                                            _streamingState.value = StreamingState.Connected(bitmap, 10)
+                                            Log.d(TAG, "Decoded frame: $bytesOfCurrentFrame bytes")
+                                        }
+                                    } catch (e: Exception) {
+                                        Log.e(TAG, "Error decoding frame ($bytesOfCurrentFrame bytes)", e)
                                     }
-                                } catch (e: Exception) {
-                                    Log.e(TAG, "Error decoding frame ($bytesOfCurrentFrame bytes)", e)
+                                    contentLength = 0
+                                    bytesOfCurrentFrame = 0
                                 }
-                                contentLength = 0
-                                bytesOfCurrentFrame = 0
+                            } else {
+                                pos++
                             }
-                        } else {
-                            pos++
                         }
                     }
-                }
 
-                disconnect()
-            } catch (e: Exception) {
-                Log.e(TAG, "Connection error", e)
-                _streamingState.value = StreamingState.Error(e.message ?: "Unknown error")
-                try {
-                    streamSocket?.close()
-                } catch (_: Exception) {}
-                streamSocket = null
+                    disconnect()
+                    return@launch // Success, exit retry loop
+
+                } catch (e: Exception) {
+                    lastError = e
+                    Log.w(TAG, "Connection attempt $attempts failed: ${e.message}")
+
+                    // Close socket if needed
+                    try {
+                        streamSocket?.close()
+                    } catch (_: Exception) {}
+                    streamSocket = null
+
+                    if (attempts < maxAttempts) {
+                        Log.d(TAG, "Retrying in ${retryDelay}ms...")
+                        delay(retryDelay)
+                        retryDelay = minOf(retryDelay * 2, 5000L) // Exponential backoff, max 5s
+                    }
+                }
             }
+
+            // All retries exhausted
+            Log.e(TAG, "Failed to connect after $maxAttempts attempts", lastError)
+            _streamingState.value = StreamingState.Error(
+                "Server not ready. ${lastError?.message ?: "Connection refused"}"
+            )
         }
     }
 
