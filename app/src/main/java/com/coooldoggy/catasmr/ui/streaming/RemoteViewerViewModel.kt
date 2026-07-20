@@ -62,33 +62,62 @@ class RemoteViewerViewModel(context: Context) : ViewModel() {
                     socket.getOutputStream().flush()
 
                     // Read response and stream frames
-                    val reader = socket.getInputStream().bufferedReader()
+                    val input = BufferedInputStream(socket.getInputStream())
                     val frameBuffer = ByteArray(1024 * 1024)
+                    val buffer = ByteArray(65536)
                     var line = ""
                     var contentLength = 0
-
-                    // Skip HTTP response headers
-                    Log.d(TAG, "Reading HTTP headers...")
-                    while (reader.readLine().also { line = it ?: "" }.isNotEmpty()) {
-                        Log.d(TAG, "Header: $line")
-                    }
-                    Log.d(TAG, "Headers done, waiting for frames...")
-
-                    // Read multipart stream
-                    val input = BufferedInputStream(socket.getInputStream())
-                    val buffer = ByteArray(65536)
                     var bytesRead: Int
                     var bytesOfCurrentFrame = 0
                     var frameCount = 0
+                    var headersDone = false
                     val startTime = System.currentTimeMillis()
                     val timeoutMs = 5000L // 5 second timeout for first frame
 
+                    Log.d(TAG, "Reading HTTP response...")
                     while (input.read(buffer).also { bytesRead = it } != -1) {
+                        // First, skip HTTP headers if we haven't yet
+                        if (!headersDone) {
+                            // Look for end of headers (blank line = \r\n\r\n)
+                            var pos = 0
+                            var lineStart = 0
+
+                            while (pos < bytesRead - 1) {
+                                if (buffer[pos] == '\r'.code.toByte() && buffer[pos + 1] == '\n'.code.toByte()) {
+                                    val line = String(buffer, lineStart, pos - lineStart).trim()
+                                    if (line.isNotEmpty()) {
+                                        Log.d(TAG, "Header: $line")
+                                    } else {
+                                        // Empty line = end of headers
+                                        headersDone = true
+                                        pos += 2 // Skip the \r\n
+                                        lineStart = pos
+                                        Log.d(TAG, "Headers done, waiting for frames...")
+                                        break
+                                    }
+                                    pos += 2
+                                    lineStart = pos
+                                } else {
+                                    pos++
+                                }
+                            }
+
+                            if (!headersDone) continue // Need more data for headers
+
+                            // Now process remaining buffer as frame data
+                            // Fall through to frame processing below
+                            bytesRead = bytesRead - lineStart
+                            if (bytesRead > 0) {
+                                buffer.copyInto(buffer, 0, lineStart, lineStart + bytesRead)
+                            }
+                        }
+
+                        // Process frames
+                        var pos = 0
                         // Check timeout for first frame
                         if (frameCount == 0 && System.currentTimeMillis() - startTime > timeoutMs) {
                             throw Exception("Timeout waiting for first frame (5 seconds)")
                         }
-                        var pos = 0
 
                         while (pos < bytesRead) {
                             if (contentLength == 0 && bytesOfCurrentFrame == 0) {
