@@ -20,6 +20,7 @@ class SettingsRepository(private val context: Context) {
         val KEEP_LOCAL_COPY = booleanPreferencesKey("keep_local_copy")
         val IS_AUTHORIZED = booleanPreferencesKey("is_authorized")
         val ACCOUNT_EMAIL = stringPreferencesKey("account_email")
+        val ONBOARDING_COMPLETE = booleanPreferencesKey("onboarding_complete")
     }
 
     val settings: Flow<AppSettings> = context.settingsDataStore.data.map { prefs ->
@@ -34,6 +35,7 @@ class SettingsRepository(private val context: Context) {
             keepLocalCopy = prefs[Keys.KEEP_LOCAL_COPY] ?: false,
             isAuthorized = prefs[Keys.IS_AUTHORIZED] ?: false,
             authorizedAccountEmail = prefs[Keys.ACCOUNT_EMAIL],
+            onboardingComplete = prefs[Keys.ONBOARDING_COMPLETE] ?: false,
         )
     }
 
@@ -66,5 +68,9 @@ class SettingsRepository(private val context: Context) {
                 prefs.remove(Keys.ACCOUNT_EMAIL)
             }
         }
+    }
+
+    suspend fun setOnboardingComplete(complete: Boolean) {
+        context.settingsDataStore.edit { it[Keys.ONBOARDING_COMPLETE] = complete }
     }
 }

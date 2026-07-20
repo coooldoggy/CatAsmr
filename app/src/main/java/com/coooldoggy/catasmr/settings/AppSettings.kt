@@ -17,4 +17,5 @@ data class AppSettings(
     val keepLocalCopy: Boolean = false,
     val isAuthorized: Boolean = false,
     val authorizedAccountEmail: String? = null,
+    val onboardingComplete: Boolean = false,
 )
