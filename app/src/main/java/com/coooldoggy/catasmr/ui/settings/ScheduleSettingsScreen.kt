@@ -22,9 +22,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.coooldoggy.catasmr.R
 import com.coooldoggy.catasmr.schedule.ScheduleWindow
 import com.coooldoggy.catasmr.settings.DetectionSensitivity
 import com.coooldoggy.catasmr.settings.PrivacyStatus
@@ -39,6 +42,7 @@ fun ScheduleSettingsScreen(
     viewModel: ScheduleSettingsViewModel = viewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
     var editingWindow by remember { mutableStateOf<ScheduleWindow?>(null) }
 
     Column(
@@ -50,12 +54,12 @@ fun ScheduleSettingsScreen(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Text("Schedule & settings", style = MaterialTheme.typography.headlineSmall)
-            TextButton(onClick = onBack) { Text("Done") }
+            Text(stringResource(R.string.schedule_settings), style = MaterialTheme.typography.headlineSmall)
+            TextButton(onClick = onBack) { Text(stringResource(R.string.schedule_done)) }
         }
 
         if (uiState.windows.isEmpty()) {
-            Text("No feeder windows yet — add one to match your auto-feeder's schedule.")
+            Text(stringResource(R.string.schedule_no_windows))
         } else {
             LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
                 items(uiState.windows, key = { it.id }) { window ->
@@ -68,34 +72,34 @@ fun ScheduleSettingsScreen(
                 }
             }
         }
-        Button(onClick = { viewModel.addWindow() }) { Text("Add window") }
+        Button(onClick = { viewModel.addWindow() }) { Text(stringResource(R.string.schedule_add_window)) }
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
 
         ChoiceRow(
-            label = "Detection sensitivity",
+            label = stringResource(R.string.section_detection),
             options = DetectionSensitivity.entries,
             selected = uiState.settings.sensitivity,
             optionLabel = { it.name.lowercase().replaceFirstChar(Char::uppercase) },
             onSelect = { viewModel.setSensitivity(it) }
         )
         ChoiceRow(
-            label = "Video quality",
+            label = stringResource(R.string.section_video),
             options = VideoQuality.entries,
             selected = uiState.settings.videoQuality,
             optionLabel = { it.name },
             onSelect = { viewModel.setVideoQuality(it) }
         )
         ChoiceRow(
-            label = "Upload privacy",
+            label = stringResource(R.string.section_privacy),
             options = PrivacyStatus.entries,
             selected = uiState.settings.privacyStatus,
             optionLabel = { it.name.lowercase().replaceFirstChar(Char::uppercase) },
             onSelect = { viewModel.setPrivacyStatus(it) }
         )
 
-        ToggleRow("Wi-Fi only uploads", uiState.settings.wifiOnly) { viewModel.setWifiOnly(it) }
-        ToggleRow("Keep local copy after upload", uiState.settings.keepLocalCopy) { viewModel.setKeepLocalCopy(it) }
+        ToggleRow(stringResource(R.string.setting_wifi_only), uiState.settings.wifiOnly) { viewModel.setWifiOnly(it) }
+        ToggleRow(stringResource(R.string.setting_keep_local), uiState.settings.keepLocalCopy) { viewModel.setKeepLocalCopy(it) }
     }
 
     editingWindow?.let { window ->

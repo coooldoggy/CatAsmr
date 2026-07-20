@@ -1,3 +1,62 @@
 <resources>
     <string name="app_name">CatAsmr</string>
+    <string name="app_description">Automatic cat camera with AI detection and YouTube upload</string>
+
+    <!-- Sections -->
+    <string name="section_setup">Setup</string>
+    <string name="section_manual_test">Manual test</string>
+    <string name="section_schedule">Schedule</string>
+    <string name="section_activity">Activity</string>
+    <string name="section_youtube">YouTube</string>
+    <string name="section_detection">Detection sensitivity</string>
+    <string name="section_video">Video quality</string>
+    <string name="section_privacy">Upload privacy</string>
+
+    <!-- Permissions -->
+    <string name="perm_camera">Camera</string>
+    <string name="perm_microphone">Microphone</string>
+    <string name="perm_notifications">Notifications</string>
+    <string name="perm_exact_alarms">Exact alarms</string>
+    <string name="perm_battery_optimization">Battery optimization disabled</string>
+
+    <!-- Recording Status -->
+    <string name="recording_watching">Currently watching for your cat</string>
+    <string name="recording_not_watching">Not watching — bypasses the schedule</string>
+    <string name="recording_start_watching">Start watching now</string>
+    <string name="recording_stop_watching">Stop watching</string>
+    <string name="recording_no_recordings">No recordings yet</string>
+    <string name="recording_last_ok">Last recording: %s (ok)</string>
+    <string name="recording_last_failed">Last recording: %s (failed)</string>
+
+    <!-- Upload Status -->
+    <string name="upload_none">No uploads yet</string>
+    <string name="upload_in_progress">Uploading…</string>
+    <string name="upload_success">Last upload succeeded</string>
+    <string name="upload_success_with_time">Last upload succeeded (%s)</string>
+    <string name="upload_failed">Last upload failed: %s</string>
+    <string name="upload_needs_reauth">YouTube access needs to be reconnected — tap Sign in</string>
+
+    <!-- Schedule -->
+    <string name="schedule_empty">No feeder schedule set yet</string>
+    <string name="schedule_next_window">Next window: %s</string>
+    <string name="schedule_no_windows">No feeder windows yet — add one to match your auto-feeder\'s schedule.</string>
+    <string name="schedule_edit">Edit schedule & settings</string>
+    <string name="schedule_settings">Schedule & settings</string>
+    <string name="schedule_done">Done</string>
+    <string name="schedule_add_window">Add window</string>
+
+    <!-- YouTube Auth -->
+    <string name="youtube_signed_in">Signed in as %s</string>
+    <string name="youtube_not_signed_in">Sign in to YouTube</string>
+    <string name="youtube_sign_out">Sign out</string>
+    <string name="youtube_sign_in_failed">YouTube sign-in failed: %s</string>
+    <string name="youtube_sign_in_cancelled">YouTube sign-in was cancelled</string>
+
+    <!-- Settings toggles -->
+    <string name="setting_wifi_only">Wi-Fi only uploads</string>
+    <string name="setting_keep_local">Keep local copy after upload</string>
+
+    <!-- Notification channel -->
+    <string name="notification_channel_title">Cat camera activity</string>
+    <string name="notification_channel_desc">Shows when CatAsmr is watching for or recording your cat</string>
 </resources>

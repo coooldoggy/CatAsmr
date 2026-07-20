@@ -18,13 +18,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.material3.Icon
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.coooldoggy.catasmr.R
 import com.coooldoggy.catasmr.recording.RecordingService
 import com.coooldoggy.catasmr.status.ActivityStatus
 import com.coooldoggy.catasmr.status.UploadState
@@ -70,70 +73,79 @@ fun HomeScreen(
             .padding(16.dp)
             .verticalScroll(rememberScrollState())
     ) {
-        Text("CatAsmr", style = MaterialTheme.typography.headlineMedium)
+        Text(stringResource(R.string.app_name), style = MaterialTheme.typography.headlineMedium)
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-        Text("Setup", style = MaterialTheme.typography.titleMedium)
-        PermissionRow("Camera", cameraGranted) {
+        Text(stringResource(R.string.section_setup), style = MaterialTheme.typography.titleMedium)
+        PermissionRow(stringResource(R.string.perm_camera), cameraGranted) {
             permissionLauncher.launch(PermissionUtils.runtimePermissionsToRequest(context).toTypedArray())
         }
-        PermissionRow("Microphone", micGranted) {
+        PermissionRow(stringResource(R.string.perm_microphone), micGranted) {
             permissionLauncher.launch(PermissionUtils.runtimePermissionsToRequest(context).toTypedArray())
         }
-        PermissionRow("Notifications", notifGranted) {
+        PermissionRow(stringResource(R.string.perm_notifications), notifGranted) {
             permissionLauncher.launch(PermissionUtils.runtimePermissionsToRequest(context).toTypedArray())
         }
-        PermissionRow("Exact alarms", exactAlarmGranted) {
+        PermissionRow(stringResource(R.string.perm_exact_alarms), exactAlarmGranted) {
             context.startActivity(PermissionUtils.exactAlarmSettingsIntent(context))
         }
-        PermissionRow("Battery optimization disabled", batteryExempt) {
+        PermissionRow(stringResource(R.string.perm_battery_optimization), batteryExempt) {
             PermissionUtils.launchBatteryOptimizationSettings(context)
         }
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-        Text("Manual test", style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(R.string.section_manual_test), style = MaterialTheme.typography.titleMedium)
         val isWatching by RecordingService.isRunning.collectAsState()
-        Text(if (isWatching) "Currently watching for your cat" else "Not watching — bypasses the schedule")
+        Text(if (isWatching) stringResource(R.string.recording_watching) else stringResource(R.string.recording_not_watching))
         if (isWatching) {
-            Button(onClick = { RecordingService.stop(context) }) { Text("Stop watching") }
+            Button(onClick = { RecordingService.stop(context) }) { Text(stringResource(R.string.recording_stop_watching)) }
         } else {
-            Button(onClick = { RecordingService.start(context) }) { Text("Start watching now") }
+            Button(onClick = { RecordingService.start(context) }) { Text(stringResource(R.string.recording_start_watching)) }
         }
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-        Text("Schedule", style = MaterialTheme.typography.titleMedium)
-        Text(uiState.nextWindowLabel?.let { "Next window: $it" } ?: "No feeder schedule set yet")
-        Button(onClick = onOpenSettings) { Text("Edit schedule & settings") }
+        Text(stringResource(R.string.section_schedule), style = MaterialTheme.typography.titleMedium)
+        Text(uiState.nextWindowLabel?.let { stringResource(R.string.schedule_next_window, it) } ?: stringResource(R.string.schedule_empty))
+        Button(onClick = onOpenSettings) { Text(stringResource(R.string.schedule_edit)) }
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-        Text("Activity", style = MaterialTheme.typography.titleMedium)
-        Text(recordingStatusLabel(uiState.status))
-        Text(uploadStatusLabel(uiState.status))
+        Text(stringResource(R.string.section_activity), style = MaterialTheme.typography.titleMedium)
+        Text(recordingStatusLabel(context, uiState.status))
+        Text(uploadStatusLabel(context, uiState.status))
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
-        Text("YouTube", style = MaterialTheme.typography.titleMedium)
+        Text(stringResource(R.string.section_youtube), style = MaterialTheme.typography.titleMedium)
         if (uiState.settings.isAuthorized) {
-            Text("Signed in as ${uiState.settings.authorizedAccountEmail ?: "your account"}")
-            Button(onClick = { viewModel.signOut() }) { Text("Sign out") }
+            Text(stringResource(R.string.youtube_signed_in, uiState.settings.authorizedAccountEmail ?: "your account"))
+            Button(onClick = { viewModel.signOut() }) { Text(stringResource(R.string.youtube_sign_out)) }
         } else {
-            Button(onClick = onSignIn) { Text("Sign in to YouTube") }
+            Button(onClick = onSignIn) { Text(stringResource(R.string.youtube_not_signed_in)) }
         }
     }
 }
 
-private fun recordingStatusLabel(status: ActivityStatus): String {
-    val at = status.lastRecordingAtMillis ?: return "No recordings yet"
-    val outcome = if (status.lastRecordingSuccess == true) "ok" else "failed"
-    return "Last recording: ${formatTimestamp(at)} ($outcome)"
+private fun recordingStatusLabel(context: android.content.Context, status: ActivityStatus): String {
+    val at = status.lastRecordingAtMillis ?: return context.getString(R.string.recording_no_recordings)
+    val timestamp = formatTimestamp(at)
+    return if (status.lastRecordingSuccess == true) {
+        context.getString(R.string.recording_last_ok, timestamp)
+    } else {
+        context.getString(R.string.recording_last_failed, timestamp)
+    }
 }
 
-private fun uploadStatusLabel(status: ActivityStatus): String = when (status.lastUploadState) {
-    UploadState.NONE -> "No uploads yet"
-    UploadState.UPLOADING -> "Uploading…"
-    UploadState.SUCCESS -> "Last upload succeeded" +
-        (status.lastUploadAtMillis?.let { " (${formatTimestamp(it)})" } ?: "")
-    UploadState.FAILED -> "Last upload failed: ${status.lastUploadError ?: "unknown error"}"
-    UploadState.NEEDS_REAUTH -> "YouTube access needs to be reconnected — tap Sign in"
+private fun uploadStatusLabel(context: android.content.Context, status: ActivityStatus): String = when (status.lastUploadState) {
+    UploadState.NONE -> context.getString(R.string.upload_none)
+    UploadState.UPLOADING -> context.getString(R.string.upload_in_progress)
+    UploadState.SUCCESS -> {
+        if (status.lastUploadAtMillis != null) {
+            context.getString(R.string.upload_success_with_time, formatTimestamp(status.lastUploadAtMillis!!))
+        } else {
+            context.getString(R.string.upload_success)
+        }
+    }
+    UploadState.FAILED -> context.getString(R.string.upload_failed, status.lastUploadError ?: "unknown error")
+    UploadState.NEEDS_REAUTH -> context.getString(R.string.upload_needs_reauth)
 }
 
 private fun formatTimestamp(millis: Long): String =

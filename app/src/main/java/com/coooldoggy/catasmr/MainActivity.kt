@@ -20,6 +20,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import com.coooldoggy.catasmr.R
 import com.coooldoggy.catasmr.auth.YouTubeAuthManager
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.ui.home.HomeScreen
@@ -54,7 +56,7 @@ class MainActivity : ComponentActivity() {
                 ) { result: ActivityResult ->
                     val data = result.data
                     if (data == null) {
-                        Toast.makeText(context, "YouTube sign-in was cancelled", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, stringResource(R.string.youtube_sign_in_cancelled), Toast.LENGTH_SHORT).show()
                         return@rememberLauncherForActivityResult
                     }
                     when (val outcome = authManager.resultFromIntent(data)) {
@@ -62,7 +64,7 @@ class MainActivity : ComponentActivity() {
                             scope.launch { settingsRepository.setAuthorization(true, outcome.accountEmail) }
                         }
                         is YouTubeAuthManager.AuthOutcome.Failed -> {
-                            Toast.makeText(context, "YouTube sign-in failed: ${outcome.message}", Toast.LENGTH_LONG)
+                            Toast.makeText(context, stringResource(R.string.youtube_sign_in_failed, outcome.message), Toast.LENGTH_LONG)
                                 .show()
                         }
                         is YouTubeAuthManager.AuthOutcome.NeedsConsent -> Unit
@@ -87,7 +89,7 @@ class MainActivity : ComponentActivity() {
                                         is YouTubeAuthManager.AuthOutcome.Failed -> {
                                             Toast.makeText(
                                                 context,
-                                                "YouTube sign-in failed: ${outcome.message}",
+                                                stringResource(R.string.youtube_sign_in_failed, outcome.message),
                                                 Toast.LENGTH_LONG
                                             ).show()
                                         }
