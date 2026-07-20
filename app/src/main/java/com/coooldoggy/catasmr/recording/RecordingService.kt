@@ -17,6 +17,8 @@ import com.coooldoggy.catasmr.detection.CatDetector
 import com.coooldoggy.catasmr.detection.DetectionConfig
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.status.ActivityStatusRepository
+import com.coooldoggy.catasmr.streaming.LocalStreamingServer
+import com.coooldoggy.catasmr.streaming.StreamingFrameAnalyzer
 import com.coooldoggy.catasmr.upload.UploadQueue
 import com.coooldoggy.catasmr.util.PerformanceMonitor
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -58,6 +60,8 @@ class RecordingService : LifecycleService() {
     private var catDetector: CatDetector? = null
     private var stateMachine: RecordingStateMachine? = null
     private var tickJob: Job? = null
+    private var streamingServer: LocalStreamingServer? = null
+    private var streamingAnalyzer: StreamingFrameAnalyzer? = null
 
     override fun onCreate() {
         super.onCreate()
@@ -115,10 +119,22 @@ class RecordingService : LifecycleService() {
             }
             catDetector = detector
 
+            // Set up streaming if enabled
+            val streamingFrameAnalyzer = StreamingFrameAnalyzer { frameData, width, height ->
+                streamingServer?.broadcastFrame(frameData, width, height)
+            }
+            streamingAnalyzer = streamingFrameAnalyzer
+
+            // Start streaming server
+            streamingServer = LocalStreamingServer(applicationContext, port = 8888)
+            streamingServer?.start()
+            Log.d(TAG, "Streaming server started")
+
             cameraController.bind(
                 lifecycleOwner = this@RecordingService,
                 analyzer = detector,
                 videoQuality = settings.videoQuality,
+                streamingAnalyzer = streamingFrameAnalyzer,
                 onReady = { startTicking(machine) },
                 onError = { stopWatchingAndSelf() }
             )
@@ -203,6 +219,9 @@ class RecordingService : LifecycleService() {
         catDetector?.close()
         catDetector = null
         stateMachine = null
+        streamingServer?.stop()
+        streamingServer = null
+        streamingAnalyzer = null
         ServiceCompat.stopForeground(this, ServiceCompat.STOP_FOREGROUND_REMOVE)
         stopSelf()
     }
@@ -213,6 +232,9 @@ class RecordingService : LifecycleService() {
         tickJob?.cancel()
         cameraController.unbind()
         catDetector?.close()
+        streamingServer?.stop()
+        streamingServer = null
+        streamingAnalyzer = null
         serviceScope.cancel()
         _isRunning.value = false
         super.onDestroy()

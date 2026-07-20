@@ -39,6 +39,7 @@ class CameraController(private val context: Context) {
         lifecycleOwner: LifecycleOwner,
         analyzer: ImageAnalysis.Analyzer,
         videoQuality: VideoQuality,
+        streamingAnalyzer: ImageAnalysis.Analyzer? = null,
         onReady: () -> Unit,
         onError: (Throwable) -> Unit
     ) {
@@ -60,11 +61,21 @@ class CameraController(private val context: Context) {
                 analysis.setAnalyzer(analysisExecutor, analyzer)
 
                 provider.unbindAll()
+
+                val useCases = mutableListOf(capture, analysis)
+                if (streamingAnalyzer != null) {
+                    val streamingAnalysis = ImageAnalysis.Builder()
+                        .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                        .setTargetResolution(android.util.Size(640, 480)) // Lower res for streaming
+                        .build()
+                    streamingAnalysis.setAnalyzer(analysisExecutor, streamingAnalyzer)
+                    useCases.add(streamingAnalysis)
+                }
+
                 provider.bindToLifecycle(
                     lifecycleOwner,
                     CameraSelector.DEFAULT_BACK_CAMERA,
-                    capture,
-                    analysis
+                    *useCases.toTypedArray()
                 )
                 onReady()
             } catch (t: Throwable) {
