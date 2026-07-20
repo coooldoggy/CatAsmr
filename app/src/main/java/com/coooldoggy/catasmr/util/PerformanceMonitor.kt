@@ -18,7 +18,7 @@ object PerformanceMonitor {
             val usedMemory = totalMemory - freeMemory
 
             val info = "Memory - Used: ${usedMemory}MB / ${maxMemory}MB"
-            Log.i(TAG, tag + ": " + info)
+            Log.i(TAG, "$tag: $info")
 
             FirebaseCrashlytics.getInstance().log("$tag memory: used=${usedMemory}MB max=${maxMemory}MB")
         } catch (e: Exception) {
