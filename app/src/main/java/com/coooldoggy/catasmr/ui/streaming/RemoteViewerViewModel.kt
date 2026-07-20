@@ -50,41 +50,76 @@ class RemoteViewerViewModel(context: Context) : ViewModel() {
                 socket.getOutputStream().write(request.toByteArray())
                 socket.getOutputStream().flush()
 
-                // Read response and stream frames
+                // Read response and stream frames using simple line parsing
+                val reader = socket.getInputStream().bufferedReader()
+                val frameBuffer = ByteArray(1024 * 1024) // 1MB buffer for frames
+                var line = ""
+                var contentLength = 0
+
+                // Skip HTTP response headers
+                while (reader.readLine().also { line = it ?: "" }.isNotEmpty()) {
+                    // Continue until empty line
+                }
+
+                // Read multipart stream
                 val input = BufferedInputStream(socket.getInputStream())
-                var buffer = ByteArray(8192)
+                val buffer = ByteArray(65536)
                 var bytesRead: Int
-                val frameBuffer = mutableListOf<Byte>()
-                var inFrame = false
+                var bytesOfCurrentFrame = 0
 
                 while (input.read(buffer).also { bytesRead = it } != -1) {
-                    for (i in 0 until bytesRead) {
-                        frameBuffer.add(buffer[i])
+                    var pos = 0
 
-                        // Detect JPEG frame boundaries
-                        if (frameBuffer.size >= 2) {
-                            val last2 = frameBuffer.takeLast(2)
-                            if (last2[0] == 0xFF.toByte() && last2[1] == 0xD8.toByte()) {
-                                inFrame = true
-                            }
-                            if (inFrame && frameBuffer.size >= 4) {
-                                val last2b = frameBuffer.takeLast(2)
-                                if (last2b[0] == 0xFF.toByte() && last2b[1] == 0xD9.toByte()) {
-                                    // Complete frame received
-                                    try {
-                                        val jpegData = frameBuffer.toByteArray()
-                                        val bitmap = BitmapFactory.decodeByteArray(jpegData, 0, jpegData.size)
-                                        if (bitmap != null) {
-                                            _streamingState.value = StreamingState.Connected(bitmap, 10)
-                                        }
-                                        frameBuffer.clear()
-                                        inFrame = false
-                                    } catch (e: Exception) {
-                                        Log.e(TAG, "Error decoding frame", e)
-                                        frameBuffer.clear()
+                    while (pos < bytesRead) {
+                        // Try to read a line for Content-Length header
+                        if (contentLength == 0 && bytesOfCurrentFrame == 0) {
+                            var lineEnd = pos
+                            while (lineEnd < bytesRead - 1) {
+                                if (buffer[lineEnd] == '\r'.code.toByte() &&
+                                    buffer[lineEnd + 1] == '\n'.code.toByte()) {
+                                    val line = String(buffer, pos, lineEnd - pos).trim()
+                                    if (line.startsWith("Content-Length:")) {
+                                        contentLength = line.substringAfter(":").trim().toIntOrNull() ?: 0
                                     }
+                                    pos = lineEnd + 2
+                                    break
                                 }
+                                lineEnd++
                             }
+                            if (lineEnd >= bytesRead - 1) break
+
+                            // Check for empty line (end of headers, start of data)
+                            if (pos < bytesRead && buffer[pos] == '\r'.code.toByte() &&
+                                pos + 1 < bytesRead && buffer[pos + 1] == '\n'.code.toByte()) {
+                                pos += 2
+                                if (contentLength == 0) continue
+                            }
+                        }
+
+                        // Read frame data
+                        if (contentLength > 0 && bytesOfCurrentFrame < contentLength) {
+                            val remaining = bytesRead - pos
+                            val toCopy = minOf(remaining, contentLength - bytesOfCurrentFrame)
+                            buffer.copyInto(frameBuffer, bytesOfCurrentFrame, pos, pos + toCopy)
+                            bytesOfCurrentFrame += toCopy
+                            pos += toCopy
+
+                            // Frame complete
+                            if (bytesOfCurrentFrame == contentLength) {
+                                try {
+                                    val bitmap = BitmapFactory.decodeByteArray(frameBuffer, 0, bytesOfCurrentFrame)
+                                    if (bitmap != null) {
+                                        _streamingState.value = StreamingState.Connected(bitmap, 10)
+                                        Log.d(TAG, "Decoded frame: $bytesOfCurrentFrame bytes")
+                                    }
+                                } catch (e: Exception) {
+                                    Log.e(TAG, "Error decoding frame ($bytesOfCurrentFrame bytes)", e)
+                                }
+                                contentLength = 0
+                                bytesOfCurrentFrame = 0
+                            }
+                        } else {
+                            pos++
                         }
                     }
                 }
