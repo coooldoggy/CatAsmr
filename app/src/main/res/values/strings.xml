@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CatAsmr</string>
+    <string name="app_name">PawWatch</string>
     <string name="app_description">Automatic cat camera with AI detection and YouTube upload</string>
 
     <!-- Sections -->
@@ -58,5 +58,5 @@
 
     <!-- Notification channel -->
     <string name="notification_channel_title">Cat camera activity</string>
-    <string name="notification_channel_desc">Shows when CatAsmr is watching for or recording your cat</string>
+    <string name="notification_channel_desc">Shows when PawWatch is watching for or recording your cat</string>
 </resources>

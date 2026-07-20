@@ -28,4 +28,5 @@ data class StreamingInfo(
     val isCloudAvailable: Boolean,
     val localAddress: String?,
     val streamingPort: Int,
+    val pairingCode: String? = null,
 )

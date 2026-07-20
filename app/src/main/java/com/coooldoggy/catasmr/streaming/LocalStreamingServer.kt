@@ -132,7 +132,7 @@ class LocalStreamingServer(
         Log.d(TAG, "Client disconnected: ${client.id}")
     }
 
-    private fun getLocalIpAddress(): String {
+    fun getLocalIpAddress(): String {
         return try {
             val wifiManager = context.getSystemService(Context.WIFI_SERVICE) as? WifiManager
             val connectionInfo = wifiManager?.connectionInfo

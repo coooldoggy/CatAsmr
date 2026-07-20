@@ -32,8 +32,10 @@ import com.coooldoggy.catasmr.R
 import com.coooldoggy.catasmr.recording.RecordingService
 import com.coooldoggy.catasmr.status.ActivityStatus
 import com.coooldoggy.catasmr.status.UploadState
+import com.coooldoggy.catasmr.streaming.QrCodeGenerator
 import com.coooldoggy.catasmr.ui.components.ErrorBanner
 import com.coooldoggy.catasmr.ui.components.PermissionRow
+import com.coooldoggy.catasmr.ui.streaming.QrCodeScreen
 import com.coooldoggy.catasmr.util.PermissionUtils
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -115,11 +117,34 @@ fun HomeScreen(
         HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
         Text(stringResource(R.string.section_manual_test), style = MaterialTheme.typography.titleMedium)
         val isWatching by RecordingService.isRunning.collectAsState()
+        val streamingInfo by RecordingService.streamingInfo.collectAsState()
+
         Text(if (isWatching) stringResource(R.string.recording_watching) else stringResource(R.string.recording_not_watching))
         if (isWatching) {
             Button(onClick = { RecordingService.stop(context) }) { Text(stringResource(R.string.recording_stop_watching)) }
             Button(onClick = onOpenPreview, modifier = Modifier.padding(top = 8.dp)) {
                 Text("View Stream Preview")
+            }
+
+            // Show QR code for pairing if streaming is active
+            streamingInfo?.let { info ->
+                info.localAddress?.let { ip ->
+                    info.pairingCode?.let { code ->
+                        val qrData = QrCodeGenerator.generatePairingData(ip, info.streamingPort, code)
+                        val qrBitmap = remember(qrData) { QrCodeGenerator.generateQrCode(qrData, 256) }
+
+                        androidx.compose.material3.Card(
+                            modifier = Modifier.padding(top = 16.dp)
+                        ) {
+                            QrCodeScreen(
+                                qrBitmap = qrBitmap,
+                                deviceIp = ip,
+                                pairingCode = code,
+                                modifier = Modifier.padding(16.dp)
+                            )
+                        }
+                    }
+                }
             }
         } else {
             Button(onClick = {

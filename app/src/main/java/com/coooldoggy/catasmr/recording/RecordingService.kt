@@ -17,6 +17,7 @@ import com.coooldoggy.catasmr.detection.CatDetector
 import com.coooldoggy.catasmr.detection.DetectionConfig
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.status.ActivityStatusRepository
+import com.coooldoggy.catasmr.streaming.DevicePairingManager
 import com.coooldoggy.catasmr.streaming.LocalStreamingServer
 import com.coooldoggy.catasmr.streaming.StreamingFrameAnalyzer
 import com.coooldoggy.catasmr.upload.UploadQueue
@@ -130,9 +131,25 @@ class RecordingService : LifecycleService() {
 
             // Start streaming server
             Log.d(TAG, "Starting LocalStreamingServer on port 8888...")
-            streamingServer = LocalStreamingServer(applicationContext, port = 8888)
-            streamingServer?.start()
+            val server = LocalStreamingServer(applicationContext, port = 8888)
+            streamingServer = server
+            server.start()
             Log.d(TAG, "Streaming server started")
+
+            // Set up pairing information
+            val pairingManager = DevicePairingManager(applicationContext)
+            val pairingCode = pairingManager.generatePairingCode()
+            val localIp = server.getLocalIpAddress()
+            _streamingInfo.value = com.coooldoggy.catasmr.streaming.StreamingInfo(
+                deviceId = android.os.Build.DEVICE,
+                deviceName = android.os.Build.MODEL,
+                isLocalAvailable = true,
+                isCloudAvailable = false,
+                localAddress = localIp,
+                streamingPort = 8888,
+                pairingCode = pairingCode
+            )
+            Log.d(TAG, "Streaming info updated: IP=$localIp, Code=$pairingCode")
 
             cameraController.bind(
                 lifecycleOwner = this@RecordingService,
@@ -226,6 +243,7 @@ class RecordingService : LifecycleService() {
         streamingServer?.stop()
         streamingServer = null
         streamingAnalyzer = null
+        _streamingInfo.value = null
         ServiceCompat.stopForeground(this, ServiceCompat.STOP_FOREGROUND_REMOVE)
         stopSelf()
     }
@@ -261,6 +279,9 @@ class RecordingService : LifecycleService() {
 
         private val _isRunning = MutableStateFlow(false)
         val isRunning: StateFlow<Boolean> = _isRunning.asStateFlow()
+
+        private val _streamingInfo = MutableStateFlow<com.coooldoggy.catasmr.streaming.StreamingInfo?>(null)
+        val streamingInfo: StateFlow<com.coooldoggy.catasmr.streaming.StreamingInfo?> = _streamingInfo.asStateFlow()
 
         fun start(context: Context, windowId: String = MANUAL_WINDOW_ID) {
             val intent = Intent(context, RecordingService::class.java).apply {
