@@ -84,14 +84,19 @@ class LocalStreamingServer(
     }
 
     fun broadcastFrame(frameData: ByteArray, width: Int, height: Int) {
-        if (connectedClients.isEmpty()) return
+        if (connectedClients.isEmpty()) {
+            Log.d(TAG, "No connected clients, skipping frame broadcast")
+            return
+        }
 
+        Log.d(TAG, "Broadcasting frame (${frameData.size} bytes) to ${connectedClients.size} clients")
         connectedClients.forEach { client ->
             scope.launch {
                 try {
                     client.sendFrame(frameData, width, height)
+                    Log.d(TAG, "Frame sent to ${client.id}")
                 } catch (e: Exception) {
-                    Log.e(TAG, "Failed to send frame to client ${client.id}", e)
+                    Log.e(TAG, "Failed to send frame to client ${client.id}: ${e.message}", e)
                     removeClient(client)
                 }
             }
@@ -154,11 +159,13 @@ class LocalStreamingServer(
             val header = buildString {
                 append("HTTP/1.1 200 OK\r\n")
                 append("Content-Type: multipart/x-mixed-replace; boundary=FRAME\r\n")
-                append("Connection: close\r\n")
+                append("Connection: keep-alive\r\n")
+                append("Cache-Control: no-cache\r\n")
                 append("\r\n")
             }
             output.writeBytes(header)
             output.flush()
+            Log.d("LocalStreamingServer", "Stream header sent, ready for frames")
         }
 
         fun sendFrame(frameData: ByteArray, width: Int, height: Int) {
