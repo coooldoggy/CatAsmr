@@ -24,6 +24,7 @@ import com.coooldoggy.catasmr.auth.YouTubeAuthManager
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.ui.home.HomeScreen
 import com.coooldoggy.catasmr.ui.settings.ScheduleSettingsScreen
+import com.coooldoggy.catasmr.ui.streaming.CameraPreviewScreen
 import com.coooldoggy.catasmr.ui.streaming.ConnectToDeviceScreen
 import com.coooldoggy.catasmr.ui.streaming.RemoteViewerScreen
 import com.coooldoggy.catasmr.ui.streaming.RemoteViewerViewModel
@@ -116,20 +117,6 @@ class MainActivity : ComponentActivity() {
                             },
                             modifier = Modifier.padding(innerPadding)
                         )
-                        Screen.StreamPreview -> {
-                            val viewModel = androidx.lifecycle.viewmodel.compose.viewModel {
-                                RemoteViewerViewModel(applicationContext)
-                            }
-                            androidx.compose.runtime.LaunchedEffect(Unit) {
-                                viewModel.connectToDevice("Local Stream Preview", "127.0.0.1", 8888)
-                            }
-                            RemoteViewerScreen(
-                                deviceName = "Stream Preview",
-                                streamingState = viewModel.streamingState,
-                                onClose = { screen = Screen.Home },
-                                modifier = Modifier.padding(innerPadding)
-                            )
-                        }
                         is Screen.RemoteViewer -> {
                             val viewModel = androidx.lifecycle.viewmodel.compose.viewModel {
                                 RemoteViewerViewModel(applicationContext)
@@ -140,6 +127,13 @@ class MainActivity : ComponentActivity() {
                             RemoteViewerScreen(
                                 deviceName = (screen as Screen.RemoteViewer).deviceName,
                                 streamingState = viewModel.streamingState,
+                                onClose = { screen = Screen.Home },
+                                modifier = Modifier.padding(innerPadding)
+                            )
+                        }
+                        Screen.StreamPreview -> {
+                            // Show local camera preview on same device
+                            CameraPreviewScreen(
                                 onClose = { screen = Screen.Home },
                                 modifier = Modifier.padding(innerPadding)
                             )
