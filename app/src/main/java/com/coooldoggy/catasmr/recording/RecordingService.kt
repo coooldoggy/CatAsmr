@@ -120,12 +120,16 @@ class RecordingService : LifecycleService() {
             catDetector = detector
 
             // Set up streaming if enabled
+            Log.d(TAG, "Setting up streaming analyzer...")
             val streamingFrameAnalyzer = StreamingFrameAnalyzer { frameData, width, height ->
+                Log.d(TAG, "StreamingFrameAnalyzer: Got frame $width x $height (${frameData.size} bytes)")
                 streamingServer?.broadcastFrame(frameData, width, height)
             }
             streamingAnalyzer = streamingFrameAnalyzer
+            Log.d(TAG, "Streaming analyzer created")
 
             // Start streaming server
+            Log.d(TAG, "Starting LocalStreamingServer on port 8888...")
             streamingServer = LocalStreamingServer(applicationContext, port = 8888)
             streamingServer?.start()
             Log.d(TAG, "Streaming server started")

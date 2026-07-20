@@ -29,11 +29,15 @@ class StreamingFrameAnalyzer(
         lastFrameTime = now
 
         try {
+            Log.d(TAG, "Processing frame format=${image.format} ${image.width}x${image.height}")
             val bitmap = imageProxyToBitmap(image)
             if (bitmap != null) {
                 val jpegData = compressBitmapToJpeg(bitmap, quality = 60)
+                Log.d(TAG, "Encoded to JPEG: ${jpegData.size} bytes")
                 onFrameReady(jpegData, bitmap.width, bitmap.height)
                 bitmap.recycle()
+            } else {
+                Log.w(TAG, "Failed to convert image to bitmap")
             }
         } catch (e: Exception) {
             Log.e(TAG, "Error processing streaming frame", e)
