@@ -41,8 +41,8 @@ class RemoteViewerViewModel(context: Context) : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             var lastError: Exception? = null
             var attempts = 0
-            val maxAttempts = 5
-            var retryDelay = 500L
+            val maxAttempts = 10
+            var retryDelay = 300L
 
             while (attempts < maxAttempts) {
                 try {

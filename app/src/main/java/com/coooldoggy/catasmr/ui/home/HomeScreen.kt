@@ -124,7 +124,8 @@ fun HomeScreen(
         } else {
             Button(onClick = {
                 RecordingService.start(context)
-                onOpenPreview()
+                // Small delay to let server initialize before preview connects
+                viewModel.delayedOpenPreview(onOpenPreview)
             }) { Text(stringResource(R.string.recording_start_watching)) }
         }
         Button(onClick = onOpenRemoteViewer, modifier = Modifier.padding(top = 8.dp)) {

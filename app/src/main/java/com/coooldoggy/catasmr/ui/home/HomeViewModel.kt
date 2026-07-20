@@ -11,6 +11,7 @@ import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.status.ActivityStatus
 import com.coooldoggy.catasmr.status.ActivityStatusRepository
 import com.coooldoggy.catasmr.ui.util.UiError
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -73,5 +74,13 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
     fun clearError() {
         _error.value = null
+    }
+
+    fun delayedOpenPreview(onOpenPreview: () -> Unit) {
+        viewModelScope.launch {
+            // Wait 1 second for server to fully initialize
+            delay(1000)
+            onOpenPreview()
+        }
     }
 }
