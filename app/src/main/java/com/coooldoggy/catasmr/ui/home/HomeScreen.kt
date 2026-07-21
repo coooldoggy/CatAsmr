@@ -1,5 +1,7 @@
 package com.coooldoggy.catasmr.ui.home
 
+import android.content.Intent
+import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
@@ -163,16 +165,43 @@ fun HomeScreen(
                         ) {
                             Text(stringResource(R.string.home_view_preview), color = MaterialTheme.colorScheme.onTertiary)
                         }
-                        Button(
-                            onClick = { RecordingService.stop(context) },
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(vertical = 4.dp),
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor = MaterialTheme.colorScheme.error
-                            )
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            Text(stringResource(R.string.home_stop_watching), color = MaterialTheme.colorScheme.onError)
+                            Button(
+                                onClick = {
+                                    val intent = Intent().apply {
+                                        action = Intent.ACTION_VIEW
+                                        data = Uri.parse("kakaoopen://talk/friends")
+                                        `package` = "com.kakao.talk"
+                                    }
+                                    try {
+                                        context.startActivity(intent)
+                                    } catch (e: Exception) {
+                                        // Kakao Talk not installed
+                                    }
+                                },
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .padding(vertical = 4.dp),
+                                colors = ButtonDefaults.buttonColors(
+                                    containerColor = MaterialTheme.colorScheme.tertiary
+                                )
+                            ) {
+                                Text("Share", color = MaterialTheme.colorScheme.onTertiary)
+                            }
+                            Button(
+                                onClick = { RecordingService.stop(context) },
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .padding(vertical = 4.dp),
+                                colors = ButtonDefaults.buttonColors(
+                                    containerColor = MaterialTheme.colorScheme.error
+                                )
+                            ) {
+                                Text(stringResource(R.string.home_stop_watching), color = MaterialTheme.colorScheme.onError)
+                            }
                         }
 
                         // QR Code Card
