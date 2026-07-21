@@ -55,6 +55,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CatAsmrTheme {
                 var selectedTab by remember { mutableStateOf(Tab.HOME) }
+                var showCameraPreview by remember { mutableStateOf(false) }
                 val scope = rememberCoroutineScope()
                 val context = LocalContext.current
 
@@ -82,25 +83,27 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     contentWindowInsets = WindowInsets(0, 0, 0, 0),
                     bottomBar = {
-                        NavigationBar {
-                            NavigationBarItem(
-                                selected = selectedTab == Tab.HOME,
-                                onClick = { selectedTab = Tab.HOME },
-                                icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
-                                label = { Text("Home") }
-                            )
-                            NavigationBarItem(
-                                selected = selectedTab == Tab.REMOTE,
-                                onClick = { selectedTab = Tab.REMOTE },
-                                icon = { Icon(Icons.Default.Phone, contentDescription = "Remote") },
-                                label = { Text("Remote") }
-                            )
-                            NavigationBarItem(
-                                selected = selectedTab == Tab.SETTINGS,
-                                onClick = { selectedTab = Tab.SETTINGS },
-                                icon = { Icon(Icons.Default.Settings, contentDescription = "Settings") },
-                                label = { Text("Settings") }
-                            )
+                        if (!showCameraPreview) {
+                            NavigationBar {
+                                NavigationBarItem(
+                                    selected = selectedTab == Tab.HOME,
+                                    onClick = { selectedTab = Tab.HOME },
+                                    icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
+                                    label = { Text("Home") }
+                                )
+                                NavigationBarItem(
+                                    selected = selectedTab == Tab.REMOTE,
+                                    onClick = { selectedTab = Tab.REMOTE },
+                                    icon = { Icon(Icons.Default.Phone, contentDescription = "Remote") },
+                                    label = { Text("Remote") }
+                                )
+                                NavigationBarItem(
+                                    selected = selectedTab == Tab.SETTINGS,
+                                    onClick = { selectedTab = Tab.SETTINGS },
+                                    icon = { Icon(Icons.Default.Settings, contentDescription = "Settings") },
+                                    label = { Text("Settings") }
+                                )
+                            }
                         }
                     }
                 ) { innerPadding ->
@@ -108,7 +111,8 @@ class MainActivity : ComponentActivity() {
                         Tab.HOME -> HomeScreen(
                             onOpenSettings = { selectedTab = Tab.SETTINGS },
                             onOpenRemoteViewer = { selectedTab = Tab.REMOTE },
-                            onOpenPreview = { },
+                            onOpenPreview = { showCameraPreview = true },
+                            onHidePreview = { showCameraPreview = false },
                             onSignIn = {
                                 scope.launch {
                                     when (val outcome = authManager.authorize()) {

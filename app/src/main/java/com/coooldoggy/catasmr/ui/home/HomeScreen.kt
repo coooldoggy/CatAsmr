@@ -52,6 +52,7 @@ import com.coooldoggy.catasmr.status.UploadState
 import com.coooldoggy.catasmr.streaming.QrCodeGenerator
 import com.coooldoggy.catasmr.ui.components.ErrorBanner
 import com.coooldoggy.catasmr.ui.components.PermissionRow
+import com.coooldoggy.catasmr.ui.streaming.CameraPreviewScreen
 import com.coooldoggy.catasmr.util.PermissionUtils
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -63,6 +64,7 @@ fun HomeScreen(
     onOpenSettings: () -> Unit = {},
     onOpenRemoteViewer: () -> Unit = {},
     onOpenPreview: () -> Unit = {},
+    onHidePreview: () -> Unit = {},
     onSignIn: () -> Unit = {},
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel()
@@ -72,6 +74,7 @@ fun HomeScreen(
     val lifecycleOwner = LocalLifecycleOwner.current
     var refreshTick by remember { mutableIntStateOf(0) }
     var expandPermissions by remember { mutableStateOf(false) }
+    var showCameraPreview by remember { mutableStateOf(false) }
 
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
@@ -93,13 +96,22 @@ fun HomeScreen(
 
     val allPermissionsGranted = cameraGranted && micGranted && notifGranted && exactAlarmGranted && batteryExempt
 
-    Column(modifier = modifier.fillMaxSize().padding(top = 32.dp)) {
-        uiState.error?.let { error ->
-            ErrorBanner(
-                error = error,
-                onDismiss = { viewModel.clearError() }
-            )
-        }
+    if (showCameraPreview) {
+        CameraPreviewScreen(
+            onClose = {
+                showCameraPreview = false
+                onHidePreview()
+            },
+            modifier = modifier.fillMaxSize()
+        )
+    } else {
+        Column(modifier = modifier.fillMaxSize().padding(top = 32.dp)) {
+            uiState.error?.let { error ->
+                ErrorBanner(
+                    error = error,
+                    onDismiss = { viewModel.clearError() }
+                )
+            }
 
         Column(
             modifier = Modifier
@@ -155,7 +167,10 @@ fun HomeScreen(
 
                     if (isWatching) {
                         Button(
-                            onClick = onOpenPreview,
+                            onClick = {
+                                showCameraPreview = true
+                                onOpenPreview()
+                            },
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(vertical = 4.dp),
@@ -260,7 +275,6 @@ fun HomeScreen(
                         Button(
                             onClick = {
                                 RecordingService.start(context)
-                                viewModel.delayedOpenPreview(onOpenPreview)
                             },
                             modifier = Modifier.fillMaxWidth(),
                             colors = ButtonDefaults.buttonColors(
@@ -315,6 +329,7 @@ fun HomeScreen(
             }
 
         }
+    }
     }
 }
 

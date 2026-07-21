@@ -5,6 +5,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.os.Build
 import android.provider.MediaStore
+import android.util.Log
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.lifecycle.ProcessCameraProvider
@@ -29,6 +30,10 @@ import java.util.concurrent.Executors
  */
 class CameraController(private val context: Context) {
 
+    companion object {
+        private const val TAG = "CameraController"
+    }
+
     private var cameraProvider: ProcessCameraProvider? = null
     private var videoCapture: VideoCapture<Recorder>? = null
     private var activeRecording: Recording? = null
@@ -43,10 +48,13 @@ class CameraController(private val context: Context) {
         onReady: () -> Unit,
         onError: (Throwable) -> Unit
     ) {
+        Log.d(TAG, "bind() called")
         val providerFuture = ProcessCameraProvider.getInstance(context)
         providerFuture.addListener({
+            Log.d(TAG, "CameraProvider listener invoked")
             try {
                 val provider = providerFuture.get()
+                Log.d(TAG, "Got camera provider")
                 cameraProvider = provider
 
                 val quality = toQuality(videoQuality)
@@ -54,13 +62,16 @@ class CameraController(private val context: Context) {
                 val recorder = Recorder.Builder().setQualitySelector(qualitySelector).build()
                 val capture = VideoCapture.withOutput(recorder)
                 videoCapture = capture
+                Log.d(TAG, "VideoCapture created")
 
                 val analysis = ImageAnalysis.Builder()
                     .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                     .build()
                 analysis.setAnalyzer(analysisExecutor, analyzer)
+                Log.d(TAG, "ImageAnalysis for detection created")
 
                 provider.unbindAll()
+                Log.d(TAG, "Unbound all previous use cases")
 
                 val useCases = mutableListOf(capture, analysis)
                 if (streamingAnalyzer != null) {
@@ -70,15 +81,19 @@ class CameraController(private val context: Context) {
                         .build()
                     streamingAnalysis.setAnalyzer(analysisExecutor, streamingAnalyzer)
                     useCases.add(streamingAnalysis)
+                    Log.d(TAG, "ImageAnalysis for streaming created")
                 }
 
+                Log.d(TAG, "Binding ${useCases.size} use cases to camera")
                 provider.bindToLifecycle(
                     lifecycleOwner,
                     CameraSelector.DEFAULT_BACK_CAMERA,
                     *useCases.toTypedArray()
                 )
+                Log.d(TAG, "Camera bound successfully, calling onReady()")
                 onReady()
             } catch (t: Throwable) {
+                Log.e(TAG, "Error in bind callback", t)
                 onError(t)
             }
         }, ContextCompat.getMainExecutor(context))

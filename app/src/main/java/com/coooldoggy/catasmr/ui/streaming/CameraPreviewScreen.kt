@@ -7,6 +7,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Icon
@@ -16,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.viewinterop.AndroidView
@@ -70,6 +72,7 @@ fun CameraPreviewScreen(
             onClick = onClose,
             modifier = Modifier
                 .align(Alignment.TopEnd)
+                .padding(top = 16.dp, end = 8.dp)
                 .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.8f))
         ) {
             Icon(Icons.Filled.Close, contentDescription = "Close")

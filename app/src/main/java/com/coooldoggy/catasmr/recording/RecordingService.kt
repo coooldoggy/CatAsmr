@@ -117,68 +117,74 @@ class RecordingService : LifecycleService() {
 
     private fun startWatching() {
         serviceScope.launch {
-            val settings = settingsRepository.settings.first()
-            val machine = RecordingStateMachine()
-            stateMachine = machine
+            try {
+                val settings = settingsRepository.settings.first()
+                val machine = RecordingStateMachine()
+                stateMachine = machine
 
-            val detector = CatDetector(DetectionConfig.confidenceThreshold(settings.sensitivity)) { catPresent ->
-                applyAction(machine.onDetection(catPresent))
-            }
-            catDetector = detector
-
-            // Read cloud streaming preference from intent
-            cloudStreamingEnabled = currentIntent?.getBooleanExtra(EXTRA_CLOUD_STREAMING, false) ?: false
-
-            // Set up pairing
-            val pairingManager = DevicePairingManager(applicationContext)
-            val pairingCode = pairingManager.generatePairingCode()
-
-            // Set up streaming if enabled
-            Log.d(TAG, "Setting up streaming analyzer...")
-            val streamingFrameAnalyzer = StreamingFrameAnalyzer { frameData, width, height ->
-                Log.d(TAG, "StreamingFrameAnalyzer: Got frame $width x $height (${frameData.size} bytes)")
-                streamingServer?.broadcastFrame(frameData, width, height)
-                if (cloudStreamingEnabled) {
-                    cloudStreamingService?.broadcastFrame(frameData, width, height)
+                val detector = CatDetector(DetectionConfig.confidenceThreshold(settings.sensitivity)) { catPresent ->
+                    applyAction(machine.onDetection(catPresent))
                 }
+                catDetector = detector
+
+                // Read cloud streaming preference from intent
+                cloudStreamingEnabled = currentIntent?.getBooleanExtra(EXTRA_CLOUD_STREAMING, false) ?: false
+
+                // Set up pairing
+                val pairingManager = DevicePairingManager(applicationContext)
+                val pairingCode = pairingManager.generatePairingCode()
+
+                // Set up streaming if enabled
+                Log.d(TAG, "Setting up streaming analyzer...")
+                val streamingFrameAnalyzer = StreamingFrameAnalyzer { frameData, width, height ->
+                    Log.d(TAG, "StreamingFrameAnalyzer: Got frame $width x $height (${frameData.size} bytes)")
+                    streamingServer?.broadcastFrame(frameData, width, height)
+                    if (cloudStreamingEnabled) {
+                        cloudStreamingService?.broadcastFrame(frameData, width, height)
+                    }
+                }
+                streamingAnalyzer = streamingFrameAnalyzer
+                Log.d(TAG, "Streaming analyzer created")
+
+                // Start local streaming server
+                Log.d(TAG, "Starting LocalStreamingServer on port 8888...")
+                val server = LocalStreamingServer(applicationContext, port = 8888)
+                streamingServer = server
+                server.start()
+                Log.d(TAG, "Streaming server started")
+
+                // Set up cloud streaming if enabled
+                if (cloudStreamingEnabled) {
+                    Log.d(TAG, "Setting up cloud streaming with code: $pairingCode")
+                    cloudStreamingService = CloudStreamingService(pairingCode, android.os.Build.DEVICE)
+                }
+
+                // Set up pairing information
+                val localIp = server.getLocalIpAddress()
+                _streamingInfo.value = com.coooldoggy.catasmr.streaming.StreamingInfo(
+                    deviceId = android.os.Build.DEVICE,
+                    deviceName = android.os.Build.MODEL,
+                    isLocalAvailable = true,
+                    isCloudAvailable = cloudStreamingEnabled,
+                    localAddress = localIp,
+                    streamingPort = 8888,
+                    pairingCode = pairingCode
+                )
+                Log.d(TAG, "Streaming info updated: IP=$localIp, Code=$pairingCode, Cloud=$cloudStreamingEnabled")
+
+                cameraController.bind(
+                    lifecycleOwner = this@RecordingService,
+                    analyzer = detector,
+                    videoQuality = settings.videoQuality,
+                    streamingAnalyzer = null,
+                    onReady = { startTicking(machine) },
+                    onError = { stopWatchingAndSelf() }
+                )
+            } catch (e: Exception) {
+                Log.e(TAG, "Error in startWatching", e)
+                FirebaseCrashlytics.getInstance().recordException(e)
+                stopWatchingAndSelf()
             }
-            streamingAnalyzer = streamingFrameAnalyzer
-            Log.d(TAG, "Streaming analyzer created")
-
-            // Start local streaming server
-            Log.d(TAG, "Starting LocalStreamingServer on port 8888...")
-            val server = LocalStreamingServer(applicationContext, port = 8888)
-            streamingServer = server
-            server.start()
-            Log.d(TAG, "Streaming server started")
-
-            // Set up cloud streaming if enabled
-            if (cloudStreamingEnabled) {
-                Log.d(TAG, "Setting up cloud streaming with code: $pairingCode")
-                cloudStreamingService = CloudStreamingService(pairingCode, android.os.Build.DEVICE)
-            }
-
-            // Set up pairing information
-            val localIp = server.getLocalIpAddress()
-            _streamingInfo.value = com.coooldoggy.catasmr.streaming.StreamingInfo(
-                deviceId = android.os.Build.DEVICE,
-                deviceName = android.os.Build.MODEL,
-                isLocalAvailable = true,
-                isCloudAvailable = cloudStreamingEnabled,
-                localAddress = localIp,
-                streamingPort = 8888,
-                pairingCode = pairingCode
-            )
-            Log.d(TAG, "Streaming info updated: IP=$localIp, Code=$pairingCode, Cloud=$cloudStreamingEnabled")
-
-            cameraController.bind(
-                lifecycleOwner = this@RecordingService,
-                analyzer = detector,
-                videoQuality = settings.videoQuality,
-                streamingAnalyzer = streamingFrameAnalyzer,
-                onReady = { startTicking(machine) },
-                onError = { stopWatchingAndSelf() }
-            )
         }
     }
 
