@@ -111,15 +111,17 @@ fun HomeScreen(
 
             // Recording Status Card
             Card(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 0.dp),
                 colors = CardDefaults.cardColors(
-                    containerColor = if (isWatching) MaterialTheme.colorScheme.tertiaryContainer
-                    else MaterialTheme.colorScheme.surfaceVariant
-                )
+                    containerColor = MaterialTheme.colorScheme.surface
+                ),
+                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
             ) {
                 Column(
-                    modifier = Modifier.padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                    modifier = Modifier.padding(20.dp),
+                    verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -127,32 +129,50 @@ fun HomeScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text(stringResource(R.string.home_recording_status), style = MaterialTheme.typography.titleSmall)
+                            Text(
+                                stringResource(R.string.home_recording_status),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
                             Text(
                                 if (isWatching) stringResource(R.string.home_active) else stringResource(R.string.home_inactive),
-                                style = MaterialTheme.typography.headlineMedium,
+                                style = MaterialTheme.typography.headlineSmall,
                                 color = if (isWatching) MaterialTheme.colorScheme.tertiary
                                 else MaterialTheme.colorScheme.onSurfaceVariant,
                                 fontWeight = FontWeight.Bold
                             )
                         }
+                        if (isWatching) {
+                            androidx.compose.material3.Badge(
+                                containerColor = MaterialTheme.colorScheme.tertiary
+                            ) {
+                                Text("LIVE", color = MaterialTheme.colorScheme.onTertiary, style = MaterialTheme.typography.labelSmall)
+                            }
+                        }
                     }
 
                     if (isWatching) {
                         Button(
-                            onClick = { RecordingService.stop(context) },
-                            modifier = Modifier.fillMaxWidth(),
+                            onClick = onOpenPreview,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 4.dp),
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = MaterialTheme.colorScheme.tertiary
                             )
                         ) {
-                            Text(stringResource(R.string.home_stop_watching), color = MaterialTheme.colorScheme.onTertiary)
+                            Text(stringResource(R.string.home_view_preview), color = MaterialTheme.colorScheme.onTertiary)
                         }
                         Button(
-                            onClick = onOpenPreview,
-                            modifier = Modifier.fillMaxWidth()
+                            onClick = { RecordingService.stop(context) },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 4.dp),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.error
+                            )
                         ) {
-                            Text(stringResource(R.string.home_view_preview))
+                            Text(stringResource(R.string.home_stop_watching), color = MaterialTheme.colorScheme.onError)
                         }
 
                         // QR Code Card
@@ -163,34 +183,44 @@ fun HomeScreen(
                                     val qrBitmap = remember(qrData) { QrCodeGenerator.generateQrCode(qrData, 256) }
 
                                     Card(
-                                        modifier = Modifier.fillMaxWidth(),
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .padding(vertical = 8.dp),
                                         colors = CardDefaults.cardColors(
-                                            containerColor = MaterialTheme.colorScheme.surface
-                                        )
+                                            containerColor = MaterialTheme.colorScheme.surfaceVariant
+                                        ),
+                                        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                                     ) {
                                         Column(
                                             modifier = Modifier
-                                                .padding(12.dp)
+                                                .padding(16.dp)
                                                 .fillMaxWidth(),
                                             horizontalAlignment = Alignment.CenterHorizontally,
-                                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                                            verticalArrangement = Arrangement.spacedBy(12.dp)
                                         ) {
                                             Text(
                                                 stringResource(R.string.home_share_qr),
-                                                style = MaterialTheme.typography.labelSmall,
-                                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                                                style = MaterialTheme.typography.bodySmall,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                                fontWeight = FontWeight.Medium
                                             )
-                                            Image(
-                                                bitmap = qrBitmap.asImageBitmap(),
-                                                contentDescription = "Pairing QR Code",
-                                                modifier = Modifier
-                                                    .padding(8.dp)
-                                                    .fillMaxWidth(0.6f)
-                                            )
+                                            androidx.compose.material3.Surface(
+                                                color = MaterialTheme.colorScheme.background,
+                                                modifier = Modifier.padding(8.dp)
+                                            ) {
+                                                Image(
+                                                    bitmap = qrBitmap.asImageBitmap(),
+                                                    contentDescription = "Pairing QR Code",
+                                                    modifier = Modifier
+                                                        .padding(8.dp)
+                                                        .fillMaxWidth(0.5f)
+                                                )
+                                            }
                                             Text(
                                                 code,
-                                                style = MaterialTheme.typography.labelLarge,
-                                                fontWeight = FontWeight.Bold
+                                                style = MaterialTheme.typography.bodyMedium,
+                                                fontWeight = FontWeight.Bold,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant
                                             )
                                         }
                                     }
