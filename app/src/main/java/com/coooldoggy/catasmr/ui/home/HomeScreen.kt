@@ -91,7 +91,7 @@ fun HomeScreen(
 
     val allPermissionsGranted = cameraGranted && micGranted && notifGranted && exactAlarmGranted && batteryExempt
 
-    Column(modifier = modifier.fillMaxSize()) {
+    Column(modifier = modifier.fillMaxSize().padding(top = 32.dp)) {
         uiState.error?.let { error ->
             ErrorBanner(
                 error = error,

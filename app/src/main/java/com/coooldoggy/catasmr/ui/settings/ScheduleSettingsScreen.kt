@@ -53,6 +53,7 @@ fun ScheduleSettingsScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
+            .padding(top = 32.dp)
     ) {
         uiState.error?.let { error ->
             ErrorBanner(

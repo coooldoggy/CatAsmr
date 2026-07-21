@@ -61,16 +61,7 @@ fun ConnectToDeviceScreen(
         return
     }
 
-    Column(modifier = modifier.fillMaxSize()) {
-        TopAppBar(
-            title = { Text(stringResource(R.string.home_connect_camera)) },
-            navigationIcon = {
-                IconButton(onClick = onBack) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.remote_back))
-                }
-            }
-        )
-
+    Column(modifier = modifier.fillMaxSize().padding(top = 32.dp)) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
