@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-64:12
-INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-64:12
-INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-64:12
-INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-64:12
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:2:1-69:12
 MERGED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/93e4bec5c66e844e8bbe4aed48f9ea23/transformed/play-services-auth-21.2.0/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/481806f17d69c68ee0564706856ec2a1/transformed/image-labeling-17.0.9/AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.mlkit:barcode-scanning:17.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/957f9f7fcc9dd1617c1041645a5e8a02/transformed/barcode-scanning-17.2.0/AndroidManifest.xml:2:1-7:12
@@ -29,10 +29,21 @@ MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/yulim/.gradle/caches/8
 MERGED from [androidx.camera:camera-core:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/51bec3c9167a72d095ccd8c11e23874f/transformed/camera-core-1.4.1/AndroidManifest.xml:17:1-36:12
 MERGED from [androidx.work:work-runtime-ktx:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/3f14b4ce0a25cef80e7b8c4a5c6aedf0/transformed/work-runtime-ktx-2.10.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dcc579423e9985e3cdb334d3bc7a7bcd/transformed/work-runtime-2.10.0/AndroidManifest.xml:17:1-145:12
+MERGED from [com.kakao.sdk:v2-all:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/62e1464fd701820adb7a24d3001e13c1/transformed/v2-all-2.20.3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:2:1-20:12
+MERGED from [com.google.android.material:material:1.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7ab4c85598c3f8477cc6f8638a9c7c55/transformed/material-1.5.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7663a93b436e5b250ad84879a694d4d5/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7eb7f9055f1e094902f1afcb1e360e40/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/457d51401821d501e915caf867834f26/transformed/loader-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.kakao.sdk:v2-talk:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/1d848e39971354cfeb882a5928bc7b90/transformed/v2-talk-2.20.3/AndroidManifest.xml:2:1-16:12
+MERGED from [com.kakao.sdk:v2-cert:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/633fa72f060c4c39164dde8b54973990/transformed/v2-cert-2.20.3/AndroidManifest.xml:2:1-17:12
+MERGED from [com.kakao.sdk:v2-user:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/a6508c04ca054538ae8786905eef30f8/transformed/v2-user-2.20.3/AndroidManifest.xml:2:1-16:12
+MERGED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/yulim/.gradle/caches/8.10.2/transforms/ce98a394d846df06daacd9e3fefd63a8/transformed/constraintlayout-2.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9540ecc550b6830330ca4bb3c77e70c9/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/54413b67dbd33cb38a521844cb4df34e/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/88d8fe05e5de8ed26519fb154eb32018/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/200a2cbbcf7176708b8d061310a85a0b/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/yulim/.gradle/caches/8.10.2/transforms/ba9c919af2ef7e5db32c42999fe473f2/transformed/material3-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.ui:ui-tooling-data-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/09fe4e90f6556bd265da70d182bd43be/transformed/ui-tooling-data/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.foundation:foundation-layout-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/95af4475b4b990f9eded6f8ee8f67d2f/transformed/foundation-layout/AndroidManifest.xml:2:1-7:12
@@ -51,11 +62,20 @@ MERGED from [androidx.compose.ui:ui-text-android:1.9.0] /Users/yulim/.gradle/cac
 MERGED from [androidx.compose.ui:ui-graphics-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/cef23bf6c75eeb344e2f530ef8895c61/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b93e36c25b79c277f4a69040b989cb47/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:17:1-29:12
 MERGED from [androidx.compose.ui:ui-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/444ec02d3f8cd7c3b369470aa3bb5783/transformed/ui-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/cb30c248bfcc2347088e56babb4019ce/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/66bd7fd91c4784bbf8739dd8a8fb0259/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/be204082b8c0cf5a9e4e017412b40711/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.kakao.sdk:v2-share:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/d868bc137145dbb473c2ffc64d9e190a/transformed/v2-share-2.20.3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.kakao.sdk:v2-navi:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/195d6db41ade5c15c92e39566de56fef/transformed/v2-navi-2.20.3/AndroidManifest.xml:2:1-14:12
+MERGED from [com.kakao.sdk:v2-network:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/7c5ee2badd62a32db928bdeb274ab4c7/transformed/v2-network-2.20.3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.kakao.sdk:v2-template:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/139a51c7a70e62f9707cf3809c637c23/transformed/v2-template-2.20.3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:2:1-24:12
+MERGED from [androidx.browser:browser:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9dc89049ae9af40ed919f67548c41781/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/1f680cacc39401e06709adab0b6cf400/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5d35da04a15b7ff81a793ebce566e19c/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1bfa24e2b2bfb64f40e4a24e40655e57/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c383506e5846a59735f42d788de4f5c4/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/be5be880c9fc944fd363342d4ca37379/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/4b65e07ade68b19cedd5e2d08faa41ce/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/be204082b8c0cf5a9e4e017412b40711/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f967cf1551a801739ea49423e2d78b36/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/7c486ddbbec63280f01869721eb5fe07/transformed/graphics-path-1.0.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/8fec30c8e5aef557563a94ff6cc4bae6/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/62ea8cf1bd72ce9e1c3e71d2584e5bff/transformed/emoji2-1.4.0/AndroidManifest.xml:17:1-35:12
@@ -66,8 +86,8 @@ MERGED from [androidx.savedstate:savedstate-android:1.3.1] /Users/yulim/.gradle/
 MERGED from [androidx.savedstate:savedstate-compose-android:1.3.1] /Users/yulim/.gradle/caches/8.10.2/transforms/bc411463f7aa6a98d2d8ee7de7858a49/transformed/savedstate-compose-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.runtime:runtime-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1b1f6021e6e725ba9381f22ec044d989/transformed/runtime/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.runtime:runtime-saveable-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/e4406fe4e3a0652bdbb127cd505cbdb3/transformed/runtime-saveable/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/9927f643fca53560fe3f43a56ab6ee10/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/61085603dbd11d6f5c5f067d52f291d5/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/9927f643fca53560fe3f43a56ab6ee10/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/e6fb7367031adccf7da04ea33755e42c/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/7c6de6b9ebcc791451267af8566b2dd9/transformed/lifecycle-livedata-core-ktx-2.9.3/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/e78bffa02530e866e2f2c3415e451283/transformed/lifecycle-livedata-core-2.9.3/AndroidManifest.xml:17:1-22:12
@@ -118,10 +138,15 @@ MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/yulim/.gradl
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/47c5de46b565fda5bc179c8d78ecc5c8/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/62e0f39fb35dde3c0b65650c3ba335df/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fa1cb9f34a32956d162eaf18dfbb008/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.databinding:viewbinding:7.0.4] /Users/yulim/.gradle/caches/8.10.2/transforms/304e04cafff965f1fb31d19d5be7c15c/transformed/viewbinding-7.0.4/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af6de655e407311d088ffc8c75edc682/transformed/transport-api-3.0.0/AndroidManifest.xml:15:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5d5367e431c515e12946b8b503493ee2/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a7af205624d355e059c64d008a7fc14a/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/3f2c0ac6eb1911f205a38991c3559c43/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c6a4919959dbafe63737aac5b334b1d2/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/42db775b77413f6ba87183d72ca30c39/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/98a666d1b6ae027587e677cf1e6ff057/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/d9011bc0413cf43b49fa58ae9866b6cc/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-viewtree:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5b3009c3c9f7b4b07a77b2a3c63c3ec2/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yulim/.gradle/caches/8.10.2/transforms/d1a0f7117d3140f11ae8bfb76083c55e/transformed/image-1.0.0-beta1/AndroidManifest.xml:2:1-9:12
 	package
@@ -210,21 +235,25 @@ ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManife
 		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:18:9-35
 	android:name
 		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:17:9-65
+uses-permission#com.kakao.talk.permission.TALK_FRIENDS
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:19:22-75
 uses-feature#android.hardware.camera
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:20:5-84
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:21:5-84
 	android:required
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:20:58-81
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:21:58-81
 	android:name
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:20:19-57
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:21:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:21:5-95
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:22:5-95
 	android:required
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:21:68-92
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:22:68-92
 	android:name
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:21:19-67
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:22:19-67
 application
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:23:5-62:19
-INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:23:5-62:19
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:24:5-67:19
+INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:24:5-67:19
 MERGED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/93e4bec5c66e844e8bbe4aed48f9ea23/transformed/play-services-auth-21.2.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-auth:21.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/93e4bec5c66e844e8bbe4aed48f9ea23/transformed/play-services-auth-21.2.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.mlkit:image-labeling:17.0.9] /Users/yulim/.gradle/caches/8.10.2/transforms/481806f17d69c68ee0564706856ec2a1/transformed/image-labeling-17.0.9/AndroidManifest.xml:7:5-15:19
@@ -253,6 +282,20 @@ MERGED from [androidx.camera:camera-core:1.4.1] /Users/yulim/.gradle/caches/8.10
 MERGED from [androidx.camera:camera-core:1.4.1] /Users/yulim/.gradle/caches/8.10.2/transforms/51bec3c9167a72d095ccd8c11e23874f/transformed/camera-core-1.4.1/AndroidManifest.xml:23:5-34:19
 MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dcc579423e9985e3cdb334d3bc7a7bcd/transformed/work-runtime-2.10.0/AndroidManifest.xml:28:5-143:19
 MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dcc579423e9985e3cdb334d3bc7a7bcd/transformed/work-runtime-2.10.0/AndroidManifest.xml:28:5-143:19
+MERGED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:10:5-18:19
+MERGED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.android.material:material:1.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7ab4c85598c3f8477cc6f8638a9c7c55/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7ab4c85598c3f8477cc6f8638a9c7c55/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
+MERGED from [com.kakao.sdk:v2-talk:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/1d848e39971354cfeb882a5928bc7b90/transformed/v2-talk-2.20.3/AndroidManifest.xml:9:5-14:19
+MERGED from [com.kakao.sdk:v2-talk:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/1d848e39971354cfeb882a5928bc7b90/transformed/v2-talk-2.20.3/AndroidManifest.xml:9:5-14:19
+MERGED from [com.kakao.sdk:v2-cert:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/633fa72f060c4c39164dde8b54973990/transformed/v2-cert-2.20.3/AndroidManifest.xml:9:5-15:19
+MERGED from [com.kakao.sdk:v2-cert:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/633fa72f060c4c39164dde8b54973990/transformed/v2-cert-2.20.3/AndroidManifest.xml:9:5-15:19
+MERGED from [com.kakao.sdk:v2-user:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/a6508c04ca054538ae8786905eef30f8/transformed/v2-user-2.20.3/AndroidManifest.xml:9:5-14:19
+MERGED from [com.kakao.sdk:v2-user:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/a6508c04ca054538ae8786905eef30f8/transformed/v2-user-2.20.3/AndroidManifest.xml:9:5-14:19
+MERGED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:9:5-24:19
+MERGED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:9:5-24:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/yulim/.gradle/caches/8.10.2/transforms/ce98a394d846df06daacd9e3fefd63a8/transformed/constraintlayout-2.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/yulim/.gradle/caches/8.10.2/transforms/ce98a394d846df06daacd9e3fefd63a8/transformed/constraintlayout-2.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2204fd48b3a1f5c2282a5317caa53c3a/transformed/ui-tooling/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2204fd48b3a1f5c2282a5317caa53c3a/transformed/ui-tooling/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b93e36c25b79c277f4a69040b989cb47/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:22:5-27:19
@@ -304,71 +347,79 @@ MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yulim/.gradle/cac
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.15.0] /Users/yulim/.gradle/caches/8.10.2/transforms/ae6fa9f4399809338d70bd7a25bcf74d/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:31:9-35
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:32:9-35
 	android:label
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:29:9-41
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:30:9-41
 	android:fullBackupContent
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:27:9-54
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:28:9-54
 	android:roundIcon
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:30:9-54
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:31:9-54
 	tools:targetApi
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:33:9-29
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:34:9-29
 	android:icon
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:28:9-43
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:29:9-43
 	android:allowBackup
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:25:9-35
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:26:9-35
 	android:theme
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:32:9-45
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:33:9-45
 	android:dataExtractionRules
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:26:9-65
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:27:9-65
+	android:usesCleartextTraffic
+		ADDED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:10:18-53
 	android:name
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:24:9-35
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:25:9-35
+meta-data#com.kakao.sdk.AppKey
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:36:9-38:53
+	android:value
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:38:13-50
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:37:13-48
 activity#com.coooldoggy.catasmr.MainActivity
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:34:9-44:20
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:39:9-49:20
 	android:label
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:37:13-45
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:42:13-45
 	android:exported
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:36:13-36
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:41:13-36
 	android:theme
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:38:13-49
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:43:13-49
 	android:name
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:35:13-41
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:40:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:39:13-43:29
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:44:13-48:29
 action#android.intent.action.MAIN
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:40:17-69
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:45:17-69
 	android:name
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:40:25-66
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:45:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:42:17-77
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:47:17-77
 	android:name
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:42:27-74
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:47:27-74
 service#com.coooldoggy.catasmr.recording.RecordingService
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:46:9-49:65
-	android:exported
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:48:13-37
-	android:foregroundServiceType
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:49:13-62
-	android:name
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:47:13-55
-receiver#com.coooldoggy.catasmr.schedule.WindowAlarmReceiver
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:51:9-53:40
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:51:9-54:65
 	android:exported
 		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:53:13-37
+	android:foregroundServiceType
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:54:13-62
 	android:name
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:52:13-57
-receiver#com.coooldoggy.catasmr.schedule.BootCompletedReceiver
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:55:9-61:20
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:52:13-55
+receiver#com.coooldoggy.catasmr.schedule.WindowAlarmReceiver
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:56:9-58:40
 	android:exported
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:57:13-36
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:58:13-37
 	android:name
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:56:13-59
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:57:13-57
+receiver#com.coooldoggy.catasmr.schedule.BootCompletedReceiver
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:60:9-66:20
+	android:exported
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:62:13-36
+	android:name
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:61:13-59
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:58:13-60:29
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:63:13-65:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:59:17-79
+ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:64:17-79
 	android:name
-		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:59:25-76
+		ADDED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml:64:25-76
 uses-sdk
 INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/yulim/dev/workspace_android/CatAsmr/app/src/main/AndroidManifest.xml
@@ -423,14 +474,36 @@ MERGED from [androidx.work:work-runtime-ktx:2.10.0] /Users/yulim/.gradle/caches/
 MERGED from [androidx.work:work-runtime-ktx:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/3f14b4ce0a25cef80e7b8c4a5c6aedf0/transformed/work-runtime-ktx-2.10.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dcc579423e9985e3cdb334d3bc7a7bcd/transformed/work-runtime-2.10.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dcc579423e9985e3cdb334d3bc7a7bcd/transformed/work-runtime-2.10.0/AndroidManifest.xml:21:5-44
+MERGED from [com.kakao.sdk:v2-all:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/62e1464fd701820adb7a24d3001e13c1/transformed/v2-all-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-all:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/62e1464fd701820adb7a24d3001e13c1/transformed/v2-all-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:6:5-8:41
+MERGED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.material:material:1.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7ab4c85598c3f8477cc6f8638a9c7c55/transformed/material-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.5.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7ab4c85598c3f8477cc6f8638a9c7c55/transformed/material-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7663a93b436e5b250ad84879a694d4d5/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7663a93b436e5b250ad84879a694d4d5/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7eb7f9055f1e094902f1afcb1e360e40/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7eb7f9055f1e094902f1afcb1e360e40/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/457d51401821d501e915caf867834f26/transformed/loader-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.loader:loader:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/457d51401821d501e915caf867834f26/transformed/loader-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.kakao.sdk:v2-talk:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/1d848e39971354cfeb882a5928bc7b90/transformed/v2-talk-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-talk:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/1d848e39971354cfeb882a5928bc7b90/transformed/v2-talk-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-cert:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/633fa72f060c4c39164dde8b54973990/transformed/v2-cert-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-cert:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/633fa72f060c4c39164dde8b54973990/transformed/v2-cert-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-user:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/a6508c04ca054538ae8786905eef30f8/transformed/v2-user-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-user:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/a6508c04ca054538ae8786905eef30f8/transformed/v2-user-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/yulim/.gradle/caches/8.10.2/transforms/ce98a394d846df06daacd9e3fefd63a8/transformed/constraintlayout-2.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/yulim/.gradle/caches/8.10.2/transforms/ce98a394d846df06daacd9e3fefd63a8/transformed/constraintlayout-2.1.3/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9540ecc550b6830330ca4bb3c77e70c9/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/9540ecc550b6830330ca4bb3c77e70c9/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/54413b67dbd33cb38a521844cb4df34e/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/yulim/.gradle/caches/8.10.2/transforms/54413b67dbd33cb38a521844cb4df34e/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/88d8fe05e5de8ed26519fb154eb32018/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/88d8fe05e5de8ed26519fb154eb32018/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/200a2cbbcf7176708b8d061310a85a0b/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/200a2cbbcf7176708b8d061310a85a0b/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/yulim/.gradle/caches/8.10.2/transforms/ba9c919af2ef7e5db32c42999fe473f2/transformed/material3-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/yulim/.gradle/caches/8.10.2/transforms/ba9c919af2ef7e5db32c42999fe473f2/transformed/material3-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.ui:ui-tooling-data-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/09fe4e90f6556bd265da70d182bd43be/transformed/ui-tooling-data/AndroidManifest.xml:5:5-44
@@ -467,16 +540,34 @@ MERGED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/ca
 MERGED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b93e36c25b79c277f4a69040b989cb47/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.ui:ui-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/444ec02d3f8cd7c3b369470aa3bb5783/transformed/ui-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/444ec02d3f8cd7c3b369470aa3bb5783/transformed/ui-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/cb30c248bfcc2347088e56babb4019ce/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/cb30c248bfcc2347088e56babb4019ce/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/66bd7fd91c4784bbf8739dd8a8fb0259/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/66bd7fd91c4784bbf8739dd8a8fb0259/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/be204082b8c0cf5a9e4e017412b40711/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/be204082b8c0cf5a9e4e017412b40711/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.kakao.sdk:v2-share:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/d868bc137145dbb473c2ffc64d9e190a/transformed/v2-share-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-share:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/d868bc137145dbb473c2ffc64d9e190a/transformed/v2-share-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-navi:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/195d6db41ade5c15c92e39566de56fef/transformed/v2-navi-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-navi:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/195d6db41ade5c15c92e39566de56fef/transformed/v2-navi-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-network:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/7c5ee2badd62a32db928bdeb274ab4c7/transformed/v2-network-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-network:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/7c5ee2badd62a32db928bdeb274ab4c7/transformed/v2-network-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-template:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/139a51c7a70e62f9707cf3809c637c23/transformed/v2-template-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-template:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/139a51c7a70e62f9707cf3809c637c23/transformed/v2-template-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9dc89049ae9af40ed919f67548c41781/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/9dc89049ae9af40ed919f67548c41781/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/1f680cacc39401e06709adab0b6cf400/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/1f680cacc39401e06709adab0b6cf400/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5d35da04a15b7ff81a793ebce566e19c/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5d35da04a15b7ff81a793ebce566e19c/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1bfa24e2b2bfb64f40e4a24e40655e57/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1bfa24e2b2bfb64f40e4a24e40655e57/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c383506e5846a59735f42d788de4f5c4/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c383506e5846a59735f42d788de4f5c4/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/be5be880c9fc944fd363342d4ca37379/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/be5be880c9fc944fd363342d4ca37379/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/4b65e07ade68b19cedd5e2d08faa41ce/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/4b65e07ade68b19cedd5e2d08faa41ce/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/be204082b8c0cf5a9e4e017412b40711/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/be204082b8c0cf5a9e4e017412b40711/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f967cf1551a801739ea49423e2d78b36/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/yulim/.gradle/caches/8.10.2/transforms/f967cf1551a801739ea49423e2d78b36/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/7c486ddbbec63280f01869721eb5fe07/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/yulim/.gradle/caches/8.10.2/transforms/7c486ddbbec63280f01869721eb5fe07/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/8fec30c8e5aef557563a94ff6cc4bae6/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:5:5-44
@@ -497,10 +588,10 @@ MERGED from [androidx.compose.runtime:runtime-android:1.9.0] /Users/yulim/.gradl
 MERGED from [androidx.compose.runtime:runtime-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/1b1f6021e6e725ba9381f22ec044d989/transformed/runtime/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.runtime:runtime-saveable-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/e4406fe4e3a0652bdbb127cd505cbdb3/transformed/runtime-saveable/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.runtime:runtime-saveable-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/e4406fe4e3a0652bdbb127cd505cbdb3/transformed/runtime-saveable/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/9927f643fca53560fe3f43a56ab6ee10/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/9927f643fca53560fe3f43a56ab6ee10/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/61085603dbd11d6f5c5f067d52f291d5/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/61085603dbd11d6f5c5f067d52f291d5/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/9927f643fca53560fe3f43a56ab6ee10/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/9927f643fca53560fe3f43a56ab6ee10/transformed/lifecycle-process-2.9.3/AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/e6fb7367031adccf7da04ea33755e42c/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/e6fb7367031adccf7da04ea33755e42c/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.3] /Users/yulim/.gradle/caches/8.10.2/transforms/7c6de6b9ebcc791451267af8566b2dd9/transformed/lifecycle-livedata-core-ktx-2.9.3/AndroidManifest.xml:5:5-44
@@ -601,14 +692,24 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yuli
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yulim/.gradle/caches/8.10.2/transforms/62e0f39fb35dde3c0b65650c3ba335df/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fa1cb9f34a32956d162eaf18dfbb008/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/yulim/.gradle/caches/8.10.2/transforms/7fa1cb9f34a32956d162eaf18dfbb008/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:7.0.4] /Users/yulim/.gradle/caches/8.10.2/transforms/304e04cafff965f1fb31d19d5be7c15c/transformed/viewbinding-7.0.4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:7.0.4] /Users/yulim/.gradle/caches/8.10.2/transforms/304e04cafff965f1fb31d19d5be7c15c/transformed/viewbinding-7.0.4/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af6de655e407311d088ffc8c75edc682/transformed/transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/af6de655e407311d088ffc8c75edc682/transformed/transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5d5367e431c515e12946b8b503493ee2/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5d5367e431c515e12946b8b503493ee2/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a7af205624d355e059c64d008a7fc14a/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/a7af205624d355e059c64d008a7fc14a/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/3f2c0ac6eb1911f205a38991c3559c43/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/3f2c0ac6eb1911f205a38991c3559c43/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c6a4919959dbafe63737aac5b334b1d2/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/c6a4919959dbafe63737aac5b334b1d2/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/42db775b77413f6ba87183d72ca30c39/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/42db775b77413f6ba87183d72ca30c39/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/98a666d1b6ae027587e677cf1e6ff057/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/98a666d1b6ae027587e677cf1e6ff057/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/d9011bc0413cf43b49fa58ae9866b6cc/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/d9011bc0413cf43b49fa58ae9866b6cc/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-viewtree:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5b3009c3c9f7b4b07a77b2a3c63c3ec2/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-viewtree:1.0.0] /Users/yulim/.gradle/caches/8.10.2/transforms/5b3009c3c9f7b4b07a77b2a3c63c3ec2/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/yulim/.gradle/caches/8.10.2/transforms/d1a0f7117d3140f11ae8bfb76083c55e/transformed/image-1.0.0-beta1/AndroidManifest.xml:5:5-44
@@ -993,6 +1094,74 @@ action#androidx.work.diagnostics.REQUEST_DIAGNOSTICS
 ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dcc579423e9985e3cdb334d3bc7a7bcd/transformed/work-runtime-2.10.0/AndroidManifest.xml:140:17-88
 	android:name
 		ADDED from [androidx.work:work-runtime:2.10.0] /Users/yulim/.gradle/caches/8.10.2/transforms/dcc579423e9985e3cdb334d3bc7a7bcd/transformed/work-runtime-2.10.0/AndroidManifest.xml:140:25-85
+activity#com.kakao.sdk.friend.view.FullPickerActivity
+ADDED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:11:9-14:59
+	android:windowSoftInputMode
+		ADDED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:14:13-56
+	android:theme
+		ADDED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:13:13-48
+	android:name
+		ADDED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:12:13-72
+activity#com.kakao.sdk.friend.view.PopupPickerActivity
+ADDED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:15:9-17:52
+	android:theme
+		ADDED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:17:13-49
+	android:name
+		ADDED from [com.kakao.sdk:v2-friend:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/fbedffdc6b4d29dd6cd2fb6f1c3117ed/transformed/v2-friend-2.20.3/AndroidManifest.xml:16:13-73
+activity#com.kakao.sdk.talk.FollowChannelHandlerActivity
+ADDED from [com.kakao.sdk:v2-talk:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/1d848e39971354cfeb882a5928bc7b90/transformed/v2-talk-2.20.3/AndroidManifest.xml:10:9-13:56
+	android:launchMode
+		ADDED from [com.kakao.sdk:v2-talk:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/1d848e39971354cfeb882a5928bc7b90/transformed/v2-talk-2.20.3/AndroidManifest.xml:12:13-44
+	android:theme
+		ADDED from [com.kakao.sdk:v2-talk:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/1d848e39971354cfeb882a5928bc7b90/transformed/v2-talk-2.20.3/AndroidManifest.xml:13:13-53
+	android:name
+		ADDED from [com.kakao.sdk:v2-talk:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/1d848e39971354cfeb882a5928bc7b90/transformed/v2-talk-2.20.3/AndroidManifest.xml:11:13-75
+activity#com.kakao.sdk.cert.CertServiceHandlerActivity
+ADDED from [com.kakao.sdk:v2-cert:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/633fa72f060c4c39164dde8b54973990/transformed/v2-cert-2.20.3/AndroidManifest.xml:10:9-14:56
+	android:launchMode
+		ADDED from [com.kakao.sdk:v2-cert:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/633fa72f060c4c39164dde8b54973990/transformed/v2-cert-2.20.3/AndroidManifest.xml:13:13-44
+	android:exported
+		ADDED from [com.kakao.sdk:v2-cert:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/633fa72f060c4c39164dde8b54973990/transformed/v2-cert-2.20.3/AndroidManifest.xml:12:13-36
+	android:theme
+		ADDED from [com.kakao.sdk:v2-cert:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/633fa72f060c4c39164dde8b54973990/transformed/v2-cert-2.20.3/AndroidManifest.xml:14:13-53
+	android:name
+		ADDED from [com.kakao.sdk:v2-cert:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/633fa72f060c4c39164dde8b54973990/transformed/v2-cert-2.20.3/AndroidManifest.xml:11:13-73
+activity#com.kakao.sdk.user.ShippingAddressesHandlerActivity
+ADDED from [com.kakao.sdk:v2-user:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/a6508c04ca054538ae8786905eef30f8/transformed/v2-user-2.20.3/AndroidManifest.xml:10:9-13:56
+	android:launchMode
+		ADDED from [com.kakao.sdk:v2-user:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/a6508c04ca054538ae8786905eef30f8/transformed/v2-user-2.20.3/AndroidManifest.xml:12:13-44
+	android:theme
+		ADDED from [com.kakao.sdk:v2-user:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/a6508c04ca054538ae8786905eef30f8/transformed/v2-user-2.20.3/AndroidManifest.xml:13:13-53
+	android:name
+		ADDED from [com.kakao.sdk:v2-user:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/a6508c04ca054538ae8786905eef30f8/transformed/v2-user-2.20.3/AndroidManifest.xml:11:13-79
+activity#com.kakao.sdk.auth.TalkAuthCodeActivity
+ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:10:9-15:56
+	android:launchMode
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:14:13-44
+	android:exported
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:13:13-37
+	android:configChanges
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:12:13-74
+	android:theme
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:15:13-53
+	android:name
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:11:13-67
+activity#com.kakao.sdk.auth.AuthCodeHandlerActivity
+ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:16:9-19:56
+	android:launchMode
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:18:13-44
+	android:theme
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:19:13-53
+	android:name
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:17:13-70
+activity#com.kakao.sdk.auth.AppsHandlerActivity
+ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:20:9-23:56
+	android:launchMode
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:22:13-44
+	android:theme
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:23:13-53
+	android:name
+		ADDED from [com.kakao.sdk:v2-auth:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/47a03f3d917a5e34841177f192c47139/transformed/v2-auth-2.20.3/AndroidManifest.xml:21:13-66
 activity#androidx.compose.ui.tooling.PreviewActivity
 ADDED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/2204fd48b3a1f5c2282a5317caa53c3a/transformed/ui-tooling/AndroidManifest.xml:23:9-25:39
 	android:exported
@@ -1007,6 +1176,48 @@ ADDED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/cac
 		ADDED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b93e36c25b79c277f4a69040b989cb47/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:26:13-76
 	android:name
 		ADDED from [androidx.compose.ui:ui-test-manifest:1.9.0] /Users/yulim/.gradle/caches/8.10.2/transforms/b93e36c25b79c277f4a69040b989cb47/transformed/ui-test-manifest-1.9.0/AndroidManifest.xml:24:13-63
+queries
+ADDED from [com.kakao.sdk:v2-navi:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/195d6db41ade5c15c92e39566de56fef/transformed/v2-navi-2.20.3/AndroidManifest.xml:9:5-12:15
+MERGED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:9:5-22:15
+MERGED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:9:5-22:15
+package#com.locnall.KimGiSa
+ADDED from [com.kakao.sdk:v2-navi:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/195d6db41ade5c15c92e39566de56fef/transformed/v2-navi-2.20.3/AndroidManifest.xml:10:9-55
+	android:name
+		ADDED from [com.kakao.sdk:v2-navi:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/195d6db41ade5c15c92e39566de56fef/transformed/v2-navi-2.20.3/AndroidManifest.xml:10:18-52
+package#com.lguplus.navi
+ADDED from [com.kakao.sdk:v2-navi:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/195d6db41ade5c15c92e39566de56fef/transformed/v2-navi-2.20.3/AndroidManifest.xml:11:9-52
+	android:name
+		ADDED from [com.kakao.sdk:v2-navi:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/195d6db41ade5c15c92e39566de56fef/transformed/v2-navi-2.20.3/AndroidManifest.xml:11:18-49
+package#com.kakao.talk
+ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:10:9-50
+	android:name
+		ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:10:18-47
+package#com.kakao.talk.alpha
+ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:11:9-56
+	android:name
+		ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:11:18-53
+package#com.kakao.talk.sandbox
+ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:12:9-58
+	android:name
+		ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:12:18-55
+package#com.kakao.onetalk
+ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:13:9-53
+	android:name
+		ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:13:18-50
+intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
+ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:15:9-21:18
+action#android.intent.action.VIEW
+ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:16:13-65
+	android:name
+		ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:16:21-62
+category#android.intent.category.BROWSABLE
+ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:18:13-74
+	android:name
+		ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:18:23-71
+data
+ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:20:13-44
+	android:scheme
+		ADDED from [com.kakao.sdk:v2-common:2.20.3] /Users/yulim/.gradle/caches/8.10.2/transforms/8550153be367ef4b5797dff6ad9149a8/transformed/v2-common-2.20.3/AndroidManifest.xml:20:19-41
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
 ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/yulim/.gradle/caches/8.10.2/transforms/62ea8cf1bd72ce9e1c3e71d2584e5bff/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
 	android:value

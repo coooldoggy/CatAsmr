@@ -20,6 +20,7 @@ class SettingsRepository(private val context: Context) {
         val KEEP_LOCAL_COPY = booleanPreferencesKey("keep_local_copy")
         val IS_AUTHORIZED = booleanPreferencesKey("is_authorized")
         val ACCOUNT_EMAIL = stringPreferencesKey("account_email")
+        val KAKAO_TOKEN = stringPreferencesKey("kakao_token")
         val ONBOARDING_COMPLETE = booleanPreferencesKey("onboarding_complete")
     }
 
@@ -37,6 +38,10 @@ class SettingsRepository(private val context: Context) {
             authorizedAccountEmail = prefs[Keys.ACCOUNT_EMAIL],
             onboardingComplete = prefs[Keys.ONBOARDING_COMPLETE] ?: false,
         )
+    }
+
+    val kakaoToken: Flow<String> = context.settingsDataStore.data.map { prefs ->
+        prefs[Keys.KAKAO_TOKEN] ?: ""
     }
 
     suspend fun setSensitivity(value: DetectionSensitivity) {
@@ -72,5 +77,15 @@ class SettingsRepository(private val context: Context) {
 
     suspend fun setOnboardingComplete(complete: Boolean) {
         context.settingsDataStore.edit { it[Keys.ONBOARDING_COMPLETE] = complete }
+    }
+
+    suspend fun setKakaoToken(token: String?) {
+        context.settingsDataStore.edit { prefs ->
+            if (token != null) {
+                prefs[Keys.KAKAO_TOKEN] = token
+            } else {
+                prefs.remove(Keys.KAKAO_TOKEN)
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.coooldoggy.catasmr.app-mergeDebugResources-64:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "com.coooldoggy.catasmr.app-mergeDebugResources-76:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
                     "source": "/Users/yulim/.gradle/caches/8.10.2/transforms/54413b67dbd33cb38a521844cb4df34e/transformed/appcompat-1.6.1/res/values-h720dp-v13/values-h720dp-v13.xml",

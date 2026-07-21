@@ -97,4 +97,11 @@
     <string name="qr_scan_desc">다른 기기에서 카메라를 보려면 QR 코드를 스캔하세요</string>
     <string name="qr_ip_label">IP:</string>
     <string name="qr_code_label">Code:</string>
+
+    <!-- Kakao -->
+    <string name="kakao_app_key">YOUR_KAKAO_APP_KEY</string>
+    <string name="kakao_signed_in">Signed in as %s</string>
+    <string name="kakao_not_signed_in">Sign in to KakaoTalk</string>
+    <string name="kakao_sign_out">Sign out</string>
+    <string name="kakao_sign_in_failed">KakaoTalk sign-in failed: %s</string>
 </resources>

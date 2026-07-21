@@ -82,6 +82,9 @@ dependencies {
     implementation(libs.kotlinx.coroutines.play.services)
     implementation(libs.zxing.core)
 
+    // Kakao SDK
+    implementation("com.kakao.sdk:v2-all:2.20.3")
+
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.junit)

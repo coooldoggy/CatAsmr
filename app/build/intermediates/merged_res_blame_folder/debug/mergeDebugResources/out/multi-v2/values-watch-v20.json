@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.coooldoggy.catasmr.app-mergeDebugResources-64:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "com.coooldoggy.catasmr.app-mergeDebugResources-76:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
                     "source": "/Users/yulim/.gradle/caches/8.10.2/transforms/93e4bec5c66e844e8bbe4aed48f9ea23/transformed/play-services-auth-21.2.0/res/values-watch-v20/values.xml",

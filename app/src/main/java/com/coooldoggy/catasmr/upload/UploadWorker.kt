@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.Uri
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
+import com.coooldoggy.catasmr.auth.KakaoManager
 import com.coooldoggy.catasmr.auth.YouTubeAuthManager
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.status.ActivityStatusRepository
@@ -42,14 +43,24 @@ class UploadWorker(
 
         val settings = settingsRepository.settings.first()
         return try {
+            val title = "Cat eating - ${formattedTimestamp()}"
             YouTubeUploadClient(applicationContext).upload(
                 accessToken = accessToken,
                 videoUri = uri,
-                title = "Cat eating - ${formattedTimestamp()}",
+                title = title,
                 description = "Recorded automatically by CatAsmr.",
                 privacyStatus = settings.privacyStatus
             )
             statusRepository.onUploadSucceeded()
+
+            // Send to KakaoTalk "나에게"
+            try {
+                sendToKakao(title)
+            } catch (e: Exception) {
+                // Log but don't fail the upload for Kakao errors
+                android.util.Log.w("UploadWorker", "Failed to send to Kakao: ${e.message}")
+            }
+
             if (!settings.keepLocalCopy) {
                 applicationContext.contentResolver.delete(uri, null, null)
             }
@@ -58,6 +69,14 @@ class UploadWorker(
             statusRepository.onUploadFailed(e.message ?: "Upload failed")
             Result.retry()
         }
+    }
+
+    private fun sendToKakao(title: String) {
+        val kakaoManager = KakaoManager(applicationContext)
+        kakaoManager.openKakaoTalkToMe(
+            title = title,
+            message = "새로운 영상이 업로드되었습니다! 🐱"
+        )
     }
 
     private fun formattedTimestamp(): String =

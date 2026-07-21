@@ -32,6 +32,11 @@
     <string name="home_stop_watching">Stop Watching</string>
     <string name="home_view_preview">View Local Preview</string>
     <string name="home_youtube">YouTube</string>
+    <string name="kakao_app_key">YOUR_KAKAO_APP_KEY</string>
+    <string name="kakao_not_signed_in">Sign in to KakaoTalk</string>
+    <string name="kakao_sign_in_failed">KakaoTalk sign-in failed: %s</string>
+    <string name="kakao_sign_out">Sign out</string>
+    <string name="kakao_signed_in">Signed in as %s</string>
     <string name="notification_channel_desc">Shows when PawWatch is watching for or recording your cat</string>
     <string name="notification_channel_title">Cat camera activity</string>
     <string name="perm_battery_optimization">Battery optimization disabled</string>

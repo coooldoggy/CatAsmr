@@ -8,6 +8,7 @@ import android.util.Log
 import androidx.work.Configuration
 import com.coooldoggy.catasmr.schedule.ScheduleHealthCheckWorker
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.kakao.sdk.common.KakaoSdk
 
 class CatAsmrApp : Application(), Configuration.Provider {
 
@@ -18,6 +19,7 @@ class CatAsmrApp : Application(), Configuration.Provider {
 
     override fun onCreate() {
         super.onCreate()
+        KakaoSdk.init(this, getString(R.string.kakao_app_key))
         initCrashlytics()
         createNotificationChannel()
         ScheduleHealthCheckWorker.enqueue(this)

@@ -36,6 +36,11 @@ string home_start_watching
 string home_stop_watching
 string home_view_preview
 string home_youtube
+string kakao_app_key
+string kakao_not_signed_in
+string kakao_sign_in_failed
+string kakao_sign_out
+string kakao_signed_in
 string notification_channel_desc
 string notification_channel_title
 string perm_battery_optimization
