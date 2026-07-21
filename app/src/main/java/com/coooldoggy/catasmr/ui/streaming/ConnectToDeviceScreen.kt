@@ -34,9 +34,9 @@ import com.coooldoggy.catasmr.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ConnectToDeviceScreen(
-    onBack: () -> Unit,
-    onConnect: (deviceName: String, ipAddress: String, port: Int) -> Unit,
-    onConnectCloud: (pairingCode: String) -> Unit,
+    onBack: () -> Unit = {},
+    onConnect: (deviceName: String, ipAddress: String, port: Int) -> Unit = { _, _, _ -> },
+    onConnectCloud: (pairingCode: String) -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     var deviceName by remember { mutableStateOf("") }

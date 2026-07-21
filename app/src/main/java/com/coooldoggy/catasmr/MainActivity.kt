@@ -10,9 +10,15 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
-import androidx.compose.runtime.Composable
+import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -24,22 +30,14 @@ import com.coooldoggy.catasmr.auth.YouTubeAuthManager
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.ui.home.HomeScreen
 import com.coooldoggy.catasmr.ui.settings.ScheduleSettingsScreen
-import com.coooldoggy.catasmr.ui.streaming.CameraPreviewScreen
-import com.coooldoggy.catasmr.ui.streaming.CloudViewerScreen
 import com.coooldoggy.catasmr.ui.streaming.ConnectToDeviceScreen
-import com.coooldoggy.catasmr.ui.streaming.RemoteViewerScreen
-import com.coooldoggy.catasmr.ui.streaming.RemoteViewerViewModel
-import com.coooldoggy.catasmr.ui.streaming.StreamingState
 import com.coooldoggy.catasmr.ui.theme.CatAsmrTheme
 import kotlinx.coroutines.launch
 
-private sealed class Screen {
-    data object Home : Screen()
-    data object Settings : Screen()
-    data object ConnectToDevice : Screen()
-    data object StreamPreview : Screen()
-    data class RemoteViewer(val deviceName: String, val ipAddress: String, val port: Int) : Screen()
-    data class CloudViewer(val pairingCode: String) : Screen()
+private enum class Tab {
+    HOME,
+    REMOTE,
+    SETTINGS
 }
 
 class MainActivity : ComponentActivity() {
@@ -55,7 +53,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             CatAsmrTheme {
-                var screen by remember { mutableStateOf<Screen>(Screen.Home) }
+                var selectedTab by remember { mutableStateOf(Tab.HOME) }
                 val scope = rememberCoroutineScope()
                 val context = LocalContext.current
 
@@ -79,12 +77,36 @@ class MainActivity : ComponentActivity() {
                     }
                 }
 
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    when (screen) {
-                        Screen.Home -> HomeScreen(
-                            onOpenSettings = { screen = Screen.Settings },
-                            onOpenRemoteViewer = { screen = Screen.ConnectToDevice },
-                            onOpenPreview = { screen = Screen.StreamPreview },
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    bottomBar = {
+                        NavigationBar {
+                            NavigationBarItem(
+                                selected = selectedTab == Tab.HOME,
+                                onClick = { selectedTab = Tab.HOME },
+                                icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
+                                label = { Text("Home") }
+                            )
+                            NavigationBarItem(
+                                selected = selectedTab == Tab.REMOTE,
+                                onClick = { selectedTab = Tab.REMOTE },
+                                icon = { Icon(Icons.Default.Phone, contentDescription = "Remote") },
+                                label = { Text("Remote") }
+                            )
+                            NavigationBarItem(
+                                selected = selectedTab == Tab.SETTINGS,
+                                onClick = { selectedTab = Tab.SETTINGS },
+                                icon = { Icon(Icons.Default.Settings, contentDescription = "Settings") },
+                                label = { Text("Settings") }
+                            )
+                        }
+                    }
+                ) { innerPadding ->
+                    when (selectedTab) {
+                        Tab.HOME -> HomeScreen(
+                            onOpenSettings = { selectedTab = Tab.SETTINGS },
+                            onOpenRemoteViewer = { selectedTab = Tab.REMOTE },
+                            onOpenPreview = { },
                             onSignIn = {
                                 scope.launch {
                                     when (val outcome = authManager.authorize()) {
@@ -106,50 +128,22 @@ class MainActivity : ComponentActivity() {
                                     }
                                 }
                             },
-                            modifier = Modifier.padding(innerPadding)
+                            modifier = Modifier
                         )
-                        Screen.Settings -> ScheduleSettingsScreen(
-                            onBack = { screen = Screen.Home },
-                            modifier = Modifier.padding(innerPadding)
-                        )
-                        Screen.ConnectToDevice -> ConnectToDeviceScreen(
-                            onBack = { screen = Screen.Home },
+                        Tab.REMOTE -> ConnectToDeviceScreen(
+                            onBack = { selectedTab = Tab.HOME },
                             onConnect = { deviceName, ipAddress, port ->
-                                screen = Screen.RemoteViewer(deviceName, ipAddress, port)
+                                Toast.makeText(context, "Connecting to $deviceName...", Toast.LENGTH_SHORT).show()
                             },
                             onConnectCloud = { pairingCode ->
-                                screen = Screen.CloudViewer(pairingCode)
+                                Toast.makeText(context, "Connecting to cloud...", Toast.LENGTH_SHORT).show()
                             },
-                            modifier = Modifier.padding(innerPadding)
+                            modifier = Modifier
                         )
-                        is Screen.RemoteViewer -> {
-                            val viewModel = androidx.lifecycle.viewmodel.compose.viewModel {
-                                RemoteViewerViewModel(applicationContext)
-                            }
-                            androidx.compose.runtime.LaunchedEffect(screen) {
-                                viewModel.connectToDevice((screen as Screen.RemoteViewer).deviceName, (screen as Screen.RemoteViewer).ipAddress, (screen as Screen.RemoteViewer).port)
-                            }
-                            RemoteViewerScreen(
-                                deviceName = (screen as Screen.RemoteViewer).deviceName,
-                                streamingState = viewModel.streamingState,
-                                onClose = { screen = Screen.Home },
-                                modifier = Modifier.padding(innerPadding)
-                            )
-                        }
-                        is Screen.CloudViewer -> {
-                            CloudViewerScreen(
-                                pairingCode = (screen as Screen.CloudViewer).pairingCode,
-                                onClose = { screen = Screen.Home },
-                                modifier = Modifier.padding(innerPadding)
-                            )
-                        }
-                        Screen.StreamPreview -> {
-                            // Show local camera preview on same device
-                            CameraPreviewScreen(
-                                onClose = { screen = Screen.Home },
-                                modifier = Modifier.padding(innerPadding)
-                            )
-                        }
+                        Tab.SETTINGS -> ScheduleSettingsScreen(
+                            onBack = { selectedTab = Tab.HOME },
+                            modifier = Modifier
+                        )
                     }
                 }
             }

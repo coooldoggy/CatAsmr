@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">123456789-abcdefghijklmnopqrstuvwxyz.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://catasmr-dev.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">123456789</string>
-    <string name="google_api_key" translatable="false">AIzaSyDummyKeyForDevelopmentOnly1234567890</string>
-    <string name="google_app_id" translatable="false">1:123456789:android:abcdef1234567890</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDummyKeyForDevelopmentOnly1234567890</string>
-    <string name="google_storage_bucket" translatable="false">catasmr-dev.appspot.com</string>
-    <string name="project_id" translatable="false">catasmr-dev</string>
+    <string name="gcm_defaultSenderId" translatable="false">733366535941</string>
+    <string name="google_api_key" translatable="false">AIzaSyAW4gJOQqg6KlyWLmh_wh8-GL92rVhnZYk</string>
+    <string name="google_app_id" translatable="false">1:733366535941:android:d7cb4b8f4b48bd1d2a196c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAW4gJOQqg6KlyWLmh_wh8-GL92rVhnZYk</string>
+    <string name="google_storage_bucket" translatable="false">pawwatch-fcb40.firebasestorage.app</string>
+    <string name="project_id" translatable="false">pawwatch-fcb40</string>
 </resources>

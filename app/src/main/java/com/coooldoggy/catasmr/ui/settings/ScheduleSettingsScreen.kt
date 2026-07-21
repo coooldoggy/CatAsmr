@@ -38,7 +38,7 @@ import com.coooldoggy.catasmr.ui.components.WindowEditorRow
 
 @Composable
 fun ScheduleSettingsScreen(
-    onBack: () -> Unit,
+    onBack: () -> Unit = {},
     modifier: Modifier = Modifier,
     viewModel: ScheduleSettingsViewModel = viewModel()
 ) {
@@ -62,13 +62,7 @@ fun ScheduleSettingsScreen(
                 .fillMaxSize()
                 .padding(16.dp)
         ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                Text(stringResource(R.string.schedule_settings), style = MaterialTheme.typography.headlineSmall)
-                TextButton(onClick = onBack) { Text(stringResource(R.string.schedule_done)) }
-            }
+            Text(stringResource(R.string.schedule_settings), style = MaterialTheme.typography.headlineSmall)
 
         if (uiState.windows.isEmpty()) {
             Text(stringResource(R.string.schedule_no_windows))

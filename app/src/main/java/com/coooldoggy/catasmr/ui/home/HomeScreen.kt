@@ -58,9 +58,9 @@ import java.util.Locale
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-    onOpenSettings: () -> Unit,
-    onOpenRemoteViewer: () -> Unit,
-    onOpenPreview: () -> Unit,
+    onOpenSettings: () -> Unit = {},
+    onOpenRemoteViewer: () -> Unit = {},
+    onOpenPreview: () -> Unit = {},
     onSignIn: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel()
@@ -92,20 +92,6 @@ fun HomeScreen(
     val allPermissionsGranted = cameraGranted && micGranted && notifGranted && exactAlarmGranted && batteryExempt
 
     Column(modifier = modifier.fillMaxSize()) {
-        TopAppBar(
-            title = { Text(stringResource(R.string.app_name), fontWeight = FontWeight.Bold) },
-            actions = {
-                IconButton(onClick = onOpenSettings) {
-                    Icon(Icons.Default.Settings, contentDescription = "Settings")
-                }
-            },
-            colors = TopAppBarDefaults.topAppBarColors(
-                containerColor = MaterialTheme.colorScheme.primary,
-                titleContentColor = MaterialTheme.colorScheme.onPrimary,
-                actionIconContentColor = MaterialTheme.colorScheme.onPrimary
-            )
-        )
-
         uiState.error?.let { error ->
             ErrorBanner(
                 error = error,

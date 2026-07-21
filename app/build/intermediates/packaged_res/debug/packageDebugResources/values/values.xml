@@ -8,23 +8,42 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_description">Automatic cat camera with AI detection and YouTube upload</string>
-    <string name="app_name">CatAsmr</string>
+    <string name="app_name">PawWatch</string>
     <string name="com.google.firebase.crashlytics.mapping_file_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
-    <string name="default_web_client_id" translatable="false">123456789-abcdefghijklmnopqrstuvwxyz.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://catasmr-dev.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">123456789</string>
-    <string name="google_api_key" translatable="false">AIzaSyDummyKeyForDevelopmentOnly1234567890</string>
-    <string name="google_app_id" translatable="false">1:123456789:android:abcdef1234567890</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDummyKeyForDevelopmentOnly1234567890</string>
-    <string name="google_storage_bucket" translatable="false">catasmr-dev.appspot.com</string>
-    <string name="notification_channel_desc">Shows when CatAsmr is watching for or recording your cat</string>
+    <string name="gcm_defaultSenderId" translatable="false">733366535941</string>
+    <string name="google_api_key" translatable="false">AIzaSyAW4gJOQqg6KlyWLmh_wh8-GL92rVhnZYk</string>
+    <string name="google_app_id" translatable="false">1:733366535941:android:d7cb4b8f4b48bd1d2a196c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAW4gJOQqg6KlyWLmh_wh8-GL92rVhnZYk</string>
+    <string name="google_storage_bucket" translatable="false">pawwatch-fcb40.firebasestorage.app</string>
+    <string name="home_active">Active</string>
+    <string name="home_activity">Activity</string>
+    <string name="home_connect_camera">Connect to Camera</string>
+    <string name="home_edit_schedule">Edit Schedule</string>
+    <string name="home_feeding_schedule">Feeding Schedule</string>
+    <string name="home_inactive">Inactive</string>
+    <string name="home_no_schedule">No schedule set</string>
+    <string name="home_permissions_required">Permissions Required</string>
+    <string name="home_recording_status">Recording Status</string>
+    <string name="home_remote_desc">Watch another device\'s camera stream</string>
+    <string name="home_remote_viewer">Remote Viewer</string>
+    <string name="home_share_qr">Share with Others</string>
+    <string name="home_sign_in_youtube">Sign In to YouTube</string>
+    <string name="home_start_watching">Start Watching</string>
+    <string name="home_stop_watching">Stop Watching</string>
+    <string name="home_view_preview">View Local Preview</string>
+    <string name="home_youtube">YouTube</string>
+    <string name="notification_channel_desc">Shows when PawWatch is watching for or recording your cat</string>
     <string name="notification_channel_title">Cat camera activity</string>
     <string name="perm_battery_optimization">Battery optimization disabled</string>
     <string name="perm_camera">Camera</string>
     <string name="perm_exact_alarms">Exact alarms</string>
     <string name="perm_microphone">Microphone</string>
     <string name="perm_notifications">Notifications</string>
-    <string name="project_id" translatable="false">catasmr-dev</string>
+    <string name="project_id" translatable="false">pawwatch-fcb40</string>
+    <string name="qr_code_label">Code:</string>
+    <string name="qr_ip_label">IP:</string>
+    <string name="qr_scan_desc">다른 기기에서 카메라를 보려면 QR 코드를 스캔하세요</string>
+    <string name="qr_scan_title">Scan to Connect</string>
     <string name="recording_last_failed">Last recording: %s (failed)</string>
     <string name="recording_last_ok">Last recording: %s (ok)</string>
     <string name="recording_no_recordings">No recordings yet</string>
@@ -32,6 +51,17 @@
     <string name="recording_start_watching">Start watching now</string>
     <string name="recording_stop_watching">Stop watching</string>
     <string name="recording_watching">Currently watching for your cat</string>
+    <string name="remote_back">Back</string>
+    <string name="remote_connect">Connect</string>
+    <string name="remote_device_hint">e.g., Living Room Camera</string>
+    <string name="remote_device_name">Device Name</string>
+    <string name="remote_find_ip">To find your device IP:\nadb shell ip addr show | grep \'inet \'</string>
+    <string name="remote_ip_address">IP Address</string>
+    <string name="remote_ip_hint">192.168.1.100</string>
+    <string name="remote_or_manual">Or enter details manually:</string>
+    <string name="remote_port">Port</string>
+    <string name="remote_scan_hint">Point your camera at the QR code</string>
+    <string name="remote_scan_qr">Scan QR Code</string>
     <string name="schedule_add_window">Add window</string>
     <string name="schedule_done">Done</string>
     <string name="schedule_edit">Edit schedule &amp;settings</string>

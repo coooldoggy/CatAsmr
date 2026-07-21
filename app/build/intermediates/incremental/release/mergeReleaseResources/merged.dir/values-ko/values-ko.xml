@@ -27,6 +27,8 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"공유 대상:"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>과(와) 공유"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"접기"</string>
+    <string name="app_description">AI 감지 기능이 있는 자동 고양이 카메라 및 YouTube 업로드</string>
+    <string name="app_name">PawWatch</string>
     <string msgid="9020470552698189270" name="autofill">"자동 완성"</string>
     <string msgid="881409763997275156" name="call_notification_answer_action">"통화"</string>
     <string msgid="8793775615905189152" name="call_notification_answer_video_action">"동영상"</string>
@@ -58,6 +60,23 @@
     <string msgid="8038256446254964252" name="default_error_message">"입력이 잘못됨"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"팝업 창"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"드롭다운 메뉴"</string>
+    <string name="home_active">활성</string>
+    <string name="home_activity">활동</string>
+    <string name="home_connect_camera">카메라 연결</string>
+    <string name="home_edit_schedule">일정 편집</string>
+    <string name="home_feeding_schedule">급이 일정</string>
+    <string name="home_inactive">비활성</string>
+    <string name="home_no_schedule">일정이 설정되지 않았습니다</string>
+    <string name="home_permissions_required">필요한 권한</string>
+    <string name="home_recording_status">녹화 상태</string>
+    <string name="home_remote_desc">다른 기기의 카메라 스트림 보기</string>
+    <string name="home_remote_viewer">원격 뷰어</string>
+    <string name="home_share_qr">다른 사용자와 공유</string>
+    <string name="home_sign_in_youtube">YouTube에 로그인</string>
+    <string name="home_start_watching">감시 시작</string>
+    <string name="home_stop_watching">감시 중지</string>
+    <string name="home_view_preview">로컬 미리보기 보기</string>
+    <string name="home_youtube">YouTube</string>
     <string msgid="6827826412747255547" name="in_progress">"진행 중"</string>
     <string msgid="7933458017204019916" name="indeterminate">"일부 선택됨"</string>
     <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"하단 시트 접기"</string>
@@ -118,10 +137,56 @@
     <string msgid="5460405025248574620" name="m3c_tooltip_pane_description">"도움말"</string>
     <string msgid="542007171693138492" name="navigation_menu">"탐색 메뉴"</string>
     <string msgid="6610465462668679431" name="not_selected">"선택되지 않음"</string>
+    <string name="notification_channel_desc">PawWatch가 고양이를 감시하거나 녹화할 때 표시됩니다</string>
+    <string name="notification_channel_title">고양이 카메라 활동</string>
+    <string name="perm_battery_optimization">배터리 최적화 비활성화</string>
+    <string name="perm_camera">카메라</string>
+    <string name="perm_exact_alarms">정확한 알람</string>
+    <string name="perm_microphone">마이크</string>
+    <string name="perm_notifications">알림</string>
+    <string name="qr_code_label">코드:</string>
+    <string name="qr_ip_label">IP:</string>
+    <string name="qr_scan_desc">다른 기기에서 카메라를 보려면 QR 코드를 스캔하세요</string>
+    <string name="qr_scan_title">스캔하여 연결</string>
     <string msgid="5941395253238309765" name="range_end">"범위 끝"</string>
     <string msgid="7097486360902471446" name="range_start">"범위 시작"</string>
+    <string name="recording_last_failed">마지막 녹화: %s (실패)</string>
+    <string name="recording_last_ok">마지막 녹화: %s (성공)</string>
+    <string name="recording_no_recordings">아직 녹화된 항목이 없습니다</string>
+    <string name="recording_not_watching">감시 중이 아님 — 일정을 무시합니다</string>
+    <string name="recording_start_watching">지금 감시 시작</string>
+    <string name="recording_stop_watching">감시 중지</string>
+    <string name="recording_watching">현재 고양이를 감시 중</string>
+    <string name="remote_back">뒤로</string>
+    <string name="remote_connect">연결</string>
+    <string name="remote_device_hint">예: 거실 카메라</string>
+    <string name="remote_device_name">기기 이름</string>
+    <string name="remote_find_ip">기기 IP를 찾으려면:\nadb shell ip addr show | grep \'inet \'</string>
+    <string name="remote_ip_address">IP 주소</string>
+    <string name="remote_ip_hint">192.168.1.100</string>
+    <string name="remote_or_manual">또는 수동으로 세부 정보 입력:</string>
+    <string name="remote_port">포트</string>
+    <string name="remote_scan_hint">QR 코드에 카메라를 맞추세요</string>
+    <string name="remote_scan_qr">QR 코드 스캔</string>
+    <string name="schedule_add_window">시간 추가</string>
+    <string name="schedule_done">완료</string>
+    <string name="schedule_edit">일정 및 설정 편집</string>
+    <string name="schedule_empty">아직 급이 일정이 설정되지 않았습니다</string>
+    <string name="schedule_next_window">다음 시간: %s</string>
+    <string name="schedule_no_windows">급이 시간이 없습니다 — 자동 급이기 일정에 맞게 추가하세요.</string>
+    <string name="schedule_settings">일정 및 설정</string>
     <string msgid="6264217191555673260" name="search_menu_title">"검색"</string>
+    <string name="section_activity">활동</string>
+    <string name="section_detection">감지 민감도</string>
+    <string name="section_manual_test">수동 테스트</string>
+    <string name="section_privacy">업로드 개인정보 보호</string>
+    <string name="section_schedule">일정</string>
+    <string name="section_setup">설정</string>
+    <string name="section_video">비디오 품질</string>
+    <string name="section_youtube">YouTube</string>
     <string msgid="6043586758067023" name="selected">"선택됨"</string>
+    <string name="setting_keep_local">업로드 후 로컬 사본 유지</string>
+    <string name="setting_wifi_only">Wi-Fi만으로 업로드</string>
     <string msgid="2792228137354697160" name="snackbar_pane_title">"주의"</string>
     <string msgid="4139871816613051306" name="state_empty">"비어 있음"</string>
     <string msgid="5834637030682409883" name="state_off">"사용 안함"</string>
@@ -132,4 +197,15 @@
     <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g>퍼센트"</string>
     <string msgid="3765533235322692011" name="tooltip_description">"도움말"</string>
     <string msgid="3124740595719787496" name="tooltip_label">"도움말 표시"</string>
+    <string name="upload_failed">마지막 업로드 실패: %s</string>
+    <string name="upload_in_progress">업로드 중…</string>
+    <string name="upload_needs_reauth">YouTube 액세스를 다시 연결해야 합니다 — 로그인 탭</string>
+    <string name="upload_none">아직 업로드된 항목이 없습니다</string>
+    <string name="upload_success">마지막 업로드 성공</string>
+    <string name="upload_success_with_time">마지막 업로드 성공 (%s)</string>
+    <string name="youtube_not_signed_in">YouTube에 로그인</string>
+    <string name="youtube_sign_in_cancelled">YouTube 로그인이 취소되었습니다</string>
+    <string name="youtube_sign_in_failed">YouTube 로그인 실패: %s</string>
+    <string name="youtube_sign_out">로그아웃</string>
+    <string name="youtube_signed_in">%s로 로그인됨</string>
 </resources>
