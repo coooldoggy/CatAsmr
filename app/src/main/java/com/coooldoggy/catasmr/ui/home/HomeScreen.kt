@@ -61,7 +61,7 @@ fun HomeScreen(
     onOpenSettings: () -> Unit = {},
     onOpenRemoteViewer: () -> Unit = {},
     onOpenPreview: () -> Unit = {},
-    onSignIn: () -> Unit,
+    onSignIn: () -> Unit = {},
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel()
 ) {
@@ -316,36 +316,6 @@ fun HomeScreen(
                 }
             }
 
-            // YouTube Card
-            Card(modifier = Modifier.fillMaxWidth()) {
-                Column(
-                    modifier = Modifier.padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    Text(stringResource(R.string.home_youtube), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
-                    if (uiState.settings.isAuthorized) {
-                        Text(
-                            stringResource(R.string.youtube_signed_in, uiState.settings.authorizedAccountEmail ?: "your account"),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                        Button(
-                            onClick = { viewModel.signOut() },
-                            modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.outlinedButtonColors()
-                        ) {
-                            Text(stringResource(R.string.youtube_sign_out))
-                        }
-                    } else {
-                        Button(
-                            onClick = onSignIn,
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text(stringResource(R.string.home_sign_in_youtube))
-                        }
-                    }
-                }
-            }
         }
     }
 }

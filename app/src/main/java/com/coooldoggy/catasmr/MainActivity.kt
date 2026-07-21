@@ -16,8 +16,13 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.systemBars
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.ScaffoldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -79,6 +84,7 @@ class MainActivity : ComponentActivity() {
 
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
+                    contentWindowInsets = WindowInsets(0, 0, 0, 0),
                     bottomBar = {
                         NavigationBar {
                             NavigationBarItem(
@@ -142,6 +148,27 @@ class MainActivity : ComponentActivity() {
                         )
                         Tab.SETTINGS -> ScheduleSettingsScreen(
                             onBack = { selectedTab = Tab.HOME },
+                            onSignIn = {
+                                scope.launch {
+                                    when (val outcome = authManager.authorize()) {
+                                        is YouTubeAuthManager.AuthOutcome.Authorized -> {
+                                            settingsRepository.setAuthorization(true, outcome.accountEmail)
+                                        }
+                                        is YouTubeAuthManager.AuthOutcome.NeedsConsent -> {
+                                            consentLauncher.launch(
+                                                IntentSenderRequest.Builder(outcome.pendingIntent.intentSender).build()
+                                            )
+                                        }
+                                        is YouTubeAuthManager.AuthOutcome.Failed -> {
+                                            Toast.makeText(
+                                                context,
+                                                context.getString(com.coooldoggy.catasmr.R.string.youtube_sign_in_failed, outcome.message),
+                                                Toast.LENGTH_LONG
+                                            ).show()
+                                        }
+                                    }
+                                }
+                            },
                             modifier = Modifier
                         )
                     }
