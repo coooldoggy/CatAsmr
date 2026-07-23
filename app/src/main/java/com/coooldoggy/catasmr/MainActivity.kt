@@ -15,6 +15,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -30,6 +31,7 @@ import androidx.compose.ui.platform.LocalContext
 import com.coooldoggy.catasmr.auth.YouTubeAuthManager
 import com.coooldoggy.catasmr.settings.SettingsRepository
 import com.coooldoggy.catasmr.ui.home.HomeScreen
+import com.coooldoggy.catasmr.ui.gallery.GalleryScreen
 import com.coooldoggy.catasmr.ui.settings.ScheduleSettingsScreen
 import com.coooldoggy.catasmr.ui.streaming.ConnectToDeviceScreen
 import com.coooldoggy.catasmr.ui.theme.CatAsmrTheme
@@ -37,6 +39,7 @@ import kotlinx.coroutines.launch
 
 private enum class Tab {
     HOME,
+    GALLERY,
     REMOTE,
     SETTINGS
 }
@@ -92,6 +95,12 @@ class MainActivity : ComponentActivity() {
                                     label = { Text("Home") }
                                 )
                                 NavigationBarItem(
+                                    selected = selectedTab == Tab.GALLERY,
+                                    onClick = { selectedTab = Tab.GALLERY },
+                                    icon = { Icon(Icons.Default.Favorite, contentDescription = "Gallery") },
+                                    label = { Text("Gallery") }
+                                )
+                                NavigationBarItem(
                                     selected = selectedTab == Tab.REMOTE,
                                     onClick = { selectedTab = Tab.REMOTE },
                                     icon = { Icon(Icons.Default.Phone, contentDescription = "Remote") },
@@ -134,6 +143,9 @@ class MainActivity : ComponentActivity() {
                                     }
                                 }
                             },
+                            modifier = Modifier
+                        )
+                        Tab.GALLERY -> GalleryScreen(
                             modifier = Modifier
                         )
                         Tab.REMOTE -> ConnectToDeviceScreen(

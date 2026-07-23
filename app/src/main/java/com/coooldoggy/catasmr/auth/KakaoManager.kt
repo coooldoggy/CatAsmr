@@ -65,6 +65,30 @@ class KakaoManager(private val context: Context) {
         }
     }
 
+    fun shareVideoToKakaoTalk(
+        videoUri: Uri,
+        message: String
+    ) {
+        try {
+            val intent = Intent(Intent.ACTION_SEND).apply {
+                type = "video/mp4"
+                putExtra(Intent.EXTRA_STREAM, videoUri)
+                putExtra(Intent.EXTRA_TEXT, message)
+                `package` = "com.kakao.talk"
+            }
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Log.e("KakaoManager", "Failed to share video: ${e.message}")
+            // Fallback: open KakaoTalk app
+            try {
+                val uri = Uri.parse("kakaoopen://talk")
+                context.startActivity(Intent(Intent.ACTION_VIEW, uri))
+            } catch (ex: Exception) {
+                Log.e("KakaoManager", "KakaoTalk app not installed")
+            }
+        }
+    }
+
     fun signOut(onComplete: () -> Unit) {
         UserApiClient.instance.logout { _ ->
             Log.i("KakaoManager", "Logout success")
