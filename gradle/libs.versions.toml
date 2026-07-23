@@ -22,6 +22,7 @@ coroutinesTest = "1.9.0"
 firebaseBom = "33.1.1"
 googleServices = "4.4.2"
 firebaseCrashlytics = "3.0.1"
+firebaseAppDistribution = "4.0.1"
 zxingCore = "3.5.1"
 firebaseRealtimeDatabase = "21.0.0"
 
@@ -68,3 +69,4 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlytics" }
+firebase-app-distribution = { id = "com.google.firebase.appdistribution", version.ref = "firebaseAppDistribution" }

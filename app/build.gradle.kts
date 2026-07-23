@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.google.services)
     alias(libs.plugins.firebase.crashlytics)
+    alias(libs.plugins.firebase.app.distribution)
 }
 
 android {
@@ -96,4 +97,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+}
+
+firebaseAppDistribution {
+    serviceCredentialsFile = "firebase-admin-key.json"
+    releaseNotes = "New release with gallery and KakaoTalk sharing features"
+    testers = "coooldoggy@gmail.com"
 }
