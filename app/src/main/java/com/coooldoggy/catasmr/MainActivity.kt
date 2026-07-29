@@ -150,8 +150,13 @@ class MainActivity : ComponentActivity() {
                         )
                         Tab.REMOTE -> ConnectToDeviceScreen(
                             onBack = { selectedTab = Tab.HOME },
-                            onConnect = { deviceName, ipAddress, port ->
-                                Toast.makeText(context, "Connecting to $deviceName...", Toast.LENGTH_SHORT).show()
+                            onConnect = { deviceName, ipAddress, port, pairingCode ->
+                                val message = if (pairingCode != null) {
+                                    "Connecting to $deviceName (Code: $pairingCode)..."
+                                } else {
+                                    "Connecting to $deviceName..."
+                                }
+                                Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
                             },
                             onConnectCloud = { pairingCode ->
                                 Toast.makeText(context, "Connecting to cloud...", Toast.LENGTH_SHORT).show()

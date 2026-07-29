@@ -35,22 +35,24 @@ import com.coooldoggy.catasmr.R
 @Composable
 fun ConnectToDeviceScreen(
     onBack: () -> Unit = {},
-    onConnect: (deviceName: String, ipAddress: String, port: Int) -> Unit = { _, _, _ -> },
+    onConnect: (deviceName: String, ipAddress: String, port: Int, pairingCode: String?) -> Unit = { _, _, _, _ -> },
     onConnectCloud: (pairingCode: String) -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     var deviceName by remember { mutableStateOf("") }
     var ipAddress by remember { mutableStateOf("") }
     var port by remember { mutableStateOf("8888") }
+    var pairingCode by remember { mutableStateOf<String?>(null) }
     var cloudPairingCode by remember { mutableStateOf("") }
     var showScanner by remember { mutableStateOf(false) }
     var isCloudMode by remember { mutableStateOf(false) }
 
     if (showScanner) {
         QrCodeScannerScreen(
-            onQrCodeScanned = { ip, scannedPort, pairingCode ->
+            onQrCodeScanned = { ip, scannedPort, scannedPairingCode ->
                 ipAddress = ip
                 port = scannedPort.toString()
+                pairingCode = scannedPairingCode
                 showScanner = false
             },
             onClose = {
@@ -183,7 +185,7 @@ fun ConnectToDeviceScreen(
                     onClick = {
                         val portNum = port.toIntOrNull() ?: 8888
                         if (deviceName.isNotBlank() && ipAddress.isNotBlank()) {
-                            onConnect(deviceName, ipAddress, portNum)
+                            onConnect(deviceName, ipAddress, portNum, pairingCode)
                         }
                     },
                     modifier = Modifier.fillMaxWidth(),
